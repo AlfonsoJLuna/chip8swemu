@@ -42,6 +42,7 @@ void resetMemory(struct cpu* chip8)
     chip8->rom_loaded = false;
 }
 
+
 void resetCPU(struct cpu* chip8)
 {
     // Initialize random number generator
@@ -275,7 +276,7 @@ void executeInstruction(struct cpu* chip8)
             chip8->program_counter += 2;
         break;
 
-        case 0xD000:    // DXYN: Display N-byte sprite starting at chip8->memory location chip8->I at (VX, VY), set VF = collision
+        case 0xD000:    // DXYN: Display N-byte sprite starting at memory location I at (VX, VY), set VF = collision
         {
             uint8_t Y = chip8->V[chip8->opcode_Y];  // Screen Y coordinate (from 0 to 31)
             uint8_t X;                              // Screen X coordinate (from 0 to 63)
@@ -301,7 +302,7 @@ void executeInstruction(struct cpu* chip8)
                     // Manage horizontal wrap
                     if (X > 63) X %= 64;
 
-                    // Check for colision
+                    // Check for collision
                     chip8->V[0xF] |= chip8->screen[64*Y + X] & ((sprite_row >> (7 - column)) & 0x1);
 
                     // XOR-Copy sprite_row pixel to screen
@@ -356,7 +357,7 @@ void executeInstruction(struct cpu* chip8)
 
                 case 0x000A:    // FX01: Wait for a key press, store the value of the key in VX
                 {
-                    chip8->program_counter -= 2;    // If no key was pressed, repeat the instruction until a key is pressed
+                    // If no key was pressed, repeat the instruction until a key is pressed
                     int key;
                     for (key = 0; key < 16; key++)
                     {
@@ -366,7 +367,6 @@ void executeInstruction(struct cpu* chip8)
                             chip8->program_counter += 2;
                         }
                     }
-                    chip8->program_counter += 2;
                 break;
                 }
 
