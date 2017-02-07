@@ -1,6 +1,17 @@
 # chip8swemu
 
-Multiplatform CHIP-8 emulator written in C
+chip8swemu is a multiplatform CHIP-8 emulator/interpreter written in C.
+
+## Features
+
+* Cross-platform support through [SDL2](http://libsdl.org): tested on Windows, but should work on Linux and macOS with minor or no changes.
+* Uses [imgui](https://github.com/ocornut/imgui) for the user interface.
+* Native file selection dialog on Windows.
+* Configurable instructions per second rate (840 by default).
+* Configurable color palette.
+* Configuration stored in a config.ini file.
+
+The emulator core (`cpu.h`, `cpu.c`) depends only on standard C99 libraries so it can be easily reusable in other projects. The [chip8duino](https://github.com/AlfonsoJLuna/chip8duino) game console uses it as a library.
 
 ## Screenshots
 
@@ -10,7 +21,7 @@ Multiplatform CHIP-8 emulator written in C
 
 ![invaders](/screenshots/invaders.png)
 
-## Resources
+## Documentation
 
 - [CHIP-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8)
 - [Cowgod's CHIP-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
@@ -25,9 +36,8 @@ chip8swemu uses the following libraries:
 
 ## Building on Windows
 
-1. Install MinGW and add its bin folder to your `PATH` system variable
+1. [Download](http://tdm-gcc.tdragon.net/download) and install the TDM-GCC compiler suite. Be sure you check `Add to PATH` during instalation.
 2. Clone or download this repository
-3. [Download](https://www.libsdl.org/download-2.0.php) SDL2 development libraries for MinGW and extract them to `chip8swemu/libraries/SDL2-2.0.4/...`
-4. [Download](https://github.com/ocornut/imgui/releases) imgui source code and place it in `chip8swemu/libraries/imgui/`
+3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.4 development libraries for MinGW and extract them to `chip8swemu/libraries/SDL2-2.0.4/...`
+4. [Download](https://github.com/ocornut/imgui/releases) imgui 1.49 source code and place it in `chip8swemu/libraries/imgui/`
 6. Open a command prompt and type: `mingw32-make`
-
