@@ -1,6 +1,6 @@
 #include "gui.h"
 #include <imgui.h>
-#include "imgui_impl_sdl.h"
+#include <imgui_impl_sdl.h>
 #include <stdbool.h>
 
 
@@ -101,7 +101,7 @@ void GUI_ProcessElements(SDL_Window* window, configuration* config)
         ImGui::SetNextWindowPosCenter(ImGuiSetCond_Appearing);
         ImGui::Begin("License", &show_window_license);
         ImGui::TextWrapped("The MIT License (MIT)\n"
-            "Copyright (c) 2016 AlfonsoJLuna\n\n"
+            "Copyright (c) 2017 AlfonsoJLuna\n\n"
             "Permission is hereby granted, free of charge, to any person "
             "obtaining a copy of this software and associated documentation "
             "files (the \"Software\"), to deal in the Software without "
