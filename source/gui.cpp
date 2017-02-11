@@ -133,7 +133,7 @@ void GUI_ProcessElements(SDL_Window* window, configuration* config)
             "chip8swemu is a multiplatform CHIP-8 emulator written in C.\n"
             "More details: https://github.com/AlfonsoJLuna/chip8swemu\n\n"
             "Libraries used:\n"
-            "SDL 2.0.4 - http://libsdl.org\n"
+            "SDL 2.0.5 - http://libsdl.org\n"
             "imgui 1.49 - https://github.com/ocornut/imgui\n");
         ImGui::End();
     }

@@ -1,5 +1,5 @@
 #include "config.h"
-#include "cpu.h"
+#include "chip8.h"
 #include "video.h"
 #include "audio.h"
 #include "fileio.h"
