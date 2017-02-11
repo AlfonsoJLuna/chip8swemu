@@ -1,27 +1,36 @@
-COMPILER = g++
+C_FILES := $(wildcard *.c)
+CPP_FILES := $(wildcard *.cpp) \
+	../libraries/imgui-1.49/imgui.cpp \
+	../libraries/imgui-1.49/imgui_draw.cpp \
+	../libraries/imgui-1.49/examples/sdl_opengl_example/imgui_impl_sdl.cpp
 
-FILES = \
-	source\chip8swemu.c \
-	source\audio.c \
-	source\input.c \
-	source\fileio.c \
-	source\video.c \
-	source\cpu.c \
-	source\config.c \
-	source\gui.cpp \
-	source\imgui_impl_sdl.cpp \
-	libraries\imgui\imgui.cpp \
-	libraries\imgui\imgui_draw.cpp
+C_OBJECTS :=  $(addprefix ../objects/,$(notdir $(C_FILES:.c=.o)))
+CPP_OBJECTS :=  $(addprefix ../objects/,$(notdir $(CPP_FILES:.cpp=.o)))
 
-IMGUI_HEADERS = -Ilibraries\imgui
-SDL2_HEADERS = -Ilibraries\SDL2-2.0.4\i686-w64-mingw32\include\SDL2
-SDL2_LIB = -Llibraries\SDL2-2.0.4\i686-w64-mingw32\lib
+LSDL2 := -L..\libraries\SDL2-2.0.5\i686-w64-mingw32\lib
+ISDL2 := -I..\libraries\SDL2-2.0.5\i686-w64-mingw32\include\SDL2
+IIMGUI := -I..\libraries\imgui-1.49 -I..\libraries\imgui-1.49\examples\sdl_opengl_example
 
-COMPILER_FLAGS = -Wall -Wl,-subsystem,windows
-LINKER_FLAGS = -lmingw32 -lSDL2main -lSDL2 -lOpenGL32 -limm32 -lcomdlg32
+LFLAGS := -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -lOpenGL32 -limm32 -lcomdlg32
+CFLAGS := -Wall -Wextra
 
-EXE = chip8swemu
+../build/chip8swemu.exe: $(C_OBJECTS) $(CPP_OBJECTS)
+	g++ $^ $(LSDL2) $(LFLAGS) -o $@
 
-all:
-	$(COMPILER) $(FILES) $(IMGUI_HEADERS) $(SDL2_HEADERS) $(SDL2_LIB) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(EXE)
+../objects/%.o: %.c
+	gcc -std=c99 $(CFLAGS) $(ISDL2) -c $< -o $@
 
+../objects/%.o: %.cpp
+	g++ $(CFLAGS) $(ISDL2) $(IIMGUI) -c $< -o $@
+
+../objects/%.o: ../libraries/imgui-1.49/%.cpp
+	g++ $(CFLAGS) -c $< -o $@
+
+../objects/%.o: ../libraries/imgui-1.49/examples/sdl_opengl_example/%.cpp
+	g++ $(CFLAGS) $(ISDL2) $(IIMGUI) -c $< -o $@
+
+print:
+	@echo $(C_FILES)
+	@echo $(CPP_FILES)
+	@echo $(C_OBJECTS)
+	@echo $(CPP_OBJECTS)
