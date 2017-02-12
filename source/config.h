@@ -33,6 +33,7 @@ typedef struct
     bool window_10x;
     bool window_15x;
     bool window_20x;
+    bool minimized;
     bool mute_sound;
 } configuration;
 

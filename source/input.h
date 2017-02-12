@@ -5,8 +5,7 @@
 #include <stdbool.h>
 
 
-void processInput(bool* quit, bool* keyboard);
+void processInput(bool* quit, bool* minimized, bool* keyboard);
 
 
 #endif  // INPUT_H
-

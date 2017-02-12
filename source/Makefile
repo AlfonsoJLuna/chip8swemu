@@ -12,7 +12,7 @@ ISDL2 := -I../libraries/SDL2-2.0.5/i686-w64-mingw32/include/SDL2
 IIMGUI := -I../libraries/imgui-1.49 -I../libraries/imgui-1.49/examples/sdl_opengl_example
 
 LFLAGS := -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -lOpenGL32 -limm32 -lcomdlg32
-CFLAGS := -Wall -Wextra -MMD
+CFLAGS := -Wall -Wextra -MMD -O3
 
 ../build/chip8swemu.exe: $(C_OBJECTS) $(CPP_OBJECTS)
 	g++ $^ $(LSDL2) $(LFLAGS) -o $@
