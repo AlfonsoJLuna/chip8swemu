@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 
                 while (!config.quit)
                 {
-                    processInput(&config.quit, chip8.keyboard);
+                    processInput(&config.quit, &config.minimized, chip8.keyboard);
 
                     if (config.load_rom)
                     {
@@ -50,7 +50,7 @@ int main(int argc, char* argv[])
                         config.reset = false;
                     }
 
-                    if (chip8.rom_loaded || !chip8.unknown_opcode)
+                    if (chip8.rom_loaded && !chip8.unknown_opcode && !config.minimized)
                     {
                         for (int i = 0; i < config.instructions_per_second / config.screen_refresh_rate; i++)
                         {
@@ -60,6 +60,7 @@ int main(int argc, char* argv[])
                             updateAudio(chip8.sound_timer && !config.mute_sound);
                         }
                     }
+
                     renderScreen(&config, chip8.screen);
                 }
                 saveConfig(&config);
@@ -70,4 +71,3 @@ int main(int argc, char* argv[])
     }
     return 0;
 }
-

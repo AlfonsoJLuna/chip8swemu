@@ -15,6 +15,7 @@ void setDefaultConfig(configuration* config)
     config->window_10x = false;
     config->window_15x = false;
     config->window_20x = false;
+    config->minimized = false;
     config->mute_sound = false;
 }
 

@@ -6,7 +6,7 @@
 SDL_Event events;
 
 
-void processInput(bool* quit, bool* keyboard)
+void processInput(bool* quit, bool* minimized, bool* keyboard)
 {
     while (SDL_PollEvent(&events))
     {
@@ -16,6 +16,23 @@ void processInput(bool* quit, bool* keyboard)
         {
             case SDL_QUIT:
                 *quit = true;
+            break;
+
+            case SDL_WINDOWEVENT:
+                switch (events.window.event)
+                {
+                    case SDL_WINDOWEVENT_MINIMIZED:
+                        *minimized = true;
+                    break;
+
+                    case SDL_WINDOWEVENT_MAXIMIZED:
+                        *minimized = false;
+                    break;
+
+                    case SDL_WINDOWEVENT_RESTORED:
+                        *minimized = false;
+                    break;
+                }
             break;
 
             case SDL_KEYDOWN:

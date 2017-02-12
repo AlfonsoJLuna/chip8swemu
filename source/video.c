@@ -101,49 +101,56 @@ bool createWindow(configuration* config)
 
 void renderScreen(configuration* config, uint8_t* screen)
 {
-    GUI_ProcessElements(window, config);
-    
-    SDL_GetWindowSize(window, &config->window_width, &config->window_height);
-
-    // Set viewport
-    glViewport(0, 0, config->window_width, config->window_height);
-    glClearColor(0.0, 0.0, 0.0, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT);
-
-    // Update texture on memory
-    for (int y = 0; y < 32; y++)
+    if (!config->minimized)
     {
-        for (int x = 0; x < 64; x++)
+        SDL_GetWindowSize(window, &config->window_width, &config->window_height);
+
+        GUI_ProcessElements(window, config);
+
+        // Set viewport
+        glViewport(0, 0, config->window_width, config->window_height);
+        glClearColor(0.0, 0.0, 0.0, 1.0);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // Update texture on memory
+        for (int y = 0; y < 32; y++)
         {
-            if (screen[(31 - y) * 64 + x])
+            for (int x = 0; x < 64; x++)
             {
-                texture[y][x][0] = config->accent_color_bgr & 0x0000FF;
-                texture[y][x][1] = (config->accent_color_bgr & 0x00FF00) >> 8;
-                texture[y][x][2] = (config->accent_color_bgr & 0xFF0000) >> 16;
-            }
-            else
-            {
-                texture[y][x][0] = config->background_color_bgr & 0x0000FF;
-                texture[y][x][1] = (config->background_color_bgr & 0x00FF00) >> 8;
-                texture[y][x][2] = (config->background_color_bgr & 0xFF0000) >> 16;
+                if (screen[(31 - y) * 64 + x])
+                {
+                    texture[y][x][0] = config->accent_color_bgr & 0x0000FF;
+                    texture[y][x][1] = (config->accent_color_bgr & 0x00FF00) >> 8;
+                    texture[y][x][2] = (config->accent_color_bgr & 0xFF0000) >> 16;
+                }
+                else
+                {
+                    texture[y][x][0] = config->background_color_bgr & 0x0000FF;
+                    texture[y][x][1] = (config->background_color_bgr & 0x00FF00) >> 8;
+                    texture[y][x][2] = (config->background_color_bgr & 0xFF0000) >> 16;
+                }
             }
         }
+
+        // Send texture to GPU
+        glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 64, 32, GL_RGB, GL_UNSIGNED_BYTE, (GLvoid*)texture);
+
+        // Render the texture
+        glBegin(GL_QUADS);
+            glTexCoord2f(0.0, 0.0);     glVertex2f(-1.0, -1.0);
+            glTexCoord2f(1.0, 0.0);     glVertex2f(1.0, -1.0);
+            glTexCoord2f(1.0, 1.0);     glVertex2f(1.0, (float)(config->window_height - 19 * 2) / config->window_height);
+            glTexCoord2f(0.0, 1.0);     glVertex2f(-1.0, (float)(config->window_height - 19 * 2) / config->window_height);
+        glEnd();
+
+        GUI_Render();
+
+        SDL_GL_SwapWindow(window);  // Waits for V-Sync
     }
-
-    // Send texture to GPU
-    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 64, 32, GL_RGB, GL_UNSIGNED_BYTE, (GLvoid*)texture);
-
-    // Render the texture
-    glBegin(GL_QUADS);
-        glTexCoord2f(0.0, 0.0);     glVertex2f(-1.0, -1.0);
-        glTexCoord2f(1.0, 0.0);     glVertex2f(1.0, -1.0);
-        glTexCoord2f(1.0, 1.0);     glVertex2f(1.0, (float)(config->window_height - 19 * 2) / config->window_height);
-        glTexCoord2f(0.0, 1.0);     glVertex2f(-1.0, (float)(config->window_height - 19 * 2) / config->window_height);
-    glEnd();
-
-    GUI_Render();
-
-    SDL_GL_SwapWindow(window);  // Waits for V-Sync
+    else
+    {
+        SDL_Delay(30);  // Wait without rendering
+    }
 }
 
 
