@@ -1,12 +1,13 @@
 #include "input.h"
 #include "gui.h"
+#include "chip8.h"
 #include <SDL.h>
 
 
 SDL_Event events;
 
 
-void processInput(bool* quit, bool* minimized, bool* keyboard)
+void processInput(bool* quit, bool* minimized)
 {
     while (SDL_PollEvent(&events))
     {
@@ -38,46 +39,46 @@ void processInput(bool* quit, bool* minimized, bool* keyboard)
             case SDL_KEYDOWN:
                 switch (events.key.keysym.scancode)
                 {
-                    case SDL_SCANCODE_X:    keyboard[0x0] = 1;    break;
-                    case SDL_SCANCODE_1:    keyboard[0x1] = 1;    break;
-                    case SDL_SCANCODE_2:    keyboard[0x2] = 1;    break;
-                    case SDL_SCANCODE_3:    keyboard[0x3] = 1;    break;
-                    case SDL_SCANCODE_Q:    keyboard[0x4] = 1;    break;
-                    case SDL_SCANCODE_W:    keyboard[0x5] = 1;    break;
-                    case SDL_SCANCODE_E:    keyboard[0x6] = 1;    break;
-                    case SDL_SCANCODE_A:    keyboard[0x7] = 1;    break;
-                    case SDL_SCANCODE_S:    keyboard[0x8] = 1;    break;
-                    case SDL_SCANCODE_D:    keyboard[0x9] = 1;    break;
-                    case SDL_SCANCODE_Z:    keyboard[0xA] = 1;    break;
-                    case SDL_SCANCODE_C:    keyboard[0xB] = 1;    break;
-                    case SDL_SCANCODE_4:    keyboard[0xC] = 1;    break;
-                    case SDL_SCANCODE_R:    keyboard[0xD] = 1;    break;
-                    case SDL_SCANCODE_F:    keyboard[0xE] = 1;    break;
-                    case SDL_SCANCODE_V:    keyboard[0xF] = 1;    break;
-                    default:                                      break;
+                    case SDL_SCANCODE_X:    chip8UpdateKey(0x0, true);      break;
+                    case SDL_SCANCODE_1:    chip8UpdateKey(0x1, true);      break;
+                    case SDL_SCANCODE_2:    chip8UpdateKey(0x2, true);      break;
+                    case SDL_SCANCODE_3:    chip8UpdateKey(0x3, true);      break;
+                    case SDL_SCANCODE_Q:    chip8UpdateKey(0x4, true);      break;
+                    case SDL_SCANCODE_W:    chip8UpdateKey(0x5, true);      break;
+                    case SDL_SCANCODE_E:    chip8UpdateKey(0x6, true);      break;
+                    case SDL_SCANCODE_A:    chip8UpdateKey(0x7, true);      break;
+                    case SDL_SCANCODE_S:    chip8UpdateKey(0x8, true);      break;
+                    case SDL_SCANCODE_D:    chip8UpdateKey(0x9, true);      break;
+                    case SDL_SCANCODE_Z:    chip8UpdateKey(0xA, true);      break;
+                    case SDL_SCANCODE_C:    chip8UpdateKey(0xB, true);      break;
+                    case SDL_SCANCODE_4:    chip8UpdateKey(0xC, true);      break;
+                    case SDL_SCANCODE_R:    chip8UpdateKey(0xD, true);      break;
+                    case SDL_SCANCODE_F:    chip8UpdateKey(0xE, true);      break;
+                    case SDL_SCANCODE_V:    chip8UpdateKey(0xF, true);      break;
+                    default:                                                break;
                 }
             break;
 
             case SDL_KEYUP:
                 switch (events.key.keysym.scancode)
                 {
-                    case SDL_SCANCODE_X:    keyboard[0x0] = 0;    break;
-                    case SDL_SCANCODE_1:    keyboard[0x1] = 0;    break;
-                    case SDL_SCANCODE_2:    keyboard[0x2] = 0;    break;
-                    case SDL_SCANCODE_3:    keyboard[0x3] = 0;    break;
-                    case SDL_SCANCODE_Q:    keyboard[0x4] = 0;    break;
-                    case SDL_SCANCODE_W:    keyboard[0x5] = 0;    break;
-                    case SDL_SCANCODE_E:    keyboard[0x6] = 0;    break;
-                    case SDL_SCANCODE_A:    keyboard[0x7] = 0;    break;
-                    case SDL_SCANCODE_S:    keyboard[0x8] = 0;    break;
-                    case SDL_SCANCODE_D:    keyboard[0x9] = 0;    break;
-                    case SDL_SCANCODE_Z:    keyboard[0xA] = 0;    break;
-                    case SDL_SCANCODE_C:    keyboard[0xB] = 0;    break;
-                    case SDL_SCANCODE_4:    keyboard[0xC] = 0;    break;
-                    case SDL_SCANCODE_R:    keyboard[0xD] = 0;    break;
-                    case SDL_SCANCODE_F:    keyboard[0xE] = 0;    break;
-                    case SDL_SCANCODE_V:    keyboard[0xF] = 0;    break;
-                    default:                                      break;
+                    case SDL_SCANCODE_X:    chip8UpdateKey(0x0, false);      break;
+                    case SDL_SCANCODE_1:    chip8UpdateKey(0x1, false);      break;
+                    case SDL_SCANCODE_2:    chip8UpdateKey(0x2, false);      break;
+                    case SDL_SCANCODE_3:    chip8UpdateKey(0x3, false);      break;
+                    case SDL_SCANCODE_Q:    chip8UpdateKey(0x4, false);      break;
+                    case SDL_SCANCODE_W:    chip8UpdateKey(0x5, false);      break;
+                    case SDL_SCANCODE_E:    chip8UpdateKey(0x6, false);      break;
+                    case SDL_SCANCODE_A:    chip8UpdateKey(0x7, false);      break;
+                    case SDL_SCANCODE_S:    chip8UpdateKey(0x8, false);      break;
+                    case SDL_SCANCODE_D:    chip8UpdateKey(0x9, false);      break;
+                    case SDL_SCANCODE_Z:    chip8UpdateKey(0xA, false);      break;
+                    case SDL_SCANCODE_C:    chip8UpdateKey(0xB, false);      break;
+                    case SDL_SCANCODE_4:    chip8UpdateKey(0xC, false);      break;
+                    case SDL_SCANCODE_R:    chip8UpdateKey(0xD, false);      break;
+                    case SDL_SCANCODE_F:    chip8UpdateKey(0xE, false);      break;
+                    case SDL_SCANCODE_V:    chip8UpdateKey(0xF, false);      break;
+                    default:                                                 break;
                 }
             break;
 
@@ -86,4 +87,3 @@ void processInput(bool* quit, bool* minimized, bool* keyboard)
         }
     }
 }
-

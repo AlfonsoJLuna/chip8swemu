@@ -1,4 +1,6 @@
 #include "fileio.h"
+
+#include "chip8.h"
 #include <stdio.h>
 
 
@@ -54,7 +56,7 @@ bool getRomPath(char* rom_path)
 #endif
 
 
-bool loadRomFromPath(char* rom_path, uint8_t* memory)
+bool loadRomFromPath(char* rom_path)
 {
     // Open ROM file in read and binary mode
     FILE* ROM = fopen(rom_path, "rb");
@@ -81,9 +83,18 @@ bool loadRomFromPath(char* rom_path, uint8_t* memory)
         return 1;
     }
 
-    // Copy ROM to CHIP-8 memory
-    unsigned long int result = fread(&memory[512], 1, rom_size, ROM);
+    // Copy ROM to a buffer
+    uint8_t buffer[3584];
+    unsigned long int result = fread(buffer, 1, rom_size, ROM);
     if (result != rom_size)
+    {
+        printf("Error: Program could not be copied to the buffer.\n");
+        fclose(ROM);
+        return 1;
+    }
+
+    // Copy ROM from buffer to CHIP-8 memory
+    if (chip8ResetMem(buffer, rom_size) == true)
     {
         printf("Error: Program could not be loaded into memory.\n");
         fclose(ROM);

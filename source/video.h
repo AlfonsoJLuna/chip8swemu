@@ -11,7 +11,7 @@ bool initializeSDL(configuration* config);
 
 bool createWindow(configuration* config);
 
-void renderScreen(configuration* config, uint8_t* screen);
+void renderScreen(configuration* config);
 
 void finalizeSDL();
 

@@ -9,7 +9,8 @@
 int main(int argc, char* argv[])
 {
     configuration config;
-    cpu chip8;
+    bool unknown_opcode = false;
+    bool rom_loaded = false;
 
     if (!initializeSDL(&config))
     {
@@ -21,47 +22,42 @@ int main(int argc, char* argv[])
 
             if (!createWindow(&config))
             {
-                resetMemory(&chip8);
-                resetCPU(&chip8);
+                chip8ResetCpu();
 
                 if (argc > 1)
                 {
-                    chip8.rom_loaded = !loadRomFromPath(argv[1], chip8.memory);
+                    rom_loaded = !loadRomFromPath(argv[1]);
                 }
 
                 while (!config.quit)
                 {
-                    processInput(&config.quit, &config.minimized, chip8.keyboard);
+                    processInput(&config.quit, &config.minimized);
 
                     if (config.load_rom)
                     {
                         if (!getRomPath(config.rom_path))
                         {
-                            resetMemory(&chip8);
-                            resetCPU(&chip8);
-                            chip8.rom_loaded = !loadRomFromPath(config.rom_path, chip8.memory);
+                            chip8ResetCpu();
+                            rom_loaded = !loadRomFromPath(config.rom_path);
+                            unknown_opcode = false;
                         }
                         config.load_rom = false;
                     }
 
                     if (config.reset)
                     {
-                        resetCPU(&chip8);
+                        chip8ResetCpu();
                         config.reset = false;
                     }
 
-                    if (chip8.rom_loaded && !chip8.unknown_opcode && !config.minimized)
+                    if (rom_loaded && !unknown_opcode && !config.minimized)
                     {
-                        for (int i = 0; i < config.instructions_per_second / config.screen_refresh_rate; i++)
-                        {
-                            fetchInstruction(&chip8);
-                            executeInstruction(&chip8);
-                            updateTimers(&chip8);
-                            updateAudio(chip8.sound_timer && !config.mute_sound);
-                        }
+                        unknown_opcode = chip8StepCpu(config.instructions_per_second / config.screen_refresh_rate);
+                        chip8UpdateTimers();
+                        updateAudio(chip8GetAudio() && !config.mute_sound);
                     }
 
-                    renderScreen(&config, chip8.screen);
+                    renderScreen(&config);
                 }
                 saveConfig(&config);
             }

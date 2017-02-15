@@ -23,10 +23,11 @@ The emulator core (`chip8.h`, `chip8.c`) depends only on standard C99 libraries 
 
 ## Documentation
 
-- [CHIP-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8)
+- [Mastering CHIP-8](http://mattmik.com/files/chip8/mastering/chip8.html)
 - [Cowgod's CHIP-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
 - [How to write an emulator (CHIP-8 interpreter)](http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
-- [Complete collection of all known CHIP-8 games](http://www.chip8.com/?page=109): Some of these programs are included in the release for testing the emulator. Those programs are public domain or freely distributed by their respective authors.
+- [CHIP-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8)
+- [Complete collection of all known CHIP-8 games](https://web.archive.org/web/20161020052454/http://chip8.com/downloads/Chip-8%20Pack.zip): Some of these programs are included in the release for testing the emulator. Those programs are public domain or freely distributed by their respective authors.
 
 ## Dependencies
 
