@@ -9,7 +9,7 @@
 
 bool getRomPath(char* rom_path);
 
-bool loadRomFromPath(char* rom_path, uint8_t* memory);
+bool loadRomFromPath(char* rom_path);
 
 bool loadConfig(configuration* config);
 

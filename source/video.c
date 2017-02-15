@@ -1,5 +1,6 @@
 #include "video.h"
 #include "gui.h"
+#include "chip8.h"
 #include <SDL.h>
 #include <SDL_opengl.h>
 #include <stdio.h>
@@ -99,7 +100,7 @@ bool createWindow(configuration* config)
 }
 
 
-void renderScreen(configuration* config, uint8_t* screen)
+void renderScreen(configuration* config)
 {
     if (!config->minimized)
     {
@@ -111,6 +112,9 @@ void renderScreen(configuration* config, uint8_t* screen)
         glViewport(0, 0, config->window_width, config->window_height);
         glClearColor(0.0, 0.0, 0.0, 1.0);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        // Get screen
+        uint8_t* screen = chip8GetScreen();
 
         // Update texture on memory
         for (int y = 0; y < 32; y++)
