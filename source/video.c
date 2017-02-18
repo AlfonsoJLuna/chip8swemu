@@ -113,15 +113,12 @@ void renderScreen(configuration* config)
         glClearColor(0.0, 0.0, 0.0, 1.0);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // Get screen
-        uint8_t* screen = chip8GetScreen();
-
         // Update texture on memory
         for (int y = 0; y < 32; y++)
         {
             for (int x = 0; x < 64; x++)
             {
-                if (screen[(31 - y) * 64 + x])
+                if (chip8GetPixel((31 - y), x))
                 {
                     texture[y][x][0] = config->accent_color_bgr & 0x0000FF;
                     texture[y][x][1] = (config->accent_color_bgr & 0x00FF00) >> 8;
