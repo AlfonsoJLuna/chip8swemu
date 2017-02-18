@@ -53,8 +53,8 @@ int main(int argc, char* argv[])
                     if (rom_loaded && !unknown_opcode && !config.minimized)
                     {
                         unknown_opcode = chip8StepCpu(config.instructions_per_second / config.screen_refresh_rate);
-                        chip8UpdateTimers();
                         updateAudio(chip8GetAudio() && !config.mute_sound);
+                        chip8UpdateTimers();
                     }
 
                     renderScreen(&config);

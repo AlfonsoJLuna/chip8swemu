@@ -5,8 +5,8 @@ void setDefaultConfig(configuration* config)
 {
     config->instructions_per_second = 840;
     config->window_size_multiplier = 10;
-    config->background_color_bgr = 0x3F2920;
-    config->accent_color_bgr = 0x80C983;
+    config->background_color_bgr = 0x111111;
+    config->accent_color_bgr = 0xDDDDDD;
 
     config->load_rom = false;
     config->quit = false;

@@ -49,8 +49,8 @@ void GUI_ProcessElements(SDL_Window* window, configuration* config)
             ImGui::MenuItem("Reset", NULL, &config->reset);
             if (ImGui::BeginMenu("Speed"))
             {
-                ImGui::SliderInt("I/s", &config->instructions_per_second, config->ips_min, config->ips_max, "%.0f");
-                ImGui::MenuItem("Default (840)", NULL, &config->ips_default);
+                ImGui::SliderInt("Hz", &config->instructions_per_second, config->ips_min, config->ips_max, "%.0f");
+                ImGui::MenuItem("Default (840Hz)", NULL, &config->ips_default);
                 ImGui::EndMenu();
             }
             ImGui::EndMenu();

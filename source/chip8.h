@@ -23,39 +23,39 @@ void chip8ResetCpu();
 
 
 /*
-	Steps the cpu.
-	cycles: The number of instructions to execute.
-	Returns 0 if all instructions were executed succesfully.
-	Returns 1 if an unknown opcode has been processed.
+    Steps the cpu.
+    cycles: The number of instructions to execute.
+    Returns 0 if all instructions were executed succesfully.
+    Returns 1 if an unknown opcode has been processed.
 */
 bool chip8StepCpu(int cycles);
 
 
 /*
-	Decreases the timers.
-	This function needs to be called 60 times per second.
+    Decreases the timers.
+    This function needs to be called 60 times per second.
 */
 void chip8UpdateTimers();
 
 
 /*
-	Updates a key status.
-	This function needs to be called when a key is pressed or released.
-	key: The key pressed or released (from 0x0 to 0xF).
-	status: 1 if the key has been pressed, 0 if the key has been released.
+    Updates a key status.
+    This function needs to be called when a key is pressed or released.
+    key: The key pressed or released (from 0x0 to 0xF).
+    status: 1 if the key has been pressed, 0 if the key has been released.
 */
 void chip8UpdateKey(uint8_t key, bool status);
 
 
 /*
-	Returns a pointer to a 64x32=2048 bytes array where the screen buffer is located.
+    Returns 1 if the pixel is set, 0 if the pixel is clear.
 */
-uint8_t* chip8GetScreen();
+bool chip8GetPixel(int row, int col);
 
 
 /*
-	Returns 1 if the buzzer should beep.
-	Returns 0 if the buzzer should be silent.
+    Returns 1 if the buzzer should beep.
+    Returns 0 if the buzzer should be silent.
 */
 bool chip8GetAudio();
 

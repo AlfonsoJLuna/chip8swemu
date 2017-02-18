@@ -62,14 +62,13 @@ typedef struct
     uint8_t  V[16];         // General purpose registers
     uint8_t  SP;            // Stack pointer
     uint16_t stack[16];
-    uint8_t  screen[2048];  // Screen buffer has 64x32 = 2048 pixels
+    uint8_t  screen[1024];  // Screen buffer needs 128x64 pixels = 8192 bits = 1024 bytes
     bool     keyboard[16];
 
     uint16_t opcode;
 
     uint8_t  delay_timer;
     uint8_t  sound_timer;
-    int      instructions;  // Number of instructions executed since last timers update
 } cpu_t;
 
 
@@ -101,12 +100,35 @@ static inline void fetchInstruction()
 #define OPCODE_NNN (cpu.opcode & 0x0FFF)
 
 
+inline bool chip8GetPixel(int row, int col)
+{
+    if (row < 64 && col < 128)
+        return cpu.screen[(64 * row + col) / 8] & (1 << ((64 * row + col) % 8));
+    else
+        return 0;
+}
+
+
+static inline void setPixel(int row, int col)
+{
+    if (row < 64 && col < 128)
+        cpu.screen[(64 * row + col) / 8] |= (1 << ((64 * row + col) % 8));
+}
+
+
+static inline void clearPixel(int row, int col)
+{
+    if (row < 64 && col < 128)
+        cpu.screen[(64 * row + col) / 8] &= ~(1 << ((64 * row + col) % 8));
+}
+
+
 // 00E0: Clear the display
 static inline void exec00E0()
 {
-    for (int pixel = 0; pixel < 2048; pixel++)
+    for (int i = 0; i < 1024; i++)
     {
-        cpu.screen[pixel] = 0;
+        cpu.screen[i] = 0;
     }
     cpu.PC += 2;
 }
@@ -329,10 +351,17 @@ static inline void execDXYN()
             if (X > 63) X %= 64;
 
             // Check for collision
-            cpu.V[0xF] |= cpu.screen[64*Y + X] & ((sprite_row >> (7 - column)) & 0x1);
+            cpu.V[0xF] |= chip8GetPixel(Y, X) & ((sprite_row >> (7 - column)) & 0x1);
 
             // XOR-Copy sprite_row pixel to screen
-            cpu.screen[64*Y + X] ^= ((sprite_row >> (7 - column)) & 0x1);
+            if (chip8GetPixel(Y, X) ^ ((sprite_row >> (7 - column)) & 0x1))
+            {
+                setPixel(Y, X);
+            }
+            else
+            {
+                clearPixel(Y, X);
+            }
 
             X++;
         }
@@ -549,12 +578,6 @@ void chip8UpdateKey(uint8_t key, bool status)
 {
     if (key <= 0xF)
         cpu.keyboard[key] = status;
-}
-
-
-uint8_t* chip8GetScreen()
-{
-    return cpu.screen;
 }
 
 
