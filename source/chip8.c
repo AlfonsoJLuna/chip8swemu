@@ -119,7 +119,7 @@ static inline void fetchInstruction()
 inline bool chip8GetPixel(int row, int col)
 {
     if (row < 64 && col < 128)
-        return cpu.screen[(64 * col + row) / 8] & (1 << ((64 * col + row) % 8));
+        return (cpu.screen[(128 * row + col) / 8] >> (7 - (col % 8))) & 1;
     else
         return 0;
 }
@@ -128,14 +128,14 @@ inline bool chip8GetPixel(int row, int col)
 static inline void setPixel(int row, int col)
 {
     if (row < 64 && col < 128)
-        cpu.screen[(64 * col + row) / 8] |= (1 << ((64 * col + row) % 8));
+        cpu.screen[(128 * row + col) / 8] |= (1 << (7 - (col % 8)));
 }
 
 
 static inline void clearPixel(int row, int col)
 {
     if (row < 64 && col < 128)
-        cpu.screen[(64 * col + row) / 8] &= ~(1 << ((64 * col + row) % 8));
+        cpu.screen[(128 * row + col) / 8] &= ~(1 << (7 - (col % 8)));
 }
 
 
@@ -403,184 +403,77 @@ static inline void execCXKK()
 }
 
 
-// DXY0: Draw 16x16 or 8x16 sprite starting at memory location I at (VX, VY), set VF = number of rows colliding
+// DXY0: Draw 16x16 sprite starting at memory location I at (VX, VY), set VF = collision
 static inline void execDXY0()
 {
-    if (cpu.extended)
+    cpu.V[0xF] = 0;
+
+    for (int row = 0; row < 16; row++)
     {
-        // Draw 16x16 sprite
-        uint8_t Y = cpu.V[OPCODE_Y];  // Screen Y coordinate (from 0 to 63)
-        uint8_t X;                    // Screen X coordinate (from 0 to 127)
-        uint8_t row;                  // Sprite row coordinate (from 0 to N)
-        uint8_t column;               // Sprite column coordinate (from 0 to 15)
-        uint16_t sprite_row;
-
-        cpu.V[0xF] = 0;
-
-        // For each row of the sprite
-        for (row = 0; row < 16; row++)
+        for (int col = 0; col < 16; col++)
         {
-            sprite_row = memory.data[cpu.I + 2 * row] | (memory.data[cpu.I + 2 * row + 1] >> 4);
+            uint16_t sprite_row = memory.data[cpu.I + 2 * row] << 8 | memory.data[cpu.I + 2 * row + 1];
+        
+            int pixel = (sprite_row >> (15 - col)) & 1;
 
-            // Manage vertical wrap
-            if (Y > 63) Y %= 64;
+            int screen_x = (cpu.V[OPCODE_X] + col) % 128;
+            int screen_y = (cpu.V[OPCODE_Y] + row) % 64;
 
-            X = cpu.V[OPCODE_X];
+            cpu.V[0xF] |= chip8GetPixel(screen_y, screen_x) & pixel;
 
-            // For each column of the row
-            for (column = 0; column < 16; column++)
-            {
-                // Manage horizontal wrap
-                if (X > 127) X %= 128;
-
-                // Check for collision
-                cpu.V[0xF] |= chip8GetPixel(Y, X) & ((sprite_row >> (15 - column)) & 0x1);
-
-                // XOR-Copy sprite_row pixel to screen
-                if (chip8GetPixel(Y, X) ^ ((sprite_row >> (15 - column)) & 0x1))
-                    setPixel(Y, X);
-                else
-                    clearPixel(Y, X);
-                X++;
-            }
-            Y++;
+            if (chip8GetPixel(screen_y, screen_x) ^ pixel)
+                setPixel(screen_y, screen_x);
+            else
+                clearPixel(screen_y, screen_x);
         }
     }
-    else
-    {
-        // Draw 8x16 sprite
-        uint8_t Y = cpu.V[OPCODE_Y];  // Screen Y coordinate (from 0 to 63)
-        uint8_t X;                    // Screen X coordinate (from 0 to 127)
-        uint8_t row;                  // Sprite row coordinate (from 0 to N)
-        uint8_t column;               // Sprite column coordinate (from 0 to 7)
-        uint8_t sprite_row;
-
-        cpu.V[0xF] = 0;
-
-        // For each row of the sprite
-        for (row = 0; row < 16; row++)
-        {
-            sprite_row = memory.data[cpu.I + row];
-
-            // Manage vertical wrap
-            if (Y > 63) Y %= 64;
-
-            X = cpu.V[OPCODE_X];
-
-            // For each column of the row
-            for (column = 0; column < 8; column++)
-            {
-                // Manage horizontal wrap
-                if (X > 127) X %= 128;
-
-                // Check for collision
-                cpu.V[0xF] |= chip8GetPixel(Y, X) & ((sprite_row >> (7 - column)) & 0x1);
-
-                // XOR-Copy sprite_row pixel to screen
-                if (chip8GetPixel(Y, X) ^ ((sprite_row >> (7 - column)) & 0x1))
-                    setPixel(Y, X);
-                else
-                    clearPixel(Y, X);
-                X++;
-            }
-            Y++;
-        }
-    }
+    cpu.PC += 2;
 }
 
 
 // DXYN: Draw 8xN sprite starting at memory location I at (VX, VY), set VF = collision
 static inline void execDXYN()
 {
-    if (cpu.extended)
+    cpu.V[0xF] = 0;
+
+    for (int row = 0; row < OPCODE_N; row++)
     {
-        // Draw using 128x64 resolution
-        uint8_t Y = cpu.V[OPCODE_Y];  // Screen Y coordinate (from 0 to 63)
-        uint8_t X;                    // Screen X coordinate (from 0 to 127)
-        uint8_t row;                  // Sprite row coordinate (from 0 to N)
-        uint8_t column;               // Sprite column coordinate (from 0 to 7)
-        uint8_t sprite_row;
-
-        cpu.V[0xF] = 0;
-
-        // For each row of the sprite
-        for (row = 0; row < OPCODE_N; row++)
+        for (int col = 0; col < 8; col++)
         {
-            sprite_row = memory.data[cpu.I + row];
+            int pixel = (memory.data[cpu.I + row] >> (7 - col)) & 1;
 
-            // Manage vertical wrap
-            if (Y > 63) Y %= 64;
+            int screen_x = (cpu.V[OPCODE_X] + col) % (cpu.extended ? 128 : 64);
+            int screen_y = (cpu.V[OPCODE_Y] + row) % (cpu.extended ? 64  : 32);
 
-            X = cpu.V[OPCODE_X];
+            if (cpu.extended)
+                cpu.V[0xF] |= chip8GetPixel(screen_y, screen_x) & pixel;
+            else
+                cpu.V[0xF] |= chip8GetPixel(2 * screen_y, 2 * screen_x) & pixel;
 
-            // For each column of the row
-            for (column = 0; column < 8; column++)
+            if (cpu.extended)
             {
-                // Manage horizontal wrap
-                if (X > 127) X %= 128;
-
-                // Check for collision
-                cpu.V[0xF] |= chip8GetPixel(Y, X) & ((sprite_row >> (7 - column)) & 0x1);
-
-                // XOR-Copy sprite_row pixel to screen
-                if (chip8GetPixel(Y, X) ^ ((sprite_row >> (7 - column)) & 0x1))
-                    setPixel(Y, X);
+                if (chip8GetPixel(screen_y, screen_x) ^ pixel)
+                    setPixel(screen_y, screen_x);
                 else
-                    clearPixel(Y, X);
-                X++;
+                    clearPixel(screen_y, screen_x);
             }
-            Y++;
-        }
-    }
-    else
-    {
-        // Draw using 64x32 resolution (doubles the coordinates)
-        uint8_t Y = cpu.V[OPCODE_Y];  // Screen Y coordinate (from 0 to 31)
-        uint8_t X;                    // Screen X coordinate (from 0 to 63)
-        uint8_t row;                  // Sprite row coordinate (from 0 to N)
-        uint8_t column;               // Sprite column coordinate (from 0 to 7)
-        uint8_t sprite_row;
-
-        cpu.V[0xF] = 0;
-
-        // For each row of the sprite
-        for (row = 0; row < OPCODE_N; row++)
-        {
-            sprite_row = memory.data[cpu.I + row];
-
-            // Manage vertical wrap
-            if (Y > 31) Y %= 32;
-
-            X = cpu.V[OPCODE_X];
-
-            // For each column of the row
-            for (column = 0; column < 8; column++)
+            else
             {
-                // Manage horizontal wrap
-                if (X > 63) X %= 64;
-
-                // Check for collision
-                cpu.V[0xF] |= chip8GetPixel(2 * Y, 2 * X) & ((sprite_row >> (7 - column)) & 0x1);
-
-                // XOR-Copy sprite_row pixel to screen
-                if (chip8GetPixel(2 * Y, 2 * X) ^ ((sprite_row >> (7 - column)) & 0x1))
+                if (chip8GetPixel(2 * screen_y, 2 * screen_x) ^ pixel)
                 {
-                    setPixel(2 * Y, 2 * X);
-                    setPixel(2 * Y, 2 * X + 1);
-                    setPixel(2 * Y + 1, 2 * X);
-                    setPixel(2 * Y + 1, 2 * X + 1);
+                    setPixel(2 * screen_y, 2 * screen_x);
+                    setPixel(2 * screen_y, 2 * screen_x + 1);
+                    setPixel(2 * screen_y + 1, 2 * screen_x);
+                    setPixel(2 * screen_y + 1, 2 * screen_x + 1);
                 }
                 else
                 {
-                    clearPixel(2 * Y, 2 * X);
-                    clearPixel(2 * Y, 2 * X + 1);
-                    clearPixel(2 * Y + 1, 2 * X);
-                    clearPixel(2 * Y + 1, 2 * X + 1);
+                    clearPixel(2 * screen_y, 2 * screen_x);
+                    clearPixel(2 * screen_y, 2 * screen_x + 1);
+                    clearPixel(2 * screen_y + 1, 2 * screen_x);
+                    clearPixel(2 * screen_y + 1, 2 * screen_x + 1);
                 }
-
-                X++;
             }
-            Y++;
         }
     }
     cpu.PC += 2;
@@ -666,7 +559,7 @@ static inline void execFX29()
 // FX30: Set I = location of high-res sprite for digit VX
 static inline void execFX30()
 {
-    cpu.I = 0xD0 + cpu.V[OPCODE_X] * 10;
+    cpu.I = 0xA0 + cpu.V[OPCODE_X] * 10;
     cpu.PC += 2;
 }
 

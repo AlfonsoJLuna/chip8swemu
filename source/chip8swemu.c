@@ -102,7 +102,12 @@ int main(int argc, char* argv[])
 
                 while (!config.quit)
                 {
-                    processInput(&config.quit, &config.minimized);
+                    if (processInput(&config))
+                    {
+                        chip8ResetCpu();
+                        rom_loaded = !loadRomFromPath(config.rom_path);
+                        unknown_opcode = false;
+                    }
 
                     if (config.load_rom)
                     {
