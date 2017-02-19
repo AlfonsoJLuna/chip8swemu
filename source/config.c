@@ -4,7 +4,7 @@
 void setDefaultConfig(configuration* config)
 {
     config->instructions_per_second = 840;
-    config->window_size_multiplier = 10;
+    config->window_size_multiplier = 5;
     config->background_color_bgr = 0x111111;
     config->accent_color_bgr = 0xEEEEEE;
 

@@ -5,7 +5,10 @@
 #include <stdbool.h>
 
 
-void processInput(bool* quit, bool* minimized);
+#include "config.h"
+
+// Returns 1 if rom drag event happened
+bool processInput(configuration* config);
 
 
 #endif  // INPUT_H

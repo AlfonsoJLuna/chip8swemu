@@ -1,14 +1,17 @@
 #include "input.h"
 #include "gui.h"
 #include "chip8.h"
+
 #include <SDL.h>
 
 
 SDL_Event events;
 
 
-void processInput(bool* quit, bool* minimized)
+bool processInput(configuration* config)
 {
+    bool rom_drag = false;
+
     while (SDL_PollEvent(&events))
     {
         GUI_GetInput(&events);
@@ -16,24 +19,30 @@ void processInput(bool* quit, bool* minimized)
         switch (events.type)
         {
             case SDL_QUIT:
-                *quit = true;
+                config->quit = true;
             break;
 
             case SDL_WINDOWEVENT:
                 switch (events.window.event)
                 {
                     case SDL_WINDOWEVENT_MINIMIZED:
-                        *minimized = true;
+                        config->minimized = true;
                     break;
 
                     case SDL_WINDOWEVENT_MAXIMIZED:
-                        *minimized = false;
+                        config->minimized = false;
                     break;
 
                     case SDL_WINDOWEVENT_RESTORED:
-                        *minimized = false;
+                        config->minimized = false;
                     break;
                 }
+            break;
+
+            case SDL_DROPFILE:
+                memcpy(config->rom_path, events.drop.file, 260);
+                SDL_free(events.drop.file);
+                rom_drag = true;
             break;
 
             case SDL_KEYDOWN:
@@ -86,4 +95,5 @@ void processInput(bool* quit, bool* minimized)
             break;
         }
     }
+    return rom_drag;
 }
