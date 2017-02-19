@@ -11,7 +11,7 @@
 SDL_DisplayMode display_mode;
 SDL_Window* window = NULL;
 SDL_GLContext glcontext;
-uint8_t texture[32][64][3];     // Create a texture of 32 rows of 64 columns of 3 bytes (R, G, B)
+uint8_t texture[64][128][3];     // Create a texture of 64 rows of 128 columns of 3 bytes (R, G, B)
 
 
 bool initializeSDL(configuration* config)
@@ -38,8 +38,8 @@ bool createWindow(configuration* config)
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
 
-    int screen_width = 64 * config->window_size_multiplier;
-    int screen_height = 32 * config->window_size_multiplier + 19;
+    int screen_width = 128 * config->window_size_multiplier;
+    int screen_height = 64 * config->window_size_multiplier + 19;
 
     window = SDL_CreateWindow("chip8swemu v0.1.0", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screen_width, screen_height, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
 
@@ -73,9 +73,9 @@ bool createWindow(configuration* config)
     }
 
     // Clear the texture
-    for (int y = 0; y < 32; y++)
+    for (int y = 0; y < 64; y++)
     {
-        for (int x = 0; x < 64; x++)
+        for (int x = 0; x < 128; x++)
         {
             texture[y][x][0] = config->background_color_bgr & 0x0000FF;
             texture[y][x][1] = (config->background_color_bgr & 0x00FF00) >> 8;
@@ -84,7 +84,7 @@ bool createWindow(configuration* config)
     }
 
     // Specify the texture
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 64, 32, 0, GL_RGB, GL_UNSIGNED_BYTE, (GLvoid*)texture);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 128, 64, 0, GL_RGB, GL_UNSIGNED_BYTE, (GLvoid*)texture);
 
     // Configure the texture
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
@@ -114,11 +114,11 @@ void renderScreen(configuration* config)
         glClear(GL_COLOR_BUFFER_BIT);
 
         // Update texture on memory
-        for (int y = 0; y < 32; y++)
+        for (int y = 0; y < 64; y++)
         {
-            for (int x = 0; x < 64; x++)
+            for (int x = 0; x < 128; x++)
             {
-                if (chip8GetPixel((31 - y), x))
+                if (chip8GetPixel((63 - y), x))
                 {
                     texture[y][x][0] = config->accent_color_bgr & 0x0000FF;
                     texture[y][x][1] = (config->accent_color_bgr & 0x00FF00) >> 8;
@@ -134,7 +134,7 @@ void renderScreen(configuration* config)
         }
 
         // Send texture to GPU
-        glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 64, 32, GL_RGB, GL_UNSIGNED_BYTE, (GLvoid*)texture);
+        glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 128, 64, GL_RGB, GL_UNSIGNED_BYTE, (GLvoid*)texture);
 
         // Render the texture
         glBegin(GL_QUADS);
@@ -169,4 +169,3 @@ void finalizeSDL()
 
     SDL_Quit();
 }
-

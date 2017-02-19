@@ -1,13 +1,13 @@
 # chip8swemu
 
-chip8swemu is a multiplatform CHIP-8 emulator/interpreter written in C.
+chip8swemu is a multiplatform CHIP-8 and Super-CHIP emulator written in C.
 
 ## Features
 
 * Cross-platform support through [SDL2](http://libsdl.org): tested on Windows, but should work on Linux and macOS with minor or no changes.
 * Uses [imgui](https://github.com/ocornut/imgui) for the user interface.
 * Native file selection dialog on Windows.
-* Configurable instructions per second rate (840 by default).
+* Configurable instructions per second rate (840Hz by default).
 * Configurable color palette.
 * Configuration stored in a config.ini file.
 
@@ -23,6 +23,7 @@ The emulator core (`chip8.h`, `chip8.c`) depends only on standard C99 libraries 
 
 ## Documentation
 
+- [Super-CHIP Documentation](https://github.com/Chromatophore/HP48-Superchip)
 - [Mastering CHIP-8](http://mattmik.com/files/chip8/mastering/chip8.html)
 - [Cowgod's CHIP-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
 - [How to write an emulator (CHIP-8 interpreter)](http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)

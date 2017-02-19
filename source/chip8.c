@@ -1,5 +1,6 @@
 #include "chip8.h"
 
+
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
@@ -20,8 +21,9 @@ bool chip8ResetMem(uint8_t* rom, int rom_size)
     // Clear the memory
     memory = (memory_t){0};
 
-    // The charset: sprites representing characters from 0 to F
-    const uint8_t charset[80] = {
+    // The charset: sprites representing characters
+    const uint8_t charset[180] = {
+        // Low-res sprites
         0xF0, 0x90, 0x90, 0x90, 0xF0, // "0"
         0x20, 0x60, 0x20, 0x20, 0x70, // "1"
         0xF0, 0x10, 0xF0, 0x80, 0xF0, // "2"
@@ -37,11 +39,23 @@ bool chip8ResetMem(uint8_t* rom, int rom_size)
         0xF0, 0x80, 0x80, 0x80, 0xF0, // "C"
         0xE0, 0x90, 0x90, 0x90, 0xE0, // "D"
         0xF0, 0x80, 0xF0, 0x80, 0xF0, // "E"
-        0xF0, 0x80, 0xF0, 0x80, 0x80  // "F"
+        0xF0, 0x80, 0xF0, 0x80, 0x80, // "F"
+
+        // High-res sprites
+        0x3C, 0x7E, 0xE7, 0xC3, 0xC3, 0xC3, 0xC3, 0xE7, 0x7E, 0x3C, // "0"
+        0x18, 0x38, 0x58, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x3C, // "1"
+        0x3E, 0x7F, 0xC3, 0x06, 0x0C, 0x18, 0x30, 0x60, 0xFF, 0xFF, // "2"
+        0x3C, 0x7E, 0xC3, 0x03, 0x0E, 0x0E, 0x03, 0xC3, 0x7E, 0x3C, // "3"
+        0x06, 0x0E, 0x1E, 0x36, 0x66, 0xC6, 0xFF, 0xFF, 0x06, 0x06, // "4"
+        0xFF, 0xFF, 0xC0, 0xC0, 0xFC, 0xFE, 0x03, 0xC3, 0x7E, 0x3C, // "5"
+        0x3E, 0x7C, 0xC0, 0xC0, 0xFC, 0xFE, 0xC3, 0xC3, 0x7E, 0x3C, // "6"
+        0xFF, 0xFF, 0x03, 0x06, 0x0C, 0x18, 0x30, 0x60, 0x60, 0x60, // "7"
+        0x3C, 0x7E, 0xC3, 0xC3, 0x7E, 0x7E, 0xC3, 0xC3, 0x7E, 0x3C, // "8"
+        0x3C, 0x7E, 0xC3, 0xC3, 0x7F, 0x3F, 0x03, 0x03, 0x3E, 0x7C  // "9"
     };
 
     // Copy the charset into memory starting at memory address 0x50
-    memcpy(&memory.data[0x50], charset, 80);
+    memcpy(&memory.data[0x50], charset, 180);
 
     // Check if the rom fits the memory
     if (rom_size <= 3584)
@@ -60,9 +74,11 @@ typedef struct
     uint16_t PC;            // Program counter
     uint16_t I;             // Index register
     uint8_t  V[16];         // General purpose registers
+    uint8_t  R[8];          // User editable registers
     uint8_t  SP;            // Stack pointer
     uint16_t stack[16];
     uint8_t  screen[1024];  // Screen buffer needs 128x64 pixels = 8192 bits = 1024 bytes
+    bool     extended;      // Extended screen (128x64 mode)
     bool     keyboard[16];
 
     uint16_t opcode;
@@ -103,7 +119,7 @@ static inline void fetchInstruction()
 inline bool chip8GetPixel(int row, int col)
 {
     if (row < 64 && col < 128)
-        return cpu.screen[(64 * row + col) / 8] & (1 << ((64 * row + col) % 8));
+        return cpu.screen[(64 * col + row) / 8] & (1 << ((64 * col + row) % 8));
     else
         return 0;
 }
@@ -112,24 +128,39 @@ inline bool chip8GetPixel(int row, int col)
 static inline void setPixel(int row, int col)
 {
     if (row < 64 && col < 128)
-        cpu.screen[(64 * row + col) / 8] |= (1 << ((64 * row + col) % 8));
+        cpu.screen[(64 * col + row) / 8] |= (1 << ((64 * col + row) % 8));
 }
 
 
 static inline void clearPixel(int row, int col)
 {
     if (row < 64 && col < 128)
-        cpu.screen[(64 * row + col) / 8] &= ~(1 << ((64 * row + col) % 8));
+        cpu.screen[(64 * col + row) / 8] &= ~(1 << ((64 * col + row) % 8));
+}
+
+
+// 00BN: Scroll display N lines up
+static inline void exec00BN()
+{
+    memmove(cpu.screen, &cpu.screen[16 * OPCODE_N], 1024 - 16 * OPCODE_N);
+    memset(&cpu.screen[1023 - 16 * OPCODE_N], 0, 16 * OPCODE_N);
+    cpu.PC += 2;
+}
+
+
+// 00CN: Scroll display N lines down
+static inline void exec00CN()
+{
+    memmove(&cpu.screen[16 * OPCODE_N], cpu.screen, 1024 - 16 * OPCODE_N);
+    memset(cpu.screen, 0, 16 * OPCODE_N);
+    cpu.PC += 2;
 }
 
 
 // 00E0: Clear the display
 static inline void exec00E0()
 {
-    for (int i = 0; i < 1024; i++)
-    {
-        cpu.screen[i] = 0;
-    }
+    memset(cpu.screen, 0, 1024);
     cpu.PC += 2;
 }
 
@@ -139,6 +170,57 @@ static inline void exec00EE()
 {
     cpu.SP--;
     cpu.PC = cpu.stack[cpu.SP];
+    cpu.PC += 2;
+}
+
+
+// 00FB: Scroll display 4 pixels right
+static inline void exec00FB()
+{
+    for (int row = 0; row < 64; row++)
+        for (int col = 15; col >= 0; col--)
+        {
+            cpu.screen[16 * row + col] >>= 4;
+            if (col > 0)
+                cpu.screen[16 * row + col] |= (cpu.screen[16 * row + col - 1] & 0x0F) << 4;
+        }
+    cpu.PC += 2;
+}
+
+
+// 00FC: Scroll display 4 pixels left
+static inline void exec00FC()
+{
+    for (int row = 0; row < 64; row++)
+        for (int col = 0; col < 16; col++)
+        {
+            cpu.screen[16 * row + col] <<= 4;
+            if (col < 15)
+                cpu.screen[16 * row + col] |= (cpu.screen[16 * row + col + 1] & 0xF0) >> 4;
+        }
+    cpu.PC += 2;
+}
+
+
+// 00FD: Exit CHIP interpreter
+static inline void exec00FD()
+{
+    // Stop incrementing the PC
+}
+
+
+// 00FE: Disable extended screen mode
+static inline void exec00FE()
+{
+    cpu.extended = false;
+    cpu.PC += 2;
+}
+
+
+// 00FF: Enable extended screen mode
+static inline void exec00FF()
+{
+    cpu.extended = true;
     cpu.PC += 2;
 }
 
@@ -240,9 +322,7 @@ static inline void exec8XY3()
 // 8XY4: Set VX = VX + VY, set VF = carry
 static inline void exec8XY4()
 {
-    // Overflow occurred if VX > VX + VY
-    cpu.V[0xF] = cpu.V[OPCODE_X] > (cpu.V[OPCODE_X] + cpu.V[OPCODE_Y]);
-    // VX = VX + VY
+    cpu.V[0xF] = (cpu.V[OPCODE_X] + cpu.V[OPCODE_Y]) > 0xFF;
     cpu.V[OPCODE_X] += cpu.V[OPCODE_Y];
     cpu.PC += 2;
 }
@@ -323,49 +403,185 @@ static inline void execCXKK()
 }
 
 
-// DXYN: Display N-byte sprite starting at memory location I at (VX, VY), set VF = collision
+// DXY0: Draw 16x16 or 8x16 sprite starting at memory location I at (VX, VY), set VF = number of rows colliding
+static inline void execDXY0()
+{
+    if (cpu.extended)
+    {
+        // Draw 16x16 sprite
+        uint8_t Y = cpu.V[OPCODE_Y];  // Screen Y coordinate (from 0 to 63)
+        uint8_t X;                    // Screen X coordinate (from 0 to 127)
+        uint8_t row;                  // Sprite row coordinate (from 0 to N)
+        uint8_t column;               // Sprite column coordinate (from 0 to 15)
+        uint16_t sprite_row;
+
+        cpu.V[0xF] = 0;
+
+        // For each row of the sprite
+        for (row = 0; row < 16; row++)
+        {
+            sprite_row = memory.data[cpu.I + 2 * row] | (memory.data[cpu.I + 2 * row + 1] >> 4);
+
+            // Manage vertical wrap
+            if (Y > 63) Y %= 64;
+
+            X = cpu.V[OPCODE_X];
+
+            // For each column of the row
+            for (column = 0; column < 16; column++)
+            {
+                // Manage horizontal wrap
+                if (X > 127) X %= 128;
+
+                // Check for collision
+                cpu.V[0xF] |= chip8GetPixel(Y, X) & ((sprite_row >> (15 - column)) & 0x1);
+
+                // XOR-Copy sprite_row pixel to screen
+                if (chip8GetPixel(Y, X) ^ ((sprite_row >> (15 - column)) & 0x1))
+                    setPixel(Y, X);
+                else
+                    clearPixel(Y, X);
+                X++;
+            }
+            Y++;
+        }
+    }
+    else
+    {
+        // Draw 8x16 sprite
+        uint8_t Y = cpu.V[OPCODE_Y];  // Screen Y coordinate (from 0 to 63)
+        uint8_t X;                    // Screen X coordinate (from 0 to 127)
+        uint8_t row;                  // Sprite row coordinate (from 0 to N)
+        uint8_t column;               // Sprite column coordinate (from 0 to 7)
+        uint8_t sprite_row;
+
+        cpu.V[0xF] = 0;
+
+        // For each row of the sprite
+        for (row = 0; row < 16; row++)
+        {
+            sprite_row = memory.data[cpu.I + row];
+
+            // Manage vertical wrap
+            if (Y > 63) Y %= 64;
+
+            X = cpu.V[OPCODE_X];
+
+            // For each column of the row
+            for (column = 0; column < 8; column++)
+            {
+                // Manage horizontal wrap
+                if (X > 127) X %= 128;
+
+                // Check for collision
+                cpu.V[0xF] |= chip8GetPixel(Y, X) & ((sprite_row >> (7 - column)) & 0x1);
+
+                // XOR-Copy sprite_row pixel to screen
+                if (chip8GetPixel(Y, X) ^ ((sprite_row >> (7 - column)) & 0x1))
+                    setPixel(Y, X);
+                else
+                    clearPixel(Y, X);
+                X++;
+            }
+            Y++;
+        }
+    }
+}
+
+
+// DXYN: Draw 8xN sprite starting at memory location I at (VX, VY), set VF = collision
 static inline void execDXYN()
 {
-    uint8_t Y = cpu.V[OPCODE_Y];  // Screen Y coordinate (from 0 to 31)
-    uint8_t X;                    // Screen X coordinate (from 0 to 63)
-    uint8_t row;                  // Sprite row coordinate (from 0 to N)
-    uint8_t column;               // Sprite column coordinate (from 0 to 7)
-    uint8_t sprite_row;
-
-    cpu.V[0xF] = 0;
-
-    // For each row of the sprite
-    for (row = 0; row < OPCODE_N; row++)
+    if (cpu.extended)
     {
-        sprite_row = memory.data[cpu.I + row];
+        // Draw using 128x64 resolution
+        uint8_t Y = cpu.V[OPCODE_Y];  // Screen Y coordinate (from 0 to 63)
+        uint8_t X;                    // Screen X coordinate (from 0 to 127)
+        uint8_t row;                  // Sprite row coordinate (from 0 to N)
+        uint8_t column;               // Sprite column coordinate (from 0 to 7)
+        uint8_t sprite_row;
 
-        // Manage vertical wrap
-        if (Y > 31) Y %= 32;
+        cpu.V[0xF] = 0;
 
-        X = cpu.V[OPCODE_X];
-
-        // For each column of the row
-        for (column = 0; column < 8; column++)
+        // For each row of the sprite
+        for (row = 0; row < OPCODE_N; row++)
         {
-            // Manage horizontal wrap
-            if (X > 63) X %= 64;
+            sprite_row = memory.data[cpu.I + row];
 
-            // Check for collision
-            cpu.V[0xF] |= chip8GetPixel(Y, X) & ((sprite_row >> (7 - column)) & 0x1);
+            // Manage vertical wrap
+            if (Y > 63) Y %= 64;
 
-            // XOR-Copy sprite_row pixel to screen
-            if (chip8GetPixel(Y, X) ^ ((sprite_row >> (7 - column)) & 0x1))
+            X = cpu.V[OPCODE_X];
+
+            // For each column of the row
+            for (column = 0; column < 8; column++)
             {
-                setPixel(Y, X);
-            }
-            else
-            {
-                clearPixel(Y, X);
-            }
+                // Manage horizontal wrap
+                if (X > 127) X %= 128;
 
-            X++;
+                // Check for collision
+                cpu.V[0xF] |= chip8GetPixel(Y, X) & ((sprite_row >> (7 - column)) & 0x1);
+
+                // XOR-Copy sprite_row pixel to screen
+                if (chip8GetPixel(Y, X) ^ ((sprite_row >> (7 - column)) & 0x1))
+                    setPixel(Y, X);
+                else
+                    clearPixel(Y, X);
+                X++;
+            }
+            Y++;
         }
-        Y++;
+    }
+    else
+    {
+        // Draw using 64x32 resolution (doubles the coordinates)
+        uint8_t Y = cpu.V[OPCODE_Y];  // Screen Y coordinate (from 0 to 31)
+        uint8_t X;                    // Screen X coordinate (from 0 to 63)
+        uint8_t row;                  // Sprite row coordinate (from 0 to N)
+        uint8_t column;               // Sprite column coordinate (from 0 to 7)
+        uint8_t sprite_row;
+
+        cpu.V[0xF] = 0;
+
+        // For each row of the sprite
+        for (row = 0; row < OPCODE_N; row++)
+        {
+            sprite_row = memory.data[cpu.I + row];
+
+            // Manage vertical wrap
+            if (Y > 31) Y %= 32;
+
+            X = cpu.V[OPCODE_X];
+
+            // For each column of the row
+            for (column = 0; column < 8; column++)
+            {
+                // Manage horizontal wrap
+                if (X > 63) X %= 64;
+
+                // Check for collision
+                cpu.V[0xF] |= chip8GetPixel(2 * Y, 2 * X) & ((sprite_row >> (7 - column)) & 0x1);
+
+                // XOR-Copy sprite_row pixel to screen
+                if (chip8GetPixel(2 * Y, 2 * X) ^ ((sprite_row >> (7 - column)) & 0x1))
+                {
+                    setPixel(2 * Y, 2 * X);
+                    setPixel(2 * Y, 2 * X + 1);
+                    setPixel(2 * Y + 1, 2 * X);
+                    setPixel(2 * Y + 1, 2 * X + 1);
+                }
+                else
+                {
+                    clearPixel(2 * Y, 2 * X);
+                    clearPixel(2 * Y, 2 * X + 1);
+                    clearPixel(2 * Y + 1, 2 * X);
+                    clearPixel(2 * Y + 1, 2 * X + 1);
+                }
+
+                X++;
+            }
+            Y++;
+        }
     }
     cpu.PC += 2;
 }
@@ -439,10 +655,18 @@ static inline void execFX1E()
 }
 
 
-// FX29: Set I = location of sprite for digit VX
+// FX29: Set I = location of low-res sprite for digit VX
 static inline void execFX29()
 {
     cpu.I = 0x50 + cpu.V[OPCODE_X] * 5;
+    cpu.PC += 2;
+}
+
+
+// FX30: Set I = location of high-res sprite for digit VX
+static inline void execFX30()
+{
+    cpu.I = 0xD0 + cpu.V[OPCODE_X] * 10;
     cpu.PC += 2;
 }
 
@@ -460,10 +684,7 @@ static inline void execFX33()
 // FX55: Store registers V0 through VX in memory starting at location I
 static inline void execFX55()
 {
-    for (int i = 0; i <= OPCODE_X; i++)
-    {
-        memory.data[cpu.I + i] = cpu.V[i];
-    }
+    memcpy(&memory.data[cpu.I], cpu.V, OPCODE_X + 1);
     cpu.PC += 2;
 }
 
@@ -471,10 +692,25 @@ static inline void execFX55()
 // FX65: Read registers V0 through VX from memory starting at location I
 static inline void execFX65()
 {
-    for (int i = 0; i <= OPCODE_X; i++)
-    {
-        cpu.V[i] = memory.data[cpu.I + i];
-    }
+    memcpy(cpu.V, &memory.data[cpu.I], OPCODE_X + 1);
+    cpu.PC += 2;
+}
+
+
+// FX75: Store V0..VX in RPL user flags (X <= 7)
+static inline void execFX75()
+{
+    if (OPCODE_X <= 7)
+        memcpy(cpu.R, cpu.V, OPCODE_X + 1);
+    cpu.PC += 2;
+}
+
+
+// FX85: Read V0..VX from RPL user flags (X <= 7)
+static inline void execFX85()
+{
+    if (OPCODE_X <= 7)
+        memcpy(cpu.V, cpu.R, OPCODE_X + 1);
     cpu.PC += 2;
 }
 
@@ -486,64 +722,92 @@ static inline bool decodeInstruction()
     switch (cpu.opcode & 0xF000)
     {
         case 0x0000:
-            switch (cpu.opcode & 0x0FFF)
+            switch (cpu.opcode & 0xFFF0)
             {
-                case 0x00E0:    exec00E0();         break;
-                case 0x00EE:    exec00EE();         break;
-                default:    unknown_opcode = true;  break;
+                case 0x00B0:            exec00BN();         break;
+                case 0x00C0:            exec00CN();         break;
+                case 0x00E0:
+                    switch (cpu.opcode)
+                    {
+                        case 0x00E0:    exec00E0();         break;
+                        case 0x00EE:    exec00EE();         break;
+                        default:    unknown_opcode = true;  break;
+                    }
+                break;
+                case 0X00F0:
+                    switch (cpu.opcode)
+                    {
+                        case 0x00FB:    exec00FB();         break;
+                        case 0x00FC:    exec00FC();         break;
+                        case 0x00FD:    exec00FD();         break;
+                        case 0x00FE:    exec00FE();         break;
+                        case 0x00FF:    exec00FF();         break;
+                        default:    unknown_opcode = true;  break;
+                    }
+                break;
+                default:            unknown_opcode = true;  break;
             }
         break;
-        case 0x1000:            exec1NNN();         break;
-        case 0x2000:            exec2NNN();         break;
-        case 0x3000:            exec3XKK();         break;
-        case 0x4000:            exec4XKK();         break;
-        case 0x5000:            exec5XY0();         break;
-        case 0x6000:            exec6XKK();         break;
-        case 0x7000:            exec7XKK();         break;
+        case 0x1000:                    exec1NNN();         break;
+        case 0x2000:                    exec2NNN();         break;
+        case 0x3000:                    exec3XKK();         break;
+        case 0x4000:                    exec4XKK();         break;
+        case 0x5000:                    exec5XY0();         break;
+        case 0x6000:                    exec6XKK();         break;
+        case 0x7000:                    exec7XKK();         break;
         case 0x8000:
             switch (cpu.opcode & 0x000F)
             {
-                case 0x0000:    exec8XY0();         break;
-                case 0x0001:    exec8XY1();         break;
-                case 0x0002:    exec8XY2();         break;
-                case 0x0003:    exec8XY3();         break;
-                case 0x0004:    exec8XY4();         break;
-                case 0x0005:    exec8XY5();         break;
-                case 0x0006:    exec8XY6();         break;
-                case 0x0007:    exec8XY7();         break;
-                case 0x000E:    exec8XYE();         break;
-                default:    unknown_opcode = true;  break;
+                case 0x0000:            exec8XY0();         break;
+                case 0x0001:            exec8XY1();         break;
+                case 0x0002:            exec8XY2();         break;
+                case 0x0003:            exec8XY3();         break;
+                case 0x0004:            exec8XY4();         break;
+                case 0x0005:            exec8XY5();         break;
+                case 0x0006:            exec8XY6();         break;
+                case 0x0007:            exec8XY7();         break;
+                case 0x000E:            exec8XYE();         break;
+                default:            unknown_opcode = true;  break;
             }
         break;
-        case 0x9000:            exec9XY0();         break;
-        case 0xA000:            execANNN();         break;
-        case 0xB000:            execBNNN();         break;
-        case 0xC000:            execCXKK();         break;
-        case 0xD000:            execDXYN();         break;
+        case 0x9000:                    exec9XY0();         break;
+        case 0xA000:                    execANNN();         break;
+        case 0xB000:                    execBNNN();         break;
+        case 0xC000:                    execCXKK();         break;
+        case 0xD000:
+            switch(cpu.opcode & 0x000F)
+            {
+                case 0x0000:            execDXY0();         break;
+                default:                execDXYN();         break;
+            }
+        break;
         case 0xE000:
             switch (cpu.opcode & 0x00FF)
             {
-                case 0x009E:    execEX9E();         break;
-                case 0x00A1:    execEXA1();         break;
-                default:    unknown_opcode = true;  break;
+                case 0x009E:            execEX9E();         break;
+                case 0x00A1:            execEXA1();         break;
+                default:            unknown_opcode = true;  break;
             }
         break;
         case 0xF000:
             switch (cpu.opcode & 0x00FF)
             {
-                case 0x0007:    execFX07();         break;
-                case 0x000A:    execFX0A();         break;
-                case 0x0015:    execFX15();         break;
-                case 0x0018:    execFX18();         break;
-                case 0x001E:    execFX1E();         break;
-                case 0x0029:    execFX29();         break;
-                case 0x0033:    execFX33();         break;
-                case 0x0055:    execFX55();         break;
-                case 0x0065:    execFX65();         break;
-                default:    unknown_opcode = true;  break;
+                case 0x0007:            execFX07();         break;
+                case 0x000A:            execFX0A();         break;
+                case 0x0015:            execFX15();         break;
+                case 0x0018:            execFX18();         break;
+                case 0x001E:            execFX1E();         break;
+                case 0x0029:            execFX29();         break;
+                case 0x0030:            execFX30();         break;
+                case 0x0033:            execFX33();         break;
+                case 0x0055:            execFX55();         break;
+                case 0x0065:            execFX65();         break;
+                case 0x0075:            execFX75();         break;
+                case 0x0085:            execFX85();         break;
+                default:            unknown_opcode = true;  break;
             }
         break;
-        default:            unknown_opcode = true;  break;
+        default:                    unknown_opcode = true;  break;
     }
 
     return unknown_opcode;

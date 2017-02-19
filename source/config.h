@@ -30,9 +30,9 @@ typedef struct
     bool quit;
     bool reset;
     bool ips_default;
+    bool window_5x;
     bool window_10x;
     bool window_15x;
-    bool window_20x;
     bool minimized;
     bool mute_sound;
 } configuration;
