@@ -59,9 +59,9 @@ void GUI_ProcessElements(SDL_Window* window, configuration* config)
         {
             if (ImGui::BeginMenu("Window Size"))
             {
+                ImGui::MenuItem("5x", NULL, &config->window_5x);
                 ImGui::MenuItem("10x", NULL, &config->window_10x);
                 ImGui::MenuItem("15x", NULL, &config->window_15x);
-                ImGui::MenuItem("20x", NULL, &config->window_20x);
                 ImGui::EndMenu();
             }
             if (ImGui::BeginMenu("Color Palette"))
@@ -130,7 +130,7 @@ void GUI_ProcessElements(SDL_Window* window, configuration* config)
         ImGui::Begin("About", &show_window_about);
         ImGui::TextWrapped("chip8swemu v0.1.0\n"
             "by AlfonsoJLuna\n\n"
-            "chip8swemu is a multiplatform CHIP-8 emulator written in C.\n"
+            "Multiplatform CHIP-8 and Super-CHIP emulator.\n\n"
             "More details: https://github.com/AlfonsoJLuna/chip8swemu\n\n"
             "Libraries used:\n"
             "SDL 2.0.5 - http://libsdl.org\n"
@@ -145,23 +145,23 @@ void GUI_ProcessElements(SDL_Window* window, configuration* config)
     }
 
     // Resize window if multiplier was changed
+    if (config->window_5x)
+    {
+            config->window_size_multiplier = 5;
+            SDL_SetWindowSize(window, 5 * 128, 5 * 64 + 19);
+            config->window_5x = false;
+    }
     if (config->window_10x)
     {
             config->window_size_multiplier = 10;
-            SDL_SetWindowSize(window, 10 * 64, 10 * 32 + 19);
+            SDL_SetWindowSize(window, 10 * 128, 10 * 64 + 19);
             config->window_10x = false;
     }
     if (config->window_15x)
     {
             config->window_size_multiplier = 15;
-            SDL_SetWindowSize(window, 15 * 64, 15 * 32 + 19);
+            SDL_SetWindowSize(window, 15 * 128, 15 * 64 + 19);
             config->window_15x = false;
-    }
-    if (config->window_20x)
-    {
-            config->window_size_multiplier = 20;
-            SDL_SetWindowSize(window, 20 * 64, 20 * 32 + 19);
-            config->window_20x = false;
     }
     
     // Convert ImVec4 to BGR
