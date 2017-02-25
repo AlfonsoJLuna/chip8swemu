@@ -2,7 +2,9 @@
 #include "gui.h"
 #include "chip8.h"
 
+
 #include <SDL.h>
+#include <string.h>
 
 
 SDL_Event events;

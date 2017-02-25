@@ -123,6 +123,7 @@ int main(int argc, char* argv[])
                     if (config.reset)
                     {
                         chip8ResetCpu();
+                        unknown_opcode = false;
                         config.reset = false;
                     }
 

@@ -743,3 +743,9 @@ bool chip8GetAudio()
 {
     return cpu.sound_timer > 0;
 }
+
+
+uint8_t* chip8GetScreen()
+{
+    return cpu.screen;
+}
