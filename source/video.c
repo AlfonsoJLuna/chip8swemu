@@ -41,7 +41,7 @@ bool createWindow(configuration* config)
     int screen_width = 128 * config->window_size_multiplier;
     int screen_height = 64 * config->window_size_multiplier + 19;
 
-    window = SDL_CreateWindow("chip8swemu v0.1.0", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screen_width, screen_height, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
+    window = SDL_CreateWindow("chip8swemu v1.0.0", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, screen_width, screen_height, SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
 
     if (window == NULL)
     {

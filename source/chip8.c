@@ -355,7 +355,7 @@ static inline void exec8XY7()
     // Borrow occurred if VX > VY, so NOT borrow occured if VY >= VX
     cpu.V[0xF] = cpu.V[OPCODE_Y] >= cpu.V[OPCODE_X];
     // VX = VY - VX
-    cpu.V[OPCODE_Y] -= cpu.V[OPCODE_X];
+    cpu.V[OPCODE_X] = cpu.V[OPCODE_Y] - cpu.V[OPCODE_X];
     cpu.PC += 2;
 }
 
@@ -544,6 +544,7 @@ static inline void execFX18()
 static inline void execFX1E()
 {
     cpu.I += cpu.V[OPCODE_X];
+    cpu.V[0xF] = cpu.I >= 0x1000;
     cpu.PC += 2;
 }
 
