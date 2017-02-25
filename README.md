@@ -4,6 +4,7 @@ chip8swemu is a multiplatform CHIP-8 and Super-CHIP emulator written in C.
 
 ## Features
 
+* CHIP-8 and Super-CHIP instructions support.
 * Cross-platform support through [SDL2](http://libsdl.org): tested on Windows, but should work on Linux and macOS with minor or no changes.
 * Uses [imgui](https://github.com/ocornut/imgui) for the user interface.
 * Native file selection dialog on Windows.
