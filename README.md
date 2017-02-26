@@ -4,12 +4,6 @@ Multiplatform CHIP-8 and Super-CHIP emulator written in C.
 
 Get the latest release: https://github.com/AlfonsoJLuna/chip8swemu/releases
 
-### About CHIP-8
-
-CHIP-8 is an interpreted programming language designed to make easier the writing of simple games for some home computers based on the RCA CDP1802 processor in the late 1970s.
-
-An extension of the CHIP-8 instruction set called Super-CHIP was introduced in 1991 initially for use on the HP48 graphing calculators.
-
 ## Features
 
 * Compatible with CHIP-8 and Super-CHIP instructions.
@@ -21,11 +15,6 @@ An extension of the CHIP-8 instruction set called Super-CHIP was introduced in 1
 
 The emulator core (`chip8.h`, `chip8.c`) is written as an independent and easily reusable library that can be included in other projects, with no other dependencies than the standard C99 libraries. The [chip8duino](https://github.com/AlfonsoJLuna/chip8duino) game console uses it as is.
 
-### Known issues
-
-* Some games (Blitz for CHIP-8, Mines for Super-CHIP) doesn't work properly if the screen wraps vertically, but other games need that feature. The wrapping should be configurable for better compatibility.
-* DXY0 instruction should draw an 8x16 sprite when used in low resolution mode, but no game depends on it.
-
 ## Screenshots
 
 ![breakout](/screenshots/breakout.png)
@@ -34,7 +23,18 @@ The emulator core (`chip8.h`, `chip8.c`) is written as an independent and easily
 
 ![invaders](/screenshots/invaders.png)
 
-## Documentation
+## Known issues
+
+* Some games (Blitz for CHIP-8, Mines for Super-CHIP) doesn't work properly if the screen wraps vertically, but other games need that feature. The wrapping should be configurable for better compatibility.
+* DXY0 instruction should draw an 8x16 sprite when used in low resolution mode, but no game depends on it.
+
+## About CHIP-8
+
+CHIP-8 is an interpreted programming language designed to make easier the writing of simple games for some home computers based on the RCA CDP1802 processor in the late 1970s.
+
+An extension of the CHIP-8 instruction set called Super-CHIP was introduced in 1991 initially for use on the HP48 graphing calculators.
+
+### Documentation
 
 - [CHIP-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8)
 - [Mastering CHIP-8](http://mattmik.com/files/chip8/mastering/chip8.html)
