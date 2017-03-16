@@ -13,7 +13,7 @@ Get the latest release: https://github.com/AlfonsoJLuna/chip8swemu/releases
 * Configurable instructions per second rate, 840Hz by default.
 * Configurable color palette.
 
-The emulator core (`chip8.h`, `chip8.c`) is written as an easily reusable library that can be included in other projects, with no other dependencies than the standard C99 libraries. The [chip8duino](https://github.com/AlfonsoJLuna/chip8duino) game console uses it.
+The emulator core (`chip8.h`, `chip8.c`) is written as an easily reusable library that can be included in other projects, with no other dependencies than the standard C99 libraries. The [chip8stm32](https://github.com/AlfonsoJLuna/chip8stm32) game console uses it.
 
 ## Screenshots
 
