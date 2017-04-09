@@ -1,3 +1,10 @@
+/*
+    CHIP-8 and Super-CHIP interpreter library
+    The MIT License (MIT) - Copyright (c) 2017 AlfonsoJLuna
+    https://github.com/AlfonsoJLuna/chip8swemu
+*/
+
+
 #include "chip8.h"
 
 
