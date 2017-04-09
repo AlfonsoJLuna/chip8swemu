@@ -5,8 +5,8 @@
 */
 
 
-#ifndef CPU_H
-#define CPU_H
+#ifndef CHIP8_H
+#define CHIP8_H
 
 
 #include <stdbool.h>
@@ -84,4 +84,4 @@ bool chip8GetAudio();
 uint8_t* chip8GetScreen();
 
 
-#endif  // CPU_H
+#endif  // CHIP8_H
