@@ -242,8 +242,9 @@ void guiProcessElements(SDL_Window* window)
         ImGui::SetNextWindowSize(ImVec2(450, 115), ImGuiSetCond_Appearing);
         ImGui::SetNextWindowPosCenter(ImGuiSetCond_Appearing);
         ImGui::Begin("Unknown opcode", &show_window_unknownop);
-        ImGui::TextWrapped("An unsupported opcode has been processed.\n"
-            "Emulation will continue but the program may not work as expected.");
+        ImGui::TextWrapped("An unsupported opcode has been processed.\n\n"
+            "Emulation will continue but may not work as expected.\n\n"
+            "Please load a rom with CHIP-8/Super-CHIP instructions only.");
         ImGui::End();
     }
 }

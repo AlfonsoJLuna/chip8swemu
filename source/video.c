@@ -17,6 +17,8 @@ uint8_t texture[64][128][3] = {0};
 
 bool enable_vsync;
 
+double last_time = 0;
+
 
 bool videoInitialize()
 {
@@ -133,10 +135,13 @@ void videoRender()
 
     guiRender();
 
-    SDL_GL_SwapWindow(window);
+    double current_time = SDL_GetPerformanceCounter() / SDL_GetPerformanceFrequency();
+    double busy_time = current_time - last_time;
+    if (!enable_vsync && ((busy_time * 1000) < (1000 / 60)))
+        SDL_Delay(1000 / 60 - busy_time * 1000);
+    last_time = SDL_GetPerformanceCounter() / SDL_GetPerformanceFrequency();
 
-    if (!enable_vsync)
-        SDL_Delay(15);
+    SDL_GL_SwapWindow(window);
 }
 
 
