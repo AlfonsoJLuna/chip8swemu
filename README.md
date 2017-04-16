@@ -17,7 +17,7 @@ The emulator core (`chip8.h`, `chip8.c`) is written as an easily reusable librar
 
 ## Screenshots
 
-![chip8swemu](/screenshots/chip8swemu.png)
+![logo](/screenshots/logo.png)
 
 ![car](/screenshots/car.png)
 
