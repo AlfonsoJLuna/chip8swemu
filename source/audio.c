@@ -1,4 +1,5 @@
 #include "audio.h"
+
 #include <SDL.h>
 #include <math.h>
 #include <stdio.h>
@@ -10,6 +11,8 @@ SDL_AudioDeviceID device = 0;
 
 double wave_position = 0;
 double wave_increment = 2 * M_PI * 1000 / 44100;
+
+bool mute_sound;
 
 
 // Samples can vary between 0 and 255
@@ -24,7 +27,7 @@ void sineWave(void* userdata, Uint8* stream, int lenght)
 }
 
 
-bool initializeAudio()
+bool audioInitialize()
 {
     audiospec = (SDL_AudioSpec*)malloc(sizeof(SDL_AudioSpec));
     audiospec->freq = 44100;
@@ -44,13 +47,19 @@ bool initializeAudio()
 }
 
 
-void updateAudio(bool enable)
+void audioMute(bool mute)
 {
-    SDL_PauseAudioDevice(device, !enable);
+    mute_sound = mute;
 }
 
 
-void finalizeAudio()
+void audioUpdate(bool beep)
+{
+    SDL_PauseAudioDevice(device, !beep || mute_sound);
+}
+
+
+void audioFinalize()
 {
     if (device != 0)
     {
@@ -64,4 +73,3 @@ void finalizeAudio()
         audiospec = NULL;
     }
 }
-

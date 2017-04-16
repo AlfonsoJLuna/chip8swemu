@@ -1,38 +1,80 @@
 #include "gui.h"
+
+#ifdef __cplusplus
+    extern "C" {
+#endif
+
+#include "audio.h"
+#include "chip8.h"
+#include "config.h"
+#include "rom.h"
+#include "video.h"
+
+#ifdef __cplusplus
+    }
+#endif
+
 #include <imgui.h>
 #include <imgui_impl_sdl.h>
-#include <stdbool.h>
 
 
-bool show_window_controls;
-bool show_window_license;
-bool show_window_about;
+static bool flag_load_rom;
+static bool flag_quit;
+static bool flag_reset;
+static bool flag_default_freq;
+static bool flag_window_5x;
+static bool flag_window_10x;
+static bool flag_window_15x;
+static bool flag_mute_sound;
+static bool flag_enable_vsync;
+
+static bool show_window_controls;
+static bool show_window_license;
+static bool show_window_about;
+static bool show_window_unknownop;
 
 
-void GUI_Initialize(SDL_Window* window)
+void guiInitialize(SDL_Window* window)
 {
     ImGui_ImplSdl_Init(window);
     
     // Disable imgui.ini saving
     ImGui::GetIO().IniFilename = NULL;
 
+    flag_load_rom = false;
+    flag_quit = false;
+    flag_reset = false;
+    flag_default_freq = false;
+    flag_window_5x = false;
+    flag_window_10x = false;
+    flag_window_15x = false;
+    flag_mute_sound = false;
+    flag_enable_vsync = false;
+
     show_window_controls = false;
     show_window_license = false;
     show_window_about = false;
+    show_window_unknownop = false;
 }
 
 
-void GUI_GetInput(SDL_Event* event)
+void guiProcessInput(SDL_Event* events)
 {
-    ImGui_ImplSdl_ProcessEvent(event);
+    ImGui_ImplSdl_ProcessEvent(events);
 }
 
 
-void GUI_ProcessElements(SDL_Window* window, configuration* config)
+void guiProcessElements(SDL_Window* window)
 {
-    // Convert BGR to ImVec4
-    ImVec4 background_vector = ImGui::ColorConvertU32ToFloat4(config->background_color_bgr);
-    ImVec4 accent_vector = ImGui::ColorConvertU32ToFloat4(config->accent_color_bgr);
+    int chip8_cpu_freq = configGetCpuFreq();
+
+    color_t color_backgr = configGetColorBackground();
+    color_t color_accent = configGetColorAccent();
+
+    ImVec4 vector_backgr = ImGui::ColorConvertU32ToFloat4(
+        color_backgr.red << 16 | color_backgr.green << 8 | color_backgr.blue);
+    ImVec4 vector_accent = ImGui::ColorConvertU32ToFloat4(
+        color_accent.red << 16 | color_accent.green << 8 | color_accent.blue);
 
     ImGui_ImplSdl_NewFrame(window);
 
@@ -40,39 +82,43 @@ void GUI_ProcessElements(SDL_Window* window, configuration* config)
     {
         if (ImGui::BeginMenu("File"))
         {
-            ImGui::MenuItem("Load ROM...", NULL, &config->load_rom);
-            ImGui::MenuItem("Exit", NULL, &config->quit);
+            ImGui::MenuItem("Load ROM...", NULL, &flag_load_rom);
+            ImGui::MenuItem("Exit", NULL, &flag_quit);
             ImGui::EndMenu();
         }
+
         if (ImGui::BeginMenu("Emulation"))
         {
-            ImGui::MenuItem("Reset", NULL, &config->reset);
-            if (ImGui::BeginMenu("Speed"))
+            ImGui::MenuItem("Reset", NULL, &flag_reset);
+            if (ImGui::BeginMenu("CPU Frequency"))
             {
-                ImGui::SliderInt("Hz", &config->instructions_per_second, config->ips_min, config->ips_max, "%.0f");
-                ImGui::MenuItem("Default (840Hz)", NULL, &config->ips_default);
+                ImGui::SliderInt("Hz", &chip8_cpu_freq, 60, 5000, "%.0f");
+                ImGui::MenuItem("Default (840Hz)", NULL, &flag_default_freq);
                 ImGui::EndMenu();
             }
             ImGui::EndMenu();
         }
+
         if (ImGui::BeginMenu("Settings"))
         {
             if (ImGui::BeginMenu("Window Size"))
             {
-                ImGui::MenuItem("5x", NULL, &config->window_5x);
-                ImGui::MenuItem("10x", NULL, &config->window_10x);
-                ImGui::MenuItem("15x", NULL, &config->window_15x);
+                ImGui::MenuItem("5x", NULL, &flag_window_5x);
+                ImGui::MenuItem("10x", NULL, &flag_window_10x);
+                ImGui::MenuItem("15x", NULL, &flag_window_15x);
                 ImGui::EndMenu();
             }
             if (ImGui::BeginMenu("Color Palette"))
             {
-                ImGui::ColorEdit3("Background", &background_vector.x);
-                ImGui::ColorEdit3("Accent", &accent_vector.x);
+                ImGui::ColorEdit3("Background", &vector_backgr.x);
+                ImGui::ColorEdit3("Accent", &vector_accent.x);
                 ImGui::EndMenu();
             }
-            ImGui::MenuItem("Mute Sound", NULL, &config->mute_sound);
+            ImGui::MenuItem("Mute Sound", NULL, &flag_mute_sound);
+            ImGui::MenuItem("Enable V-Sync", NULL, &flag_enable_vsync);
             ImGui::EndMenu();
         }
+
         if (ImGui::BeginMenu("Help"))
         {
             ImGui::MenuItem("Controls...", NULL, &show_window_controls);
@@ -80,8 +126,61 @@ void GUI_ProcessElements(SDL_Window* window, configuration* config)
             ImGui::MenuItem("About...", NULL, &show_window_about);
             ImGui::EndMenu();
         }
+
         ImGui::EndMainMenuBar();
     }
+
+    if (flag_load_rom)
+    {
+        if (!romObtainPath())
+        {
+            chip8ResetCpu();
+            romLoadFromPath();
+        }
+        flag_load_rom = false;
+    }
+
+    if (flag_reset)
+    {
+        chip8ResetCpu();
+        flag_reset = false;
+    }
+
+    configSetCpuFreq(chip8_cpu_freq);
+
+    if (flag_default_freq)
+    {
+        configSetCpuFreq(840);
+        flag_default_freq = false;
+    }
+
+    if (flag_window_5x)
+    {
+        SDL_SetWindowSize(window, 5 * 128, 5 * 64 + 19);
+        flag_window_5x = false;
+    }
+
+    if (flag_window_10x)
+    {
+        SDL_SetWindowSize(window, 10 * 128, 10 * 64 + 19);
+        flag_window_10x = false;
+    }
+
+    if (flag_window_15x)
+    {
+        SDL_SetWindowSize(window, 15 * 128, 15 * 64 + 19);
+        flag_window_15x = false;
+    }
+
+    uint32_t rgb_backgr = ImGui::ColorConvertFloat4ToU32(vector_backgr);
+    uint32_t rgb_accent = ImGui::ColorConvertFloat4ToU32(vector_accent);
+
+    configSetColorBackground(rgb_backgr >> 16, (rgb_backgr & 0xFF00) >> 8, rgb_backgr & 0xFF);
+    configSetColorAccent(rgb_accent >> 16, (rgb_accent & 0xFF00) >> 8, rgb_accent & 0xFF);
+
+    audioMute(flag_mute_sound);
+
+    videoToggleVsync(flag_enable_vsync);
 
     if (show_window_controls)
     {
@@ -138,46 +237,37 @@ void GUI_ProcessElements(SDL_Window* window, configuration* config)
         ImGui::End();
     }
 
-    if (config->ips_default)
+    if (show_window_unknownop)
     {
-        config->instructions_per_second = 840;
-        config->ips_default = false;
+        ImGui::SetNextWindowSize(ImVec2(450, 115), ImGuiSetCond_Appearing);
+        ImGui::SetNextWindowPosCenter(ImGuiSetCond_Appearing);
+        ImGui::Begin("Unknown opcode", &show_window_unknownop);
+        ImGui::TextWrapped("An unsupported opcode has been processed.\n"
+            "Emulation will continue but the program may not work as expected.");
+        ImGui::End();
     }
-
-    // Resize window if multiplier was changed
-    if (config->window_5x)
-    {
-            config->window_size_multiplier = 5;
-            SDL_SetWindowSize(window, 5 * 128, 5 * 64 + 19);
-            config->window_5x = false;
-    }
-    if (config->window_10x)
-    {
-            config->window_size_multiplier = 10;
-            SDL_SetWindowSize(window, 10 * 128, 10 * 64 + 19);
-            config->window_10x = false;
-    }
-    if (config->window_15x)
-    {
-            config->window_size_multiplier = 15;
-            SDL_SetWindowSize(window, 15 * 128, 15 * 64 + 19);
-            config->window_15x = false;
-    }
-    
-    // Convert ImVec4 to BGR
-    config->background_color_bgr = ImGui::ColorConvertFloat4ToU32(background_vector);
-    config->accent_color_bgr = ImGui::ColorConvertFloat4ToU32(accent_vector);
 }
 
 
-void GUI_Render()
+bool guiGetFlagQuit()
+{
+    return flag_quit;
+}
+
+
+void guiShowUnknownOp()
+{
+    show_window_unknownop = true;
+}
+
+
+void guiRender()
 {
     ImGui::Render();
 }
 
 
-void GUI_Finalize()
+void guiFinalize()
 {
     ImGui_ImplSdl_Shutdown();
 }
-

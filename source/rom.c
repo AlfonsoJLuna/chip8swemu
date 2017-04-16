@@ -1,12 +1,11 @@
-#include "config.h"
+#include "rom.h"
+
 #include "chip8.h"
-#include "video.h"
-#include "audio.h"
-#include "fileio.h"
-#include "input.h"
+#include <stdio.h>
+#include <string.h>
 
 
-const uint8_t default_rom[1072] = {
+static uint8_t default_rom[1072] = {
     0x00, 0xFF, 0x00, 0xE0, 0xA2, 0x01, 0xF0, 0x65, 0xA2, 0x30, 0x61, 0x40, 0x30, 0xFF, 0x81, 0x06,
     0x80, 0x10, 0x80, 0x0E, 0x62, 0x00, 0x63, 0x01, 0x71, 0xFF, 0xD2, 0x11, 0x72, 0x08, 0x92, 0x00,
     0x22, 0x26, 0xF3, 0x1E, 0x12, 0x1A, 0x71, 0xFF, 0x62, 0x00, 0x41, 0xFF, 0x12, 0x2C, 0x00, 0xEE,
@@ -77,70 +76,113 @@ const uint8_t default_rom[1072] = {
 };
 
 
-int main(int argc, char* argv[])
+bool romLoadDefault()
 {
-    configuration config;
-    bool unknown_opcode = false;
-    bool rom_loaded = false;
+    return chip8ResetMem(default_rom, sizeof(default_rom));
+}
 
-    if (!initializeSDL(&config))
+
+static char rom_path[260];
+
+
+void romSetPath(char* path)
+{
+    if (strlen(path) <= 256)
+        strcpy(rom_path, path);
+}
+
+
+#ifdef _WIN32
+
+    #include <shlobj.h>
+    #include <commdlg.h>
+
+    bool romObtainPath()
     {
-        if (!initializeAudio())
-        {
-            setDefaultConfig(&config);
+        OPENFILENAME ofn;
 
-            loadConfig(&config);
+        ZeroMemory(&ofn, sizeof(ofn));
 
-            if (!createWindow(&config))
-            {
-                chip8ResetCpu();
-                
-                if (argc > 1)
-                    rom_loaded = !loadRomFromPath(argv[1]);
-                else
-                    rom_loaded = !chip8ResetMem(default_rom, 1072);
+        ofn.lStructSize = sizeof(ofn);
+        ofn.hwndOwner = NULL;
+        ofn.lpstrFile = rom_path;
+        ofn.lpstrFile[0] = '\0';
+        ofn.nMaxFile = 260;
+        ofn.lpstrFilter = "CHIP-8 Roms\0*.*\0";
+        ofn.nFilterIndex = 1;
+        ofn.lpstrFileTitle = NULL;
+        ofn.nMaxFileTitle = 0;
+        ofn.lpstrInitialDir = "roms";
+        ofn.lpstrTitle = "Select ROM";
+        ofn.Flags = OFN_NOCHANGEDIR | OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
 
-                while (!config.quit)
-                {
-                    if (processInput(&config))
-                    {
-                        chip8ResetCpu();
-                        rom_loaded = !loadRomFromPath(config.rom_path);
-                        unknown_opcode = false;
-                    }
-
-                    if (config.load_rom)
-                    {
-                        if (!getRomPath(config.rom_path))
-                        {
-                            chip8ResetCpu();
-                            rom_loaded = !loadRomFromPath(config.rom_path);
-                            unknown_opcode = false;
-                        }
-                        config.load_rom = false;
-                    }
-
-                    if (config.reset)
-                    {
-                        chip8ResetCpu();
-                        unknown_opcode = false;
-                        config.reset = false;
-                    }
-
-                    if (rom_loaded && !unknown_opcode && !config.minimized)
-                    {
-                        unknown_opcode = chip8StepCpu(config.instructions_per_second / config.screen_refresh_rate);
-                        updateAudio(chip8GetAudio() && !config.mute_sound);
-                        chip8UpdateTimers();
-                    }
-
-                    renderScreen(&config);
-                }
-                saveConfig(&config);
-            }
-            finalizeAudio();
-        }
-        finalizeSDL();
+        return !GetOpenFileName(&ofn);
     }
+
+#elif __linux__
+
+    #include <gtk/gtk.h>
+
+    bool romObtainPath()
+    {
+        // To do
+        return 1;
+    }
+
+#else
+
+    #error Platform not supported
+
+#endif
+
+
+bool romLoadFromPath()
+{
+    // Open ROM file in read and binary mode
+    FILE* ROM = fopen(rom_path, "rb");
+
+    if (ROM == NULL)
+    {
+        perror("Error");
+        printf("Error: ROM file could not be opened.\n");
+        return 1;
+    }
+    printf("ROM file opened successfully.\n");
+
+    // Obtain ROM file size
+    fseek(ROM, 0, SEEK_END);
+    unsigned long int rom_size = ftell(ROM);
+    rewind(ROM);
+    printf("ROM size is %lu bytes.\n", rom_size);
+
+    // Check if ROM file size fits CHIP-8 memory
+    if (rom_size > 3584)
+    {
+        printf("Error: ROM file is too large. Max file size is 3584 bytes.\n");
+        fclose(ROM);
+        return 1;
+    }
+
+    // Copy ROM to a buffer
+    uint8_t buffer[3584];
+    unsigned long int result = fread(buffer, 1, rom_size, ROM);
+    if (result != rom_size)
+    {
+        printf("Error: Program could not be copied to the buffer.\n");
+        fclose(ROM);
+        return 1;
+    }
+
+    // Copy ROM from buffer to CHIP-8 memory
+    if (chip8ResetMem(buffer, rom_size))
+    {
+        printf("Error: Program could not be loaded into memory.\n");
+        fclose(ROM);
+        return 1;
+    }
+
+    // Everything was OK
+    printf("Program loaded into memory.\n");
+    fclose(ROM);
     return 0;
 }

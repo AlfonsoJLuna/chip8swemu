@@ -2,19 +2,36 @@
 #define VIDEO_H
 
 
-#include "config.h"
 #include <stdbool.h>
-#include <stdint.h>
 
 
-bool initializeSDL(configuration* config);
+/**
+ * Initialize SDL and create a window with an OpenGL context.
+ *
+ * @return 0 if the window was created succesfully, 1 otherwise.
+*/
+bool videoInitialize();
 
-bool createWindow(configuration* config);
 
-void renderScreen(configuration* config);
+/**
+ * Enable Vertical Sync
+ *
+ * @param enable
+ *
+ */
+void videoToggleVsync(bool enable);
 
-void finalizeSDL();
+
+/**
+ * Draw the CHIP-8 screen and the GUI to the window.
+*/
+void videoRender();
+
+
+/**
+ * Destroy SDL context.
+*/
+void videoFinalize();
 
 
 #endif  // VIDEO_H
-

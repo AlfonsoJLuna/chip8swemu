@@ -8,42 +8,43 @@
 
 typedef struct
 {
-    // Paths
-    char* program_path;
-    char rom_path[260];
-
-    // Window size
-    unsigned int window_size_multiplier;
-    int window_width;
-    int window_height;
-
-    // Video parameters
-    int screen_refresh_rate;
-    int instructions_per_second;
-    int ips_min;
-    int ips_max;
-    uint32_t background_color_bgr;
-    uint32_t accent_color_bgr;
-
-    // Settings flags
-    bool load_rom;
-    bool quit;
-    bool reset;
-    bool ips_default;
-    bool window_5x;
-    bool window_10x;
-    bool window_15x;
-    bool minimized;
-    bool mute_sound;
-} configuration;
+    int width;
+    int height;
+} window_size_t;
 
 
-void setDefaultConfig(configuration* config);
+typedef struct
+{
+    uint8_t red;
+    uint8_t green;
+    uint8_t blue;
+} color_t;
 
 
-// Converts colors from RGB to BGR and viceversa
-uint32_t colorYGX(uint32_t colorXGY);
+void configSetDefaults();
+
+
+void configSetCpuFreq(int freq);
+
+void configSetWindowSize(int width, int height);
+
+void configSetColorBackground(uint8_t red, uint8_t green, uint8_t blue);
+
+void configSetColorAccent(uint8_t red, uint8_t green, uint8_t blue);
+
+
+int configGetCpuFreq();
+
+window_size_t configGetWindowSize();
+
+color_t configGetColorBackground();
+
+color_t configGetColorAccent();
+
+
+bool configLoadFromFile();
+
+bool configSaveToFile();
 
 
 #endif  // CONFIG_H
-
