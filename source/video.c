@@ -101,15 +101,15 @@ void videoRender()
         {
             if (chip8GetPixel((63 - y), x))
             {
-                texture[y][x][0] = color_accent.blue;
+                texture[y][x][0] = color_accent.red;
                 texture[y][x][1] = color_accent.green;
-                texture[y][x][2] = color_accent.red;
+                texture[y][x][2] = color_accent.blue;
             }
             else
             {
-                texture[y][x][0] = color_backgr.blue;
+                texture[y][x][0] = color_backgr.red;
                 texture[y][x][1] = color_backgr.green;
-                texture[y][x][2] = color_backgr.red;
+                texture[y][x][2] = color_backgr.blue;
             }
         }
     }

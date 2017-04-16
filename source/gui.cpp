@@ -72,9 +72,9 @@ void guiProcessElements(SDL_Window* window)
     color_t color_accent = configGetColorAccent();
 
     ImVec4 vector_backgr = ImGui::ColorConvertU32ToFloat4(
-        color_backgr.red << 16 | color_backgr.green << 8 | color_backgr.blue);
+        color_backgr.blue << 16 | color_backgr.green << 8 | color_backgr.red);
     ImVec4 vector_accent = ImGui::ColorConvertU32ToFloat4(
-        color_accent.red << 16 | color_accent.green << 8 | color_accent.blue);
+        color_accent.blue << 16 | color_accent.green << 8 | color_accent.red);
 
     ImGui_ImplSdl_NewFrame(window);
 
@@ -172,11 +172,11 @@ void guiProcessElements(SDL_Window* window)
         flag_window_15x = false;
     }
 
-    uint32_t rgb_backgr = ImGui::ColorConvertFloat4ToU32(vector_backgr);
-    uint32_t rgb_accent = ImGui::ColorConvertFloat4ToU32(vector_accent);
+    uint32_t bgr_backgr = ImGui::ColorConvertFloat4ToU32(vector_backgr);
+    uint32_t bgr_accent = ImGui::ColorConvertFloat4ToU32(vector_accent);
 
-    configSetColorBackground(rgb_backgr >> 16, (rgb_backgr & 0xFF00) >> 8, rgb_backgr & 0xFF);
-    configSetColorAccent(rgb_accent >> 16, (rgb_accent & 0xFF00) >> 8, rgb_accent & 0xFF);
+    configSetColorBackground(bgr_backgr & 0xFF, (bgr_backgr & 0xFF00) >> 8, bgr_backgr >> 16);
+    configSetColorAccent(bgr_accent & 0xFF, (bgr_accent & 0xFF00) >> 8, bgr_accent >> 16);
 
     audioMute(flag_mute_sound);
 
