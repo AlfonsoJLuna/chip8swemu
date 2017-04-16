@@ -1,50 +1,33 @@
-#include "input.h"
-#include "gui.h"
+#include "events.h"
+
 #include "chip8.h"
-
-
+#include "gui.h"
+#include "rom.h"
 #include <SDL.h>
-#include <string.h>
 
 
 SDL_Event events;
 
 
-bool processInput(configuration* config)
+bool eventsProcess()
 {
-    bool rom_drag = false;
+    bool quit = false;
 
     while (SDL_PollEvent(&events))
     {
-        GUI_GetInput(&events);
+        guiProcessInput(&events);
 
         switch (events.type)
         {
             case SDL_QUIT:
-                config->quit = true;
-            break;
-
-            case SDL_WINDOWEVENT:
-                switch (events.window.event)
-                {
-                    case SDL_WINDOWEVENT_MINIMIZED:
-                        config->minimized = true;
-                    break;
-
-                    case SDL_WINDOWEVENT_MAXIMIZED:
-                        config->minimized = false;
-                    break;
-
-                    case SDL_WINDOWEVENT_RESTORED:
-                        config->minimized = false;
-                    break;
-                }
+                quit = true;
             break;
 
             case SDL_DROPFILE:
-                memcpy(config->rom_path, events.drop.file, 260);
+                romSetPath(events.drop.file);
                 SDL_free(events.drop.file);
-                rom_drag = true;
+                chip8ResetCpu();
+                romLoadFromPath();
             break;
 
             case SDL_KEYDOWN:
@@ -97,5 +80,6 @@ bool processInput(configuration* config)
             break;
         }
     }
-    return rom_drag;
+
+    return quit;
 }

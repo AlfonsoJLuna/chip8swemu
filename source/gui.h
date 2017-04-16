@@ -2,8 +2,8 @@
 #define GUI_H
 
 
-#include "config.h"
 #include <SDL.h>
+#include <stdbool.h>
 
 
 #ifdef __cplusplus
@@ -11,15 +11,19 @@
 #endif
 
 
-void GUI_Initialize(SDL_Window* window);
+void guiInitialize(SDL_Window* window);
 
-void GUI_GetInput(SDL_Event* event);
+void guiProcessInput(SDL_Event* events);
 
-void GUI_ProcessElements(SDL_Window* window, configuration* config);
+void guiProcessElements(SDL_Window* window);
 
-void GUI_Render();
+bool guiGetFlagQuit();
 
-void GUI_Finalize();
+void guiShowUnknownOp();
+
+void guiRender();
+
+void guiFinalize();
 
 
 #ifdef __cplusplus
@@ -28,4 +32,3 @@ void GUI_Finalize();
 
 
 #endif  // GUI_H
-
