@@ -17,11 +17,11 @@ The emulator core (`chip8.h`, `chip8.c`) is written as an easily reusable librar
 
 ## Screenshots
 
-![breakout](/screenshots/breakout.png)
+![chip8swemu](/screenshots/chip8swemu.png)
 
-![tetris](/screenshots/tetris.png)
+![car](/screenshots/car.png)
 
-![invaders](/screenshots/invaders.png)
+![ant](/screenshots/ant.png)
 
 ## Documentation
 
