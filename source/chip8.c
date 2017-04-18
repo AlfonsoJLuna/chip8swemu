@@ -347,7 +347,7 @@ static inline void exec8XY5()
 
 
 // 8XY6: Shifts VX right by one. VF is set to the value of the least significant bit of VX before the shift.
-// Note: VY is ignored on modern implementations
+// Note: The original implementation stores the value of register VY shifted right one bit in register VX.
 static inline void exec8XY6()
 {
     cpu.V[0xF] = cpu.V[OPCODE_X] & 0x01;
