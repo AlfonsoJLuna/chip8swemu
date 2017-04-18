@@ -348,6 +348,7 @@ static inline void exec8XY5()
 
 // 8XY6: Shifts VX right by one. VF is set to the value of the least significant bit of VX before the shift.
 // Note: The original implementation stores the value of register VY shifted right one bit in register VX.
+// This should be configurable for better compatibility.
 static inline void exec8XY6()
 {
     cpu.V[0xF] = cpu.V[OPCODE_X] & 0x01;
@@ -369,6 +370,7 @@ static inline void exec8XY7()
 
 // 8XYE: Shifts VX left by one. VF is set to the value of the most significant bit of VX before the shift.
 // Note: The original implementation stores the value of register VY shifted left one bit in register VX.
+// This should be configurable for better compatibility.
 static inline void exec8XYE()
 {
     cpu.V[0xF] = cpu.V[OPCODE_X] >> 7;
@@ -583,6 +585,8 @@ static inline void execFX33()
 
 
 // FX55: Store registers V0 through VX in memory starting at location I
+// Note: The original implementation also increments I by the number of registers written.
+// This should be configurable for better compatibility.
 static inline void execFX55()
 {
     memcpy(&memory.data[cpu.I], cpu.V, OPCODE_X + 1);
@@ -591,6 +595,8 @@ static inline void execFX55()
 
 
 // FX65: Read registers V0 through VX from memory starting at location I
+// Note: The original implementation also increments I by the number of registers read.
+// This should be configurable for better compatibility.
 static inline void execFX65()
 {
     memcpy(cpu.V, &memory.data[cpu.I], OPCODE_X + 1);
