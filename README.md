@@ -34,12 +34,14 @@ For more information:
 - [Mastering CHIP-8](http://mattmik.com/files/chip8/mastering/chip8.html)
 - [Cowgod's CHIP-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
 - [How to write an emulator (CHIP-8 interpreter)](http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
+- [Mastering SuperChip](https://github.com/JohnEarnest/Octo/blob/gh-pages/docs/SuperChip.md)
 - [Super-CHIP Documentation](https://github.com/Chromatophore/HP48-Superchip)
 
 ## Known issues
 
-* Some games (Blitz for CHIP-8, Mines for Super-CHIP) doesn't work properly if the screen wraps vertically, but other games need that feature. The wrapping should be configurable for better compatibility.
-* DXY0 instruction should draw an 8x16 sprite when used in low resolution mode, but no game depends on it.
+* 8XY6/8XYE and FX55/FX65 instructions behavior in the Super-CHIP interpreter differs from the original CHIP-8. This emulator uses the Super-CHIP approach because it is the expected by most games, but this should be configurable for better compatibility (Animal Race requires the old behavior in order to display the animal sprites correctly).
+* Vertical wrap is always enabled. Some games (Lunar Lander for CHIP-8, for example) require that, but others (Blitz for CHIP-8, Mines for Super-CHIP) don't work properly if the screen wraps vertically. This should be configurable for better compatibility.
+* There are some other weird quirks not considered here because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
 
 ## Dependencies
 
