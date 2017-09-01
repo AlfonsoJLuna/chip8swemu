@@ -7,11 +7,13 @@ Get the latest release: https://github.com/AlfonsoJLuna/chip8swemu/releases
 ## Features
 
 * Compatible with CHIP-8 and Super-CHIP programs.
-* Cross-platform support through [SDL2](http://libsdl.org). Tested on Windows, should work on Linux and macOS with minor or no changes.
+* Cross-platform support through [SDL2](http://libsdl.org).
 * Graphical user interface using [imgui](https://github.com/ocornut/imgui).
-* Native file selection dialog on Windows. On other platforms, roms can be passed as an argument or dropped to the window.
+* Roms can be passed as an argument or dropped to the window.
+* Native file selection dialog on Windows.
 * Configurable instructions per second rate, 840Hz by default.
 * Configurable color palette.
+* Compatibility Mode and configurable vertical wrapping.
 
 The emulator core (`chip8.h`, `chip8.c`) is written as an easily reusable library that can be included in other projects, with no other dependencies than the standard C99 libraries. The [chip8stm32](https://github.com/AlfonsoJLuna/chip8stm32) game console uses it.
 
@@ -22,6 +24,21 @@ The emulator core (`chip8.h`, `chip8.c`) is written as an easily reusable librar
 ![car](/screenshots/car.png)
 
 ![ant](/screenshots/ant.png)
+
+## Quirks
+
+Compatibility Mode: 8XY6/8XYE and FX55/FX65 instructions behavior in the original Super-CHIP interpreter differs from the original CHIP-8. This emulator uses the Super-CHIP approach by default because is the expected by most games, but you can enable the Compatibility Mode if a game requires the old behavior. You need to change the option before loading the game to take effect.
+
+List of known games that require the Compatibility Mode enabled:
+* Animal Race [Brian Astle].ch8
+
+Vertical Wrap: Enabled by default because is the expected by most games, but there are games that don't work properly if the screen wraps vertically. You need to change the option before loading the game to take effect.
+
+List of known games that require the Vertical Wrap disabled:
+* Blitz [David Winter].ch8
+* Mines! - The minehunter [David Winter, 1997].ch8
+
+There are some other weird quirks not considered because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
 
 ## Documentation
 
@@ -36,12 +53,6 @@ For more information:
 - [How to write an emulator (CHIP-8 interpreter)](http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
 - [Mastering SuperChip](https://github.com/JohnEarnest/Octo/blob/gh-pages/docs/SuperChip.md)
 - [Super-CHIP Documentation](https://github.com/Chromatophore/HP48-Superchip)
-
-## Known issues
-
-* 8XY6/8XYE and FX55/FX65 instructions behavior in the Super-CHIP interpreter differs from the original CHIP-8. This emulator uses the Super-CHIP approach because it is the expected by most games, but this should be configurable for better compatibility (Animal Race requires the old behavior in order to display the animal sprites correctly).
-* Vertical wrap is always enabled. Some games (Lunar Lander for CHIP-8, for example) require that, but others (Blitz for CHIP-8, Mines for Super-CHIP) don't work properly if the screen wraps vertically. This should be configurable for better compatibility.
-* There are some other weird quirks not considered here because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
 
 ## Building on Windows
 

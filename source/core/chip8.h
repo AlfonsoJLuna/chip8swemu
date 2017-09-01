@@ -84,4 +84,13 @@ bool chip8GetAudio();
 uint8_t* chip8GetScreen();
 
 
+/**
+ * Change 8XY6, 8XYE, FX55, FX65 behavior between
+ * CHIP-8 (compatibility mode enabled) or Super-CHIP (disabled).
+ *
+ * @param Enable or disable the compatibility mode.
+ */
+void chip8CompatibilityMode(bool enabled);
+
+
 #endif  // CHIP8_H

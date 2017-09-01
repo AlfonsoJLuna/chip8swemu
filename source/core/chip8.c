@@ -92,6 +92,8 @@ typedef struct
 
     uint8_t  delay_timer;
     uint8_t  sound_timer;
+
+    bool compatibility_mode;
 } cpu_t;
 
 
@@ -246,7 +248,7 @@ static inline void exec2NNN()
     cpu.SP++;
     cpu.PC = OPCODE_NNN;
 }
-            
+
 
 // 3XKK: Skip next instruction if VX = KK
 static inline void exec3XKK()
@@ -348,11 +350,19 @@ static inline void exec8XY5()
 
 // 8XY6: Shifts VX right by one. VF is set to the value of the least significant bit of VX before the shift.
 // Note: The original implementation stores the value of register VY shifted right one bit in register VX.
-// This should be configurable for better compatibility.
 static inline void exec8XY6()
 {
-    cpu.V[0xF] = cpu.V[OPCODE_X] & 0x01;
-    cpu.V[OPCODE_X] >>= 1;
+    if (cpu.compatibility_mode)
+    {
+        cpu.V[0xF] = cpu.V[OPCODE_Y] & 0x01;
+        cpu.V[OPCODE_X] = cpu.V[OPCODE_Y] >> 1;
+    }
+    else
+    {
+        cpu.V[0xF] = cpu.V[OPCODE_X] & 0x01;
+        cpu.V[OPCODE_X] >>= 1;
+    }
+
     cpu.PC += 2;
 }
 
@@ -373,8 +383,17 @@ static inline void exec8XY7()
 // This should be configurable for better compatibility.
 static inline void exec8XYE()
 {
-    cpu.V[0xF] = cpu.V[OPCODE_X] >> 7;
-    cpu.V[OPCODE_X] <<= 1;
+    if (cpu.compatibility_mode)
+    {
+        cpu.V[0xF] = cpu.V[OPCODE_Y] >> 7;
+        cpu.V[OPCODE_X] = cpu.V[OPCODE_Y] << 1;
+    }
+    else
+    {
+        cpu.V[0xF] = cpu.V[OPCODE_X] >> 7;
+        cpu.V[OPCODE_X] <<= 1;
+    }
+
     cpu.PC += 2;
 }
 
@@ -393,7 +412,7 @@ static inline void exec9XY0()
 static inline void execANNN()
 {
     cpu.I = OPCODE_NNN;
-    cpu.PC += 2;  
+    cpu.PC += 2;
 }
 
 
@@ -422,7 +441,7 @@ static inline void execDXY0()
         for (int col = 0; col < 16; col++)
         {
             uint16_t sprite_row = memory.data[cpu.I + 2 * row] << 8 | memory.data[cpu.I + 2 * row + 1];
-        
+
             int pixel = (sprite_row >> (15 - col)) & 1;
 
             int screen_x = (cpu.V[OPCODE_X] + col) % 128;
@@ -586,20 +605,26 @@ static inline void execFX33()
 
 // FX55: Store registers V0 through VX in memory starting at location I
 // Note: The original implementation also increments I by the number of registers written.
-// This should be configurable for better compatibility.
 static inline void execFX55()
 {
     memcpy(&memory.data[cpu.I], cpu.V, OPCODE_X + 1);
+
+    if (cpu.compatibility_mode)
+        cpu.I += (OPCODE_X + 1);
+
     cpu.PC += 2;
 }
 
 
 // FX65: Read registers V0 through VX from memory starting at location I
 // Note: The original implementation also increments I by the number of registers read.
-// This should be configurable for better compatibility.
 static inline void execFX65()
 {
     memcpy(cpu.V, &memory.data[cpu.I], OPCODE_X + 1);
+
+    if (cpu.compatibility_mode)
+        cpu.I += (OPCODE_X + 1);
+
     cpu.PC += 2;
 }
 
@@ -761,4 +786,10 @@ bool chip8GetAudio()
 uint8_t* chip8GetScreen()
 {
     return cpu.screen;
+}
+
+
+void chip8CompatibilityMode(bool enabled)
+{
+    cpu.compatibility_mode = enabled;
 }
