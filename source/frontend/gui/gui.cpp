@@ -23,6 +23,7 @@ static bool flag_quit;
 static bool flag_reset;
 static bool flag_default_freq;
 static bool flag_compatibility;
+static bool flag_vertical_wrap;
 static bool flag_window_5x;
 static bool flag_window_10x;
 static bool flag_window_15x;
@@ -47,6 +48,7 @@ void guiInitialize(SDL_Window* window)
     flag_reset = false;
     flag_default_freq = false;
     flag_compatibility = false;
+    flag_vertical_wrap = true;
     flag_window_5x = false;
     flag_window_10x = false;
     flag_window_15x = false;
@@ -99,6 +101,7 @@ void guiProcessElements(SDL_Window* window)
                 ImGui::EndMenu();
             }
             ImGui::MenuItem("Compatibility Mode", NULL, &flag_compatibility);
+            ImGui::MenuItem("Vertical Wrap", NULL, &flag_vertical_wrap);
             ImGui::EndMenu();
         }
 
@@ -158,6 +161,8 @@ void guiProcessElements(SDL_Window* window)
     }
 
     chip8CompatibilityMode(flag_compatibility);
+
+    chip8VerticalWrap(flag_vertical_wrap);
 
     if (flag_window_5x)
     {

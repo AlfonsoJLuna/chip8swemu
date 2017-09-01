@@ -94,6 +94,7 @@ typedef struct
     uint8_t  sound_timer;
 
     bool compatibility_mode;
+    bool vertical_wrap;
 } cpu_t;
 
 
@@ -127,7 +128,7 @@ static inline void fetchInstruction()
 
 inline bool chip8GetPixel(int row, int col)
 {
-    if (row < 64 && col < 128)
+    if (row >= 0 && row <= 63 && col >= 0 && col <= 127)
         return (cpu.screen[(128 * row + col) / 8] >> (7 - (col % 8))) & 1;
     else
         return 0;
@@ -136,14 +137,14 @@ inline bool chip8GetPixel(int row, int col)
 
 static inline void setPixel(int row, int col)
 {
-    if (row < 64 && col < 128)
+    if (row >= 0 && row <= 63 && col >= 0 && col <= 127)
         cpu.screen[(128 * row + col) / 8] |= (1 << (7 - (col % 8)));
 }
 
 
 static inline void clearPixel(int row, int col)
 {
-    if (row < 64 && col < 128)
+    if (row >= 0 && row <= 63 && col >= 0 && col <= 127)
         cpu.screen[(128 * row + col) / 8] &= ~(1 << (7 - (col % 8)));
 }
 
@@ -445,7 +446,16 @@ static inline void execDXY0()
             int pixel = (sprite_row >> (15 - col)) & 1;
 
             int screen_x = (cpu.V[OPCODE_X] + col) % 128;
-            int screen_y = (cpu.V[OPCODE_Y] + row) % 64;
+
+            int screen_y;
+            if (cpu.vertical_wrap)
+            {
+                screen_y = (cpu.V[OPCODE_Y] + row) % 64;
+            }
+            else
+            {
+                screen_y = (cpu.V[OPCODE_Y] + row);
+            }
 
             cpu.V[0xF] |= chip8GetPixel(screen_y, screen_x) & pixel;
 
@@ -471,7 +481,16 @@ static inline void execDXYN()
             int pixel = (memory.data[cpu.I + row] >> (7 - col)) & 1;
 
             int screen_x = (cpu.V[OPCODE_X] + col) % (cpu.extended ? 128 : 64);
-            int screen_y = (cpu.V[OPCODE_Y] + row) % (cpu.extended ? 64  : 32);
+
+            int screen_y;
+            if (cpu.vertical_wrap)
+            {
+                screen_y = (cpu.V[OPCODE_Y] + row) % (cpu.extended ? 64  : 32);
+            }
+            else
+            {
+                screen_y = (cpu.V[OPCODE_Y] + row);
+            }
 
             if (cpu.extended)
                 cpu.V[0xF] |= chip8GetPixel(screen_y, screen_x) & pixel;
@@ -792,4 +811,10 @@ uint8_t* chip8GetScreen()
 void chip8CompatibilityMode(bool enabled)
 {
     cpu.compatibility_mode = enabled;
+}
+
+
+void chip8VerticalWrap(bool enabled)
+{
+    cpu.vertical_wrap = enabled;
 }

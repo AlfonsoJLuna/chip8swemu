@@ -93,4 +93,12 @@ uint8_t* chip8GetScreen();
 void chip8CompatibilityMode(bool enabled);
 
 
+/**
+ * Configure Vertical Wrap
+ *
+ * @param Enable or disable the vertical wrap.
+ */
+void chip8VerticalWrap(bool enabled);
+
+
 #endif  // CHIP8_H
