@@ -43,12 +43,6 @@ For more information:
 * Vertical wrap is always enabled. Some games (Lunar Lander for CHIP-8, for example) require that, but others (Blitz for CHIP-8, Mines for Super-CHIP) don't work properly if the screen wraps vertically. This should be configurable for better compatibility.
 * There are some other weird quirks not considered here because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
 
-## Dependencies
-
-chip8swemu uses the following libraries:
-- [SDL 2.0.5](http://libsdl.org)
-- [imgui 1.51](https://github.com/ocornut/imgui)
-
 ## Building on Windows
 
 1. [Download](http://tdm-gcc.tdragon.net/download) and install the TDM-GCC compiler suite. Be sure you check `Add to PATH` during installation.
