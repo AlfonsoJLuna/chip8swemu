@@ -13,7 +13,7 @@ Get the latest release: https://github.com/AlfonsoJLuna/chip8swemu/releases
 * Native file selection dialog on Windows.
 * Configurable instructions per second rate, 840Hz by default.
 * Configurable color palette.
-* Compatibility Mode and configurable vertical wrapping.
+* Compatibility Mode and configurable vertical wrap.
 
 The emulator core (`chip8.h`, `chip8.c`) is written as an easily reusable library that can be included in other projects, with no other dependencies than the standard C99 libraries. The [chip8stm32](https://github.com/AlfonsoJLuna/chip8stm32) game console uses it.
 
