@@ -38,7 +38,7 @@ bool videoInitialize()
 
     window_size_t window_size = configGetWindowSize();
 
-    window = SDL_CreateWindow("chip8swemu v1.0.0",
+    window = SDL_CreateWindow("chip8swemu v1.1.0",
         SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
         window_size.width, window_size.height,
         SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
@@ -120,17 +120,17 @@ void videoRender()
 
     // Render the texture
     glBegin(GL_QUADS);
-        glTexCoord2f(0.0, 0.0);
-        glVertex2f(-1.0, -1.0);
+        glTexCoord2f(0.0f, 0.0f);
+        glVertex2f(-1.0f, -1.0f);
 
-        glTexCoord2f(1.0, 0.0);
-        glVertex2f(1.0, -1.0);
+        glTexCoord2f(1.0f, 0.0f);
+        glVertex2f(1.0f, -1.0f);
 
-        glTexCoord2f(1.0, 1.0);
-        glVertex2f(1.0, (float)(window_size.height - 19 * 2) / window_size.height);
+        glTexCoord2f(1.0f, 1.0f);
+        glVertex2f(1.0f, (float)(window_size.height - 19 * 2) / window_size.height);
 
-        glTexCoord2f(0.0, 1.0);
-        glVertex2f(-1.0, (float)(window_size.height - 19 * 2) / window_size.height);
+        glTexCoord2f(0.0f, 1.0f);
+        glVertex2f(-1.0f, (float)(window_size.height - 19 * 2) / window_size.height);
     glEnd();
 
     guiRender();
