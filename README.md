@@ -47,12 +47,12 @@ For more information:
 
 chip8swemu uses the following libraries:
 - [SDL 2.0.5](http://libsdl.org)
-- [imgui 1.49](https://github.com/ocornut/imgui)
+- [imgui 1.51](https://github.com/ocornut/imgui)
 
 ## Building on Windows
 
 1. [Download](http://tdm-gcc.tdragon.net/download) and install the TDM-GCC compiler suite. Be sure you check `Add to PATH` during installation.
 2. Clone or download this repository
 3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.5 development libraries for MinGW and extract them to `chip8swemu/libraries/SDL2-2.0.5/...`
-4. [Download](https://github.com/ocornut/imgui/releases) imgui 1.49 source code and place it in `chip8swemu/libraries/imgui-1.49/...`
+4. [Download](https://github.com/ocornut/imgui/releases) imgui 1.51 source code and place it in `chip8swemu/libraries/imgui-1.51/...`
 6. Open a command prompt in `chip8swemu/source/` and type: `mingw32-make`
