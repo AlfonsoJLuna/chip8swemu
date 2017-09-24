@@ -9,14 +9,14 @@ CPP_OBJECTS :=  $(addprefix ../objects/,$(notdir $(CPP_FILES:.cpp=.o)))
 
 INCLUDES := -Icore -Ifrontend -Ifrontend/gui
 
-LSDL2 := -L../libraries/SDL2-2.0.5/i686-w64-mingw32/lib
-ISDL2 := -I../libraries/SDL2-2.0.5/i686-w64-mingw32/include/SDL2
+LSDL2 := -L../libraries/SDL2-2.0.5/x86_64-w64-mingw32/lib
+ISDL2 := -I../libraries/SDL2-2.0.5/x86_64-w64-mingw32/include/SDL2
 IIMGUI := -I../libraries/imgui-1.51
 
 LFLAGS := -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 \
-	-lOpenGL32 -limm32 -lcomdlg32
+	-lOpenGL32 -limm32 -lcomdlg32 -m64
 
-CFLAGS := -Wall -Wextra -MMD -O3
+CFLAGS := -Wall -Wextra -MMD -O3 -m64
 
 ../build/chip8swemu.exe: $(C_OBJECTS) $(CPP_OBJECTS)
 	g++ $^ $(LSDL2) $(LFLAGS) -o $@
