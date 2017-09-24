@@ -19,11 +19,11 @@ The emulator core (`chip8.h`, `chip8.c`) is written as an easily reusable librar
 
 ## Screenshots
 
-![logo](/screenshots/logo.png)
+![logo](/images/logo.png)
 
-![car](/screenshots/car.png)
+![car](/images/car.png)
 
-![ant](/screenshots/ant.png)
+![ant](/images/ant.png)
 
 ## Quirks
 
