@@ -18,9 +18,9 @@ LFLAGS := -Llibraries/SDL2-2.0.5/x86_64-w64-mingw32/lib \
 	-lOpenGL32 -limm32 -lcomdlg32 -m64
 
 build/chip8swemu.exe: $(C_OBJECTS) $(CPP_OBJECTS)
-		@test -d build || mkdir build
-		g++ $^ $(LFLAGS) -o $@
-		xcopy /y libraries\SDL2-2.0.5\x86_64-w64-mingw32\bin\SDL2.dll build
+	@test -d build || mkdir build
+	g++ $^ $(LFLAGS) -o $@
+	xcopy /y libraries\SDL2-2.0.5\x86_64-w64-mingw32\bin\SDL2.dll build
 
 objects/%.o: ../core/%.c
 	@test -d objects || mkdir objects

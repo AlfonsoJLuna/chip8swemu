@@ -4,41 +4,44 @@ Multiplatform CHIP-8 and Super-CHIP emulator written in C.
 
 Get the latest release: https://github.com/AlfonsoJLuna/chip8swemu/releases
 
-## Features
+## Core
 
-* Compatible with CHIP-8 and Super-CHIP programs.
-* Cross-platform support through [SDL2](http://libsdl.org).
-* Graphical user interface using [imgui](https://github.com/ocornut/imgui).
-* Roms can be passed as an argument or dropped to the window.
+The emulator core (`chip8.h`, `chip8.c`) is written as a platform-independent library that can be easily included in other projects, with no other dependencies than the standard C99 libraries. The [chip8stm32](https://github.com/AlfonsoJLuna/chip8stm32) game console uses it.
+
+The minimum requirements are 6KB of RAM and a 128x64 display so it can run even on small microcontrollers:
+
+**ATmega2560 (Arduino Mega) + KS0108 GLCD**
+
+![core-arduino](/images/core-arduino.jpg)
+
+**STM32F103 (Blue Pill) + SH1106 OLED Display**
+
+![core-stm32](/images/core-stm32.jpg)
+
+## Frontend
+
+I also provide a frontend for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui). I have tested it on Windows, but should work on Linux and Mac OS X with minor or no changes.
+
+Features:
 * Native file selection dialog on Windows.
+* Roms can be passed as an argument or dropped to the window.
 * Configurable instructions per second rate, 840Hz by default.
 * Configurable color palette.
 * Compatibility Mode and configurable vertical wrap.
 
-The emulator core (`chip8.h`, `chip8.c`) is written as an easily reusable library that can be included in other projects, with no other dependencies than the standard C99 libraries. The [chip8stm32](https://github.com/AlfonsoJLuna/chip8stm32) game console uses it.
+![frontend-logo](/images/frontend-logo.png)
 
-## Screenshots
+![frontend-invaders](/images/frontend-invaders.png)
 
-![logo](/images/logo.png)
+![frontend-car](/images/frontend-car.png)
 
-![car](/images/car.png)
+## Building on Windows (64-bit)
 
-![ant](/images/ant.png)
-
-## Quirks
-
-Compatibility Mode: 8XY6/8XYE and FX55/FX65 instructions behavior in the original Super-CHIP interpreter differs from the original CHIP-8. This emulator uses the Super-CHIP approach by default because is the expected by most games, but you can enable the Compatibility Mode if a game requires the old behavior. You need to change the option before loading the game to take effect.
-
-List of known games that require the Compatibility Mode enabled:
-* Animal Race [Brian Astle].ch8
-
-Vertical Wrap: Enabled by default because is the expected by most games, but there are games that don't work properly if the screen wraps vertically. You need to change the option before loading the game to take effect.
-
-List of known games that require the Vertical Wrap disabled:
-* Blitz [David Winter].ch8
-* Mines! - The minehunter [David Winter, 1997].ch8
-
-There are some other weird quirks not considered because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
+1. Clone or download this repository.
+2. [Download](http://tdm-gcc.tdragon.net/download) and install the TDM64-GCC compiler suite. Be sure you check `Add to PATH` during installation.
+3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.5 development libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.5/...`.
+4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.51 source code and place it in `chip8swemu/frontend/libraries/imgui-1.51/...`.
+6. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`.
 
 ## Documentation
 
@@ -54,10 +57,21 @@ For more information:
 - [Mastering SuperChip](https://github.com/JohnEarnest/Octo/blob/gh-pages/docs/SuperChip.md)
 - [Super-CHIP Documentation](https://github.com/Chromatophore/HP48-Superchip)
 
-## Building on Windows
+## Quirks
 
-1. [Download](http://tdm-gcc.tdragon.net/download) and install the TDM-GCC compiler suite. Be sure you check `Add to PATH` during installation.
-2. Clone or download this repository
-3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.5 development libraries for MinGW and extract them to `chip8swemu/libraries/SDL2-2.0.5/...`
-4. [Download](https://github.com/ocornut/imgui/releases) imgui 1.51 source code and place it in `chip8swemu/libraries/imgui-1.51/...`
-6. Open a command prompt in `chip8swemu/source/` and type: `mingw32-make`
+### Compatibility Mode
+
+8XY6/8XYE and FX55/FX65 instructions behavior in the original Super-CHIP interpreter differs from the original CHIP-8. This emulator uses the Super-CHIP approach by default because is the expected by most games, but you can enable the Compatibility Mode if a game requires the old behavior. You need to change the option before loading the game to take effect.
+
+List of known games that require the Compatibility Mode enabled:
+* Animal Race [Brian Astle].ch8
+
+### Vertical Wrap
+
+Enabled by default because is the expected by most games, but there are games that don't work properly if the screen wraps vertically. You need to change the option before loading the game to take effect.
+
+List of known games that require the Vertical Wrap disabled:
+* Blitz [David Winter].ch8
+* Mines! - The minehunter [David Winter, 1997].ch8
+
+There are some other weird quirks not considered because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
