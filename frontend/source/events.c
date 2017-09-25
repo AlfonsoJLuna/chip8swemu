@@ -24,10 +24,8 @@ bool eventsProcess()
             break;
 
             case SDL_DROPFILE:
-                romSetPath(events.drop.file);
+                romLoadFromPath(events.drop.file);
                 SDL_free(events.drop.file);
-                chip8ResetCpu();
-                romLoadFromPath();
             break;
 
             case SDL_KEYDOWN:
