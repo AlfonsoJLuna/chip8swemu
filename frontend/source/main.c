@@ -18,12 +18,9 @@ int main(int argc, char* argv[])
     {
         if (!audioInitialize())
         {
-            chip8ResetCpu();
-
             if (argc > 1)
             {
-                romSetPath(argv[1]);
-                romLoadFromPath();
+                romLoadFromPath(argv[1]);
             }
             else
             {

@@ -138,11 +138,7 @@ void guiProcessElements(SDL_Window* window)
 
     if (flag_load_rom)
     {
-        if (!romObtainPath())
-        {
-            chip8ResetCpu();
-            romLoadFromPath();
-        }
+        romLoadFromDialog();
         flag_load_rom = false;
     }
 

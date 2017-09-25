@@ -2,16 +2,11 @@
 #define ROM_H
 
 
-#include <stdbool.h>
+int romLoadDefault();
+
+int romLoadFromPath(char* rom_path);
+
+int romLoadFromDialog();
 
 
-bool romLoadDefault();
-
-void romSetPath(char* path);
-
-bool romObtainPath();
-
-bool romLoadFromPath();
-
-
-#endif  // ROM_H
+#endif
