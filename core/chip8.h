@@ -11,6 +11,7 @@
 
 #include <stdbool.h>
 #include <stdint.h>
+#include <string.h>
 
 
 /**
@@ -21,7 +22,7 @@
  *
  * @return 0 if the rom was succesfully copied, 1 otherwise.
  */
-bool chip8ResetMem(uint8_t* rom, int rom_size);
+int chip8ResetMem(uint8_t* rom, size_t rom_size);
 
 
 /**
