@@ -233,12 +233,12 @@ void guiProcessElements(SDL_Window* window)
         ImGui::SetNextWindowSize(ImVec2(450, 230), ImGuiSetCond_Appearing);
         ImGui::SetNextWindowPosCenter(ImGuiSetCond_Appearing);
         ImGui::Begin("About", &show_window_about);
-        ImGui::TextWrapped("chip8swemu v1.1.0\n"
+        ImGui::TextWrapped("chip8swemu v1.1.1\n"
             "by AlfonsoJLuna\n\n"
             "Multiplatform CHIP-8 and Super-CHIP emulator.\n\n"
             "More details: https://github.com/AlfonsoJLuna/chip8swemu\n\n"
             "Libraries used:\n"
-            "SDL 2.0.5 - http://libsdl.org\n"
+            "SDL 2.0.6 - http://libsdl.org\n"
             "imgui 1.51 - https://github.com/ocornut/imgui\n");
         ImGui::End();
     }
