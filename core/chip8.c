@@ -9,7 +9,6 @@
 
 
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
 
 
@@ -23,7 +22,7 @@ typedef struct
 static memory_t memory;
 
 
-bool chip8ResetMem(uint8_t* rom, int rom_size)
+int chip8ResetMem(uint8_t* rom, size_t rom_size)
 {
     // Clear the memory
     memory = (memory_t){0};
@@ -381,7 +380,6 @@ static inline void exec8XY7()
 
 // 8XYE: Shifts VX left by one. VF is set to the value of the most significant bit of VX before the shift.
 // Note: The original implementation stores the value of register VY shifted left one bit in register VX.
-// This should be configurable for better compatibility.
 static inline void exec8XYE()
 {
     if (cpu.compatibility_mode)
