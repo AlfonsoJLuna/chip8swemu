@@ -1,14 +1,14 @@
 # chip8swemu
 
-Multiplatform CHIP-8 and Super-CHIP emulator written in C.
+CHIP-8 is an interpreted programming language initially used for writing simple games for some home computers in the late 1970s. An extension of the CHIP-8 instruction set called Super-CHIP was introduced in 1991 initially for use on the HP48 graphing calculators.
 
-Get the latest release: https://github.com/AlfonsoJLuna/chip8swemu/releases
+chip8swemu is a CHIP-8 and Super-CHIP emulator which allows you to play those games in almost any current device.
 
 ## Core
 
-The emulator core (`chip8.h`, `chip8.c`) is written as a platform-independent library that can be easily included in other projects, with no other dependencies than the standard C99 libraries. The [chip8stm32](https://github.com/AlfonsoJLuna/chip8stm32) game console uses it.
+The emulator core (`chip8.h`, `chip8.c`) is written in standard C99 as a platform-independent library with no other dependencies.
 
-The minimum requirements are 6KB of RAM and a 128x64 display so it can run even on small microcontrollers:
+The only requirements are 6KB of RAM and a 128x64 display so it can run even on small microcontrollers, for example:
 
 **ATmega2560 (Arduino Mega) + KS0108 GLCD**
 
@@ -20,14 +20,14 @@ The minimum requirements are 6KB of RAM and a 128x64 display so it can run even 
 
 ## Frontend
 
-I also provide a frontend for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui). I have tested it on Windows, but should work on Linux and Mac OS X with minor or no changes.
+I also provide a frontend for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui).
 
-Features:
+* Only tested on Windows, but should work on Linux and Mac OS X.
 * Native file selection dialog on Windows.
-* Roms can be passed as an argument or dropped to the window.
+* Roms can also be passed as an argument or dropped to the window.
 * Configurable instructions per second rate, 840Hz by default.
-* Configurable color palette.
-* Compatibility Mode and configurable vertical wrap.
+* Configurable background and accent colors, black and white by default.
+* Configurable Compatibility Mode and Vertical Wrap.
 
 ![frontend-logo](/images/frontend-logo.png)
 
@@ -35,27 +35,13 @@ Features:
 
 ![frontend-car](/images/frontend-car.png)
 
-## Building on Windows (64-bit)
+### Building on Windows (64-bit)
 
 1. Clone or download this repository.
 2. [Download](http://tdm-gcc.tdragon.net/download) and install the TDM64-GCC compiler suite. Be sure you check `Add to PATH` during installation.
-3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.6 development libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.6/...`.
-4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.51 source code and place it in `chip8swemu/frontend/libraries/imgui-1.51/...`.
-6. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`.
-
-## Documentation
-
-CHIP-8 is an interpreted programming language designed to make easier the writing of simple games for some home computers based on the RCA CDP1802 processor in the late 1970s.
-
-An extension of the CHIP-8 instruction set called Super-CHIP was introduced in 1991 initially for use on the HP48 graphing calculators.
-
-For more information:
-- [CHIP-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8)
-- [Mastering CHIP-8](http://mattmik.com/files/chip8/mastering/chip8.html)
-- [Cowgod's CHIP-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
-- [How to write an emulator (CHIP-8 interpreter)](http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
-- [Mastering SuperChip](https://github.com/JohnEarnest/Octo/blob/gh-pages/docs/SuperChip.md)
-- [Super-CHIP Documentation](https://github.com/Chromatophore/HP48-Superchip)
+3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.6 development libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.6/...`
+4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.51 source code and place it in `chip8swemu/frontend/libraries/imgui-1.51/...`
+6. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`
 
 ## Quirks
 
@@ -75,3 +61,13 @@ List of known games that require the Vertical Wrap disabled:
 * Mines! - The minehunter [David Winter, 1997].ch8
 
 There are some other weird quirks not considered because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
+
+## Useful Resources
+
+- [CHIP-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8)
+- [Mastering CHIP-8](http://mattmik.com/files/chip8/mastering/chip8.html)
+- [Cowgod's CHIP-8 Technical Reference](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
+- [How to write an emulator (CHIP-8 interpreter)](http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/)
+- [Mastering SuperChip](https://github.com/JohnEarnest/Octo/blob/gh-pages/docs/SuperChip.md)
+- [Super-CHIP Documentation](https://github.com/Chromatophore/HP48-Superchip)
+- [EmuDev on Reddit](https://www.reddit.com/r/EmuDev/)
