@@ -1,6 +1,199 @@
 #include "config.h"
 
+#include "chip8.h"
 #include <stdio.h>
+
+
+static config_t config;
+
+
+static config_t sanitizeValues(config_t new_config)
+{
+    if (new_config.frequency < 60)
+    {
+        new_config.frequency = 60;
+    }
+
+    if (new_config.comp_mode > 1)
+    {
+        new_config.comp_mode = 1;
+    }
+
+    if (new_config.vert_wrap > 1)
+    {
+        new_config.vert_wrap = 1;
+    }
+
+    if (new_config.width < 128)
+    {
+        new_config.width = 128;
+    }
+
+    if (new_config.height < 83)
+    {
+        new_config.height = 83;
+    }
+
+    if (new_config.vsync > 1)
+    {
+        new_config.vsync = 1;
+    }
+
+    if (new_config.mute > 1)
+    {
+        new_config.mute = 1;
+    }
+
+    return new_config;
+}
+
+
+void configSetDefaults()
+{
+    config_t defaults;
+
+    defaults.frequency = 840;
+	defaults.comp_mode = 0;
+	defaults.vert_wrap = 1;
+	defaults.width = 640;
+	defaults.height = 339;
+	defaults.vsync = 0;
+	defaults.mute = 0;
+	defaults.accent.red = 0xFF;
+    defaults.accent.green = 0xFF;
+    defaults.accent.blue = 0xFF;
+	defaults.background.red = 0x00;
+    defaults.background.green = 0x00;
+    defaults.background.blue = 0x00;
+
+    configSet(defaults);
+
+    configSetDefaults_old();
+}
+
+
+void configSet(config_t new_config)
+{
+    config = sanitizeValues(new_config);
+}
+
+
+config_t configGet()
+{
+    return config;
+}
+
+
+int configLoadFromFile()
+{
+    FILE* file = fopen("config.ini", "r");
+
+	if (file == NULL)
+	{
+		return 1;
+	}
+
+    config_t new_config;
+
+    fscanf(file,
+        "frequency=%u\n"
+    	"comp_mode=%u\n"
+    	"vert_wrap=%u\n"
+    	"width=%u\n"
+    	"height=%u\n"
+    	"vsync=%u\n"
+    	"mute=%u\n"
+    	"accent.red=%X\n"
+        "accent.green=%X\n"
+        "accent.blue=%X\n"
+    	"background.red=%X\n"
+        "background.green=%X\n"
+        "background.blue=%X\n",
+        &new_config.frequency,
+    	&new_config.comp_mode,
+    	&new_config.vert_wrap,
+    	&new_config.width,
+    	&new_config.height,
+    	&new_config.vsync,
+    	&new_config.mute,
+    	&new_config.accent.red,
+        &new_config.accent.green,
+        &new_config.accent.blue,
+    	&new_config.background.red,
+        &new_config.background.green,
+        &new_config.background.blue);
+
+	fclose(file);
+
+    configSet(new_config);
+
+	return 0;
+}
+
+
+int configSaveToFile()
+{
+    FILE* file = fopen("config.ini", "w");
+
+	if (file == NULL)
+	{
+		return 1;
+	}
+
+	fprintf(file,
+        "frequency=%u\n"
+    	"comp_mode=%u\n"
+    	"vert_wrap=%u\n"
+    	"width=%u\n"
+    	"height=%u\n"
+    	"vsync=%u\n"
+    	"mute=%u\n"
+    	"accent.red=%X\n"
+        "accent.green=%X\n"
+        "accent.blue=%X\n"
+    	"background.red=%X\n"
+        "background.green=%X\n"
+        "background.blue=%X\n",
+        config.frequency,
+    	config.comp_mode,
+    	config.vert_wrap,
+    	config.width,
+    	config.height,
+    	config.vsync,
+    	config.mute,
+    	config.accent.red,
+        config.accent.green,
+        config.accent.blue,
+    	config.background.red,
+        config.background.green,
+        config.background.blue);
+
+	fclose(file);
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DEPRECATED
+
+
+
+
+
+
+
+
 
 
 static int chip8_cpu_freq;
@@ -11,7 +204,7 @@ static color_t color_backgr;
 static color_t color_accent;
 
 
-void configSetDefaults()
+void configSetDefaults_old()
 {
     chip8_cpu_freq = 840;
     window_size = (window_size_t) { .width = 640, .height = 339 };
@@ -65,90 +258,4 @@ color_t configGetColorBackground()
 color_t configGetColorAccent()
 {
     return color_accent;
-}
-
-
-bool configLoadFromFile()
-{
-    FILE* file = fopen("config.ini", "r");
-
-    if (file == NULL)
-    {
-        perror("Error");
-        printf("Error: Configuration file could not be loaded.\n");
-        return 1;
-    }
-    else
-    {
-        printf("Configuration file loaded successfully.\n");
-
-        unsigned int cbr, cbg, cbb, car, cag, cab;
-
-        fscanf(file,
-            "chip8_cpu_freq=%d\n"
-            "window_size.width=%d\n"
-            "window_size.height=%d\n"
-            "color_backgr.red=%X\n"
-            "color_backgr.green=%X\n"
-            "color_backgr.blue=%X\n"
-            "color_accent.red=%X\n"
-            "color_accent.green=%X\n"
-            "color_accent.blue=%X\n",
-            &chip8_cpu_freq,
-            &window_size.width, &window_size.height,
-            &cbr, &cbg, &cbb, &car, &cag, &cab);
-
-        fclose(file);
-
-        color_backgr = (color_t) { cbr & 0xFF, cbg & 0xFF, cbb & 0xFF };
-        color_accent = (color_t) { car & 0xFF, cag & 0xFF, cab & 0xFF };
-
-        // Check introduced values and replace them if they werent between reasonable limits
-        if (chip8_cpu_freq < 60) chip8_cpu_freq = 60;
-        if (window_size.width < 128) window_size.width = 128;
-        if (window_size.height < 83) window_size.height = 83;
-    }
-
-    return 0;
-}
-
-
-bool configSaveToFile()
-{
-    FILE* file = fopen("config.ini", "w");
-
-    if (file == NULL)
-    {
-        perror("Error");
-        printf("Error: Configuration file could not be saved.\n");
-        return 1;
-    }
-    else
-    {
-        fprintf(file,
-            "chip8_cpu_freq=%d\n"
-            "window_size.width=%d\n"
-            "window_size.height=%d\n"
-            "color_backgr.red=%X\n"
-            "color_backgr.green=%X\n"
-            "color_backgr.blue=%X\n"
-            "color_accent.red=%X\n"
-            "color_accent.green=%X\n"
-            "color_accent.blue=%X\n",
-            chip8_cpu_freq,
-            window_size.width,
-            window_size.height,
-            color_backgr.red,
-            color_backgr.green,
-            color_backgr.blue,
-            color_accent.red,
-            color_accent.green,
-            color_accent.blue);
-
-        fclose(file);
-
-        printf("Configuration file saved successfully.\n");
-    }
-
-    return 0;
 }
