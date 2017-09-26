@@ -36,11 +36,11 @@ bool videoInitialize()
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
 
-    window_size_t window_size = configGetWindowSize();
+    config_t config = configGet();
 
     window = SDL_CreateWindow("chip8swemu v1.1.1",
         SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-        window_size.width, window_size.height,
+        config.width, config.height,
         SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
 
     if (window == NULL)
@@ -80,14 +80,14 @@ void videoToggleVsync(bool enable)
 
 void videoRender()
 {
-    window_size_t window_size;
-    SDL_GetWindowSize(window, &window_size.width, &window_size.height);
-    configSetWindowSize(window_size.width, window_size.height);
+    config_t config;
+    SDL_GetWindowSize(window, &config.width, &config.height);
+    configSet(config);
 
     guiProcessElements(window);
 
     // Set viewport
-    glViewport(0, 0, window_size.width, window_size.height);
+    glViewport(0, 0,config.width, config.height);
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
@@ -127,10 +127,10 @@ void videoRender()
         glVertex2f(1.0f, -1.0f);
 
         glTexCoord2f(1.0f, 1.0f);
-        glVertex2f(1.0f, (float)(window_size.height - 19 * 2) / window_size.height);
+        glVertex2f(1.0f, (float)(config.height - 19 * 2) / config.height);
 
         glTexCoord2f(0.0f, 1.0f);
-        glVertex2f(-1.0f, (float)(window_size.height - 19 * 2) / window_size.height);
+        glVertex2f(-1.0f, (float)(config.height - 19 * 2) / config.height);
     glEnd();
 
     guiRender();
