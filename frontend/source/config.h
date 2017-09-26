@@ -39,15 +39,4 @@ int configLoadFromFile();
 int configSaveToFile();
 
 
-// DEPRECATED
-
-void configSetColorBackground(uint8_t red, uint8_t green, uint8_t blue);
-
-void configSetColorAccent(uint8_t red, uint8_t green, uint8_t blue);
-
-color_t configGetColorBackground();
-
-color_t configGetColorAccent();
-
-
 #endif

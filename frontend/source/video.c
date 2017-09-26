@@ -80,7 +80,7 @@ void videoToggleVsync(bool enable)
 
 void videoRender()
 {
-    config_t config;
+    config_t config = configGet();
     SDL_GetWindowSize(window, &config.width, &config.height);
     configSet(config);
 
@@ -91,25 +91,24 @@ void videoRender()
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    // Update texture on memory
-    color_t color_backgr = configGetColorBackground();
-    color_t color_accent = configGetColorAccent();
+    config = configGet();
 
+    // Update texture on memory
     for (int y = 0; y < 64; y++)
     {
         for (int x = 0; x < 128; x++)
         {
             if (chip8GetPixel((63 - y), x))
             {
-                texture[y][x][0] = color_accent.red;
-                texture[y][x][1] = color_accent.green;
-                texture[y][x][2] = color_accent.blue;
+                texture[y][x][0] = config.accent.red;
+                texture[y][x][1] = config.accent.green;
+                texture[y][x][2] = config.accent.blue;
             }
             else
             {
-                texture[y][x][0] = color_backgr.red;
-                texture[y][x][1] = color_backgr.green;
-                texture[y][x][2] = color_backgr.blue;
+                texture[y][x][0] = config.background.red;
+                texture[y][x][1] = config.background.green;
+                texture[y][x][2] = config.background.blue;
             }
         }
     }
