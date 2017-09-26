@@ -47,8 +47,6 @@ void guiInitialize(SDL_Window* window)
     flag_quit = false;
     flag_reset = false;
     flag_default_freq = false;
-    flag_compatibility = false;
-    flag_vertical_wrap = true;
     flag_window_5x = false;
     flag_window_10x = false;
     flag_window_15x = false;
@@ -73,6 +71,9 @@ void guiProcessElements(SDL_Window* window)
     config_t config = configGet();
 
     int chip8_cpu_freq = config.frequency;
+
+    flag_compatibility = config.comp_mode;
+    flag_vertical_wrap = config.vert_wrap;
 
     ImVec4 vector_backgr = ImGui::ColorConvertU32ToFloat4(
         config.background.blue << 16 | config.background.green << 8 | config.background.red);
@@ -155,8 +156,10 @@ void guiProcessElements(SDL_Window* window)
         flag_default_freq = false;
     }
 
+    config.comp_mode = flag_compatibility;
     chip8CompatibilityMode(flag_compatibility);
 
+    config.vert_wrap = flag_vertical_wrap;
     chip8VerticalWrap(flag_vertical_wrap);
 
     if (flag_window_5x)
