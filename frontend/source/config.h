@@ -41,19 +41,9 @@ int configSaveToFile();
 
 // DEPRECATED
 
-typedef struct
-{
-    int width;
-    int height;
-} window_size_t;
-
-void configSetWindowSize(int width, int height);
-
 void configSetColorBackground(uint8_t red, uint8_t green, uint8_t blue);
 
 void configSetColorAccent(uint8_t red, uint8_t green, uint8_t blue);
-
-window_size_t configGetWindowSize();
 
 color_t configGetColorBackground();
 

@@ -187,21 +187,13 @@ int configSaveToFile()
 
 // DEPRECATED
 
-static window_size_t window_size;
-
 static color_t color_backgr;
 static color_t color_accent;
 
 void configSetDefaults_old()
 {
-    window_size = (window_size_t) { .width = 640, .height = 339 };
     color_backgr = (color_t) { .red = 0x11, .green = 0x11, .blue = 0x11 };
     color_accent = (color_t) { .red = 0xEE, .green = 0xEE, .blue = 0xEE };
-}
-
-void configSetWindowSize(int width, int height)
-{
-    window_size = (window_size_t) { .width = width, .height = height };
 }
 
 void configSetColorBackground(uint8_t red, uint8_t green, uint8_t blue)
@@ -212,11 +204,6 @@ void configSetColorBackground(uint8_t red, uint8_t green, uint8_t blue)
 void configSetColorAccent(uint8_t red, uint8_t green, uint8_t blue)
 {
     color_accent = (color_t) { .red = red, .green = green, .blue = blue };
-}
-
-window_size_t configGetWindowSize()
-{
-    return window_size;
 }
 
 color_t configGetColorBackground()
