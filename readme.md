@@ -39,7 +39,7 @@ Features:
 
 1. Clone or download this repository.
 2. [Download](http://tdm-gcc.tdragon.net/download) and install the TDM64-GCC compiler suite. Be sure you check `Add to PATH` during installation.
-3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.6 development libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.5/...`.
+3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.6 development libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.6/...`.
 4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.51 source code and place it in `chip8swemu/frontend/libraries/imgui-1.51/...`.
 6. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`.
 
