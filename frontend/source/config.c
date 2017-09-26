@@ -67,8 +67,6 @@ void configSetDefaults()
     defaults.background.blue = 0x00;
 
     configSet(defaults);
-
-    configSetDefaults_old();
 }
 
 
@@ -171,47 +169,4 @@ int configSaveToFile()
 	fclose(file);
 
 	return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-// DEPRECATED
-
-static color_t color_backgr;
-static color_t color_accent;
-
-void configSetDefaults_old()
-{
-    color_backgr = (color_t) { .red = 0x11, .green = 0x11, .blue = 0x11 };
-    color_accent = (color_t) { .red = 0xEE, .green = 0xEE, .blue = 0xEE };
-}
-
-void configSetColorBackground(uint8_t red, uint8_t green, uint8_t blue)
-{
-    color_backgr = (color_t) { .red = red, .green = green, .blue = blue };
-}
-
-void configSetColorAccent(uint8_t red, uint8_t green, uint8_t blue)
-{
-    color_accent = (color_t) { .red = red, .green = green, .blue = blue };
-}
-
-color_t configGetColorBackground()
-{
-    return color_backgr;
-}
-
-color_t configGetColorAccent()
-{
-    return color_accent;
 }
