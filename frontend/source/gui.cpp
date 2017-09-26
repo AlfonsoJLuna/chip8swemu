@@ -70,7 +70,9 @@ void guiProcessInput(SDL_Event* events)
 
 void guiProcessElements(SDL_Window* window)
 {
-    int chip8_cpu_freq = configGetCpuFreq();
+    config_t config = configGet();
+
+    int chip8_cpu_freq = config.frequency;
 
     color_t color_backgr = configGetColorBackground();
     color_t color_accent = configGetColorAccent();
@@ -148,13 +150,15 @@ void guiProcessElements(SDL_Window* window)
         flag_reset = false;
     }
 
-    configSetCpuFreq(chip8_cpu_freq);
+    config.frequency = chip8_cpu_freq;
 
     if (flag_default_freq)
     {
-        configSetCpuFreq(840);
+        config.frequency = 840;
         flag_default_freq = false;
     }
+
+    configSet(config);
 
     chip8CompatibilityMode(flag_compatibility);
 

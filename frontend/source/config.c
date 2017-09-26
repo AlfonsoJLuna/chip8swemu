@@ -187,73 +187,42 @@ int configSaveToFile()
 
 // DEPRECATED
 
-
-
-
-
-
-
-
-
-
-static int chip8_cpu_freq;
-
 static window_size_t window_size;
 
 static color_t color_backgr;
 static color_t color_accent;
 
-
 void configSetDefaults_old()
 {
-    chip8_cpu_freq = 840;
     window_size = (window_size_t) { .width = 640, .height = 339 };
     color_backgr = (color_t) { .red = 0x11, .green = 0x11, .blue = 0x11 };
     color_accent = (color_t) { .red = 0xEE, .green = 0xEE, .blue = 0xEE };
 }
-
-
-void configSetCpuFreq(int freq)
-{
-    chip8_cpu_freq = freq;
-}
-
 
 void configSetWindowSize(int width, int height)
 {
     window_size = (window_size_t) { .width = width, .height = height };
 }
 
-
 void configSetColorBackground(uint8_t red, uint8_t green, uint8_t blue)
 {
     color_backgr = (color_t) { .red = red, .green = green, .blue = blue };
 }
-
 
 void configSetColorAccent(uint8_t red, uint8_t green, uint8_t blue)
 {
     color_accent = (color_t) { .red = red, .green = green, .blue = blue };
 }
 
-
-int configGetCpuFreq()
-{
-    return chip8_cpu_freq;
-}
-
-
 window_size_t configGetWindowSize()
 {
     return window_size;
 }
 
-
 color_t configGetColorBackground()
 {
     return color_backgr;
 }
-
 
 color_t configGetColorAccent()
 {

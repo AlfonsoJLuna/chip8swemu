@@ -47,15 +47,11 @@ typedef struct
     int height;
 } window_size_t;
 
-void configSetCpuFreq(int freq);
-
 void configSetWindowSize(int width, int height);
 
 void configSetColorBackground(uint8_t red, uint8_t green, uint8_t blue);
 
 void configSetColorAccent(uint8_t red, uint8_t green, uint8_t blue);
-
-int configGetCpuFreq();
 
 window_size_t configGetWindowSize();
 

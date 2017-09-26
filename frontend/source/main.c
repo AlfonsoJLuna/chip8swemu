@@ -32,7 +32,9 @@ int main(int argc, char* argv[])
                 quit |= eventsProcess();
                 quit |= guiGetFlagQuit();
 
-                if (chip8StepCpu(configGetCpuFreq() / 60))
+                config_t config = configGet();
+
+                if (chip8StepCpu(config.frequency / 60))
                     guiShowUnknownOp();
 
                 audioUpdate(chip8GetAudio());
