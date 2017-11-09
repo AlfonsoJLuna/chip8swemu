@@ -38,7 +38,7 @@ bool videoInitialize()
 
     config_t config = configGet();
 
-    window = SDL_CreateWindow("chip8swemu v1.1.1",
+    window = SDL_CreateWindow("chip8swemu v1.1.2",
         SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
         config.width, config.height,
         SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE);
