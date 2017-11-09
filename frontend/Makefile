@@ -16,12 +16,11 @@ HEADERS := -I../core -Isource -Ilibraries/imgui-1.52
 
 CFLAGS := -Wall -Wextra -MMD -O3
 
-LFLAGS := -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -lOpenGL32 \
-	-limm32 -lcomdlg32
-
 # Platform-specific flags
 
 ifeq ($(OS),Windows_NT)
+	LFLAGS += -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -lOpenGL32 \
+		-limm32 -lcomdlg32
 	ifeq ($(PROCESSOR_ARCHITEW6432),AMD64)
 		HEADERS += -Ilibraries/SDL2-2.0.5/x86_64-w64-mingw32/include/SDL2
 		CFLAGS += -m64
@@ -41,7 +40,8 @@ ifeq ($(OS),Windows_NT)
 else
 	UNAME_S := $(shell uname -s)
 	ifeq ($(UNAME_S),Linux)
-		CFLAGS += -D LINUX
+		HEADERS += $(shell sdl2-config --cflags)
+		LFLAGS += $(shell sdl2-config --libs) -lGL
 	endif
 	ifeq ($(UNAME_S),Darwin)
 		CFLAGS += -D OSX
