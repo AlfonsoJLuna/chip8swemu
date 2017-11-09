@@ -5,12 +5,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define PI 3.14159265358979323846
 
 SDL_AudioSpec* audiospec = NULL;
 SDL_AudioDeviceID device = 0;
 
 double wave_position = 0;
-double wave_increment = 2 * M_PI * 1000 / 44100;
+double wave_increment = 2 * PI * 1000 / 44100;
 
 bool mute_sound;
 
