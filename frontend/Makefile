@@ -1,14 +1,14 @@
 C_FILES := $(wildcard ../core/*.c) $(wildcard source/*.c)
 
 CPP_FILES := $(wildcard source/*.cpp) \
-	libraries/imgui-1.51/imgui.cpp \
-	libraries/imgui-1.51/imgui_draw.cpp \
+	libraries/imgui-1.52/imgui.cpp \
+	libraries/imgui-1.52/imgui_draw.cpp \
 
 C_OBJECTS := $(addprefix objects/,$(notdir $(C_FILES:.c=.o)))
 
 CPP_OBJECTS := $(addprefix objects/,$(notdir $(CPP_FILES:.cpp=.o)))
 
-HEADERS := -I../core -Isource -Ilibraries/imgui-1.51 \
+HEADERS := -I../core -Isource -Ilibraries/imgui-1.52 \
 	-Ilibraries/SDL2-2.0.5/x86_64-w64-mingw32/include/SDL2
 
 CFLAGS := -Wall -Wextra -MMD -O3 -m64
@@ -34,7 +34,7 @@ objects/%.o: source/%.cpp
 	@test -d objects || mkdir objects
 	g++ $(CFLAGS) $(HEADERS) -c $< -o $@
 
-objects/%.o: libraries/imgui-1.51/%.cpp
+objects/%.o: libraries/imgui-1.52/%.cpp
 	@test -d objects || mkdir objects
 	g++ $(CFLAGS) -c $< -o $@
 

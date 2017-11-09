@@ -42,14 +42,14 @@ There are some other weird quirks not considered because they also differ betwee
 
 ## Building
 
-The only required dependencies are SDL 2.0.5 and ImGui 1.51. I have tested on Windows, but should work on Linux and other OSs if you modify the Makefile as needed.
+The only required dependencies are SDL 2.0.5 and ImGui 1.52. I have tested on Windows, but should work on Linux and other OSs if you modify the Makefile as needed.
 
 Instructions for building on Windows (64-bit):
 
 1. [Install](https://git-scm.com/downloads) git and clone this repository.
 2. [Install](http://tdm-gcc.tdragon.net/download) the TDM64-GCC compiler suite. Be sure you check `Add to PATH` during installation.
 3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.5 libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.5/...`
-4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.51 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.51/...`
+4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
 6. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`.
 
 ## References
