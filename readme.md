@@ -1,23 +1,16 @@
 # chip8swemu
 
-Multiplatform CHIP-8 and Super-CHIP emulator written in C.
+Multiplatform CHIP-8 and Super-CHIP emulator.
 
-Get the latest release: https://github.com/AlfonsoJLuna/chip8swemu/releases
+Download the latest release: https://github.com/AlfonsoJLuna/chip8swemu/releases
 
-![frontend-logo](/images/frontend-logo.png)
+___
 
-## Features
+## Core
 
-* Compatible with CHIP-8 and Super-CHIP programs.
-* Cross-platform support through [SDL2](http://libsdl.org).
-* Cross-platform GUI using [ImGui](https://github.com/ocornut/imgui).
-* Native file selection dialog on Windows.
-* Roms can be passed as an argument or dropped to the window.
-* Configurable instructions per second rate, 840Hz by default.
-* Configurable color palette.
-* Compatibility settings.
+The emulator core (`chip8.h`, `chip8.c`) is an easy to use library written in portable C99.
 
-The emulator core (`chip8.h`, `chip8.c`) is written as a platform-independent library with no other dependencies than the standard C99 libraries, so it can run even on small microcontrollers:
+You can easily include it in any project for any platform, it runs even on small microcontrollers, for example:
 
 **ATmega2560 (Arduino Mega) + KS0108 GLCD**
 
@@ -26,6 +19,54 @@ The emulator core (`chip8.h`, `chip8.c`) is written as a platform-independent li
 **STM32F103 (Blue Pill) + SH1106 OLED Display**
 
 ![core-stm32](/images/core-stm32.jpg)
+
+___
+
+## Frontend
+
+chip8swemu also has a frontend for the desktop (Windows XP+/Linux).
+
+Features:
+
+* Cross-platform support through [SDL2](http://libsdl.org).
+* Cross-platform GUI using [ImGui](https://github.com/ocornut/imgui).
+* ROMs can be passed as an argument or dropped to the window.
+* Native file selection dialog is available on Windows.
+* Configurable instructions per second rate, 840Hz by default.
+* Configurable color palette.
+* Compatibility settings.
+
+Screenshots:
+
+![frontend-1](/images/frontend-1.png)
+
+![frontend-2](/images/frontend-2.png)
+
+![frontend-3](/images/frontend-3.png)
+
+___
+
+## Building
+
+Required dependencies are ImGui, SDL2, OpenGL.
+
+### How to build on Windows
+
+1. [Install](https://git-scm.com/downloads) git and clone this repository.
+2. [Install](http://tdm-gcc.tdragon.net/download) the TDM64-GCC (64-bit) or TDM-GCC (32-bit) compiler suite. Be sure you check `Add to PATH` during installation.
+3. [Download](https://www.libsdl.org/release/SDL2-devel-2.0.5-mingw.tar.gz) SDL 2.0.5 libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.5/...`
+4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
+5. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`.
+
+### How to build on Linux (Ubuntu)
+
+1. Install git: `sudo apt-get install git`
+2. Clone this repository: `git clone https://github.com/alfonsojluna/chip8swemu`
+3. Install SDL2 development libraries: `sudo apt-get install libsdl2-dev`
+4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
+5. Open a terminal in `chip8swemu/frontend/` and type: `make`.
+
+___
 
 ## Compatibility
 
@@ -40,19 +81,11 @@ Known games that require the `Vertical Wrap` *disabled*:
 
 There are some other weird quirks not considered because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
 
-## Building
-
-The only required dependencies are SDL 2.0.5 and ImGui 1.52. I have tested on Windows, but should work on Linux and other OSs if you modify the Makefile as needed.
-
-Instructions for building on Windows (64-bit):
-
-1. [Install](https://git-scm.com/downloads) git and clone this repository.
-2. [Install](http://tdm-gcc.tdragon.net/download) the TDM64-GCC compiler suite. Be sure you check `Add to PATH` during installation.
-3. [Download](https://www.libsdl.org/download-2.0.php) SDL 2.0.5 libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.5/...`
-4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
-6. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`.
+___
 
 ## References
+
+Useful resources and documentation for developing a CHIP-8 emulator:
 
 - [CHIP-8 article on Wikipedia](https://en.wikipedia.org/wiki/CHIP-8)
 - [Mastering CHIP-8](http://mattmik.com/files/chip8/mastering/chip8.html)
