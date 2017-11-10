@@ -1,6 +1,7 @@
 #include "config.h"
 
 #include "chip8.h"
+#include <inttypes.h>
 #include <stdio.h>
 
 
@@ -94,19 +95,19 @@ int configLoadFromFile()
     config_t new_config;
 
     fscanf(file,
-        "frequency=%u\n"
-    	"comp_mode=%u\n"
-    	"vert_wrap=%u\n"
-    	"width=%u\n"
-    	"height=%u\n"
-    	"vsync=%u\n"
-    	"mute=%u\n"
-    	"accent.red=%X\n"
-        "accent.green=%X\n"
-        "accent.blue=%X\n"
-    	"background.red=%X\n"
-        "background.green=%X\n"
-        "background.blue=%X\n",
+        "frequency=%"SCNu16"\n"
+    	"comp_mode=%"SCNu8"\n"
+    	"vert_wrap=%"SCNu8"\n"
+    	"width=%"SCNu16"\n"
+    	"height=%"SCNu16"\n"
+    	"vsync=%"SCNu8"\n"
+    	"mute=%"SCNu8"\n"
+    	"accent.red=%"SCNx8"\n"
+        "accent.green=%"SCNx8"\n"
+        "accent.blue=%"SCNx8"\n"
+    	"background.red=%"SCNx8"\n"
+        "background.green=%"SCNx8"\n"
+        "background.blue=%"SCNx8"\n",
         &new_config.frequency,
     	&new_config.comp_mode,
     	&new_config.vert_wrap,

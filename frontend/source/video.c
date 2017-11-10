@@ -81,7 +81,10 @@ void videoToggleVsync(bool enable)
 void videoRender()
 {
     config_t config = configGet();
-    SDL_GetWindowSize(window, &config.width, &config.height);
+    int width, height;
+    SDL_GetWindowSize(window, &width, &height);
+    config.width = width;
+    config.height = height;
     configSet(config);
 
     guiProcessElements(window);
