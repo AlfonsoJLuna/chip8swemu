@@ -14,7 +14,7 @@ CPP_OBJECTS += $(addprefix objects/,$(notdir $(CPP_FILES:.cpp=.o)))
 
 HEADERS += -I../core -Isource -Ilibraries/imgui-1.52
 
-CFLAGS += -Wall -Wextra -MMD -O3
+CFLAGS += -Wall -Wextra -MMD -O2
 
 # Platform-specific flags
 
