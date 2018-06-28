@@ -2,49 +2,21 @@
 
 Multiplatform CHIP-8 and Super-CHIP emulator.
 
+![frontend-1](/images/frontend-1.png) | ![frontend-2](/images/frontend-2.png) | ![frontend-3](/images/frontend-3.png)
+:-----------: | :-------------: | :-------------:
+| | | |
+
 Download the latest release: https://github.com/AlfonsoJLuna/chip8swemu/releases
 
-___
+## Features
 
-## Core
-
-The emulator core (`chip8.h`, `chip8.c`) is an easy to use library written in portable C99.
-
-You can easily include it in any project for any platform, it runs even on small microcontrollers, for example:
-
-**ATmega2560 (Arduino Mega) + KS0108 GLCD**
-
-![core-arduino](/images/core-arduino.jpg)
-
-**STM32F103 (Blue Pill) + SH1106 OLED Display**
-
-![core-stm32](/images/core-stm32.jpg)
-
-___
-
-## Frontend
-
-chip8swemu also has a frontend for the desktop (Windows XP+/Linux).
-
-Features:
-
-* Cross-platform support through [SDL2](http://libsdl.org).
-* Cross-platform GUI using [ImGui](https://github.com/ocornut/imgui).
+* Portable emulator core (`chip8.h`, `chip8.c`) written in standard C99.
+* Cross-platform (Windows XP+/Linux) frontend based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui).
 * ROMs can be passed as an argument or dropped to the window.
-* Native file selection dialog is available on Windows.
-* Configurable instructions per second rate, 840Hz by default.
+* Native file selection dialog (only available on Windows).
+* Configurable CPU clock rate, 840Hz by default.
 * Configurable color palette.
 * Compatibility settings.
-
-Screenshots:
-
-![frontend-1](/images/frontend-1.png)
-
-![frontend-2](/images/frontend-2.png)
-
-![frontend-3](/images/frontend-3.png)
-
-___
 
 ## Building
 
@@ -66,8 +38,6 @@ Required dependencies are ImGui, SDL2, OpenGL.
 4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
 5. Open a terminal in `chip8swemu/frontend/` and type: `make`.
 
-___
-
 ## Compatibility
 
 Some games require special settings to run properly, you need to change the options before loading the game to take effect.
@@ -80,8 +50,6 @@ Known games that require the `Vertical Wrap` *disabled*:
 * Mines! - The minehunter [David Winter, 1997].ch8
 
 There are some other weird quirks not considered because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
-
-___
 
 ## References
 
