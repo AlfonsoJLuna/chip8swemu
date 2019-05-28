@@ -2,9 +2,13 @@
 
 *Multiplatform CHIP-8 and Super-CHIP emulator.*
 
-chip8swemu is a CHIP-8 and Super-CHIP emulator focused on portability. The emulator core is written in standard C99 as a library with no other dependencies. It can be easily included in any project adding the `chip8.h` and `chip8.c` files and can run in almost any machine.
+## chip8swemu/core
 
-## Platform: Desktop
+The emulator core is a CHIP-8 and Super-CHIP interpreter library written in standard C99 with no other dependencies. It can be easily included in any project adding the `chip8.h` and `chip8.c` files and can run in almost any machine.
+
+## chip8swemu/platform/desktop
+
+chip8swemu has a cross-platform frontend for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui).
 
 ![frontend-1](/images/frontend-1.png) | ![frontend-2](/images/frontend-2.png) | ![frontend-3](/images/frontend-3.png)
 :-----------: | :-------------: | :-------------:
@@ -12,24 +16,24 @@ chip8swemu is a CHIP-8 and Super-CHIP emulator focused on portability. The emula
 
 ### Features
 
-* Cross-platform (Windows XP+/Linux) frontend based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui).
+* Compatible with Windows XP+ and Linux.
 * ROMs can be passed as an argument or dropped to the window.
 * Native file selection dialog (only available on Windows).
 * Configurable CPU clock rate, 840Hz by default.
 * Configurable color palette.
-* Compatibility settings.
+* Configurable compatibility settings.
 
-## Platform: STM32
+## chip8swemu/platform/chip8stm32
 
-It also has a custom PCB called chip8stm32 based on a STM32F103 (ARM Cortex-M3) microcontroller allowing you to play your CHIP-8 games on the go.
+chip8stm32 is a custom PCB and firmware for running chip8swemu on STM32F103 (ARM Cortex-M3) microcontrollers.
+
+Video: https://www.youtube.com/watch?v=vA76s3j4H90
 
 ![Core-STM32](/images/core-stm32.jpg) | ![chip8stm32](/images/chip8stm32.jpg)
 :-------------: | :-------------:
 Blue Pill (STM32F103 + SH1106 OLED Display) | Custom PCB (chip8stm32)
 
-Video: https://www.youtube.com/watch?v=vA76s3j4H90
-
-### Game gallery
+## Game gallery
 
 ![Splash screen](/images/1.jpg) | ![Menu](/images/2.jpg) | ![SuperWorm V4](/images/3.jpg)
 :-----------: | :-------------: | :-------------:
