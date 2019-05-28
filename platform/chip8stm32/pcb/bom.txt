@@ -1,0 +1,38 @@
+Quantity   Name                   Value         RefDes                                                                  
+______________________________________________________________________________________________________________________
+
+1          Battery Holder 2xAAA   BAT           BT1                                                                     
+6          CAP_0603               100nF         C1, C2, C3, C4, C6, C13                                                 
+4          CAP_1206               10uF          C5, C10, C11, C12                                                       
+1          CAP_0603               1uF           C7                                                                      
+2          CAP_0603               27pF          C8, C9                                                                  
+1          SSH1106 SPI Display                  DS1                                                                     
+1          644456-5               SWD           J1                                                                      
+1          CD32                   2.2uH         L1                                                                      
+1          Buzzer                               LS1                                                                     
+16         RES_0603               4K7           R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16   
+1          RES_0603               10K           R17                                                                     
+1          RES_0603               150           R18                                                                     
+1          RES_0603               100           R19                                                                     
+1          PTS645SL50SMTRLFS      1             S1                                                                      
+1          PTS645SL50SMTRLFS      2             S2                                                                      
+1          PTS645SL50SMTRLFS      3             S3                                                                      
+1          PTS645SL50SMTRLFS      4             S4                                                                      
+1          PTS645SL50SMTRLFS      5             S5                                                                      
+1          PTS645SL50SMTRLFS      6             S6                                                                      
+1          PTS645SL50SMTRLFS      7             S7                                                                      
+1          PTS645SL50SMTRLFS      8             S8                                                                      
+1          PTS645SL50SMTRLFS      9             S9                                                                      
+1          PTS645SL50SMTRLFS      A             S10                                                                     
+1          PTS645SL50SMTRLFS      B             S11                                                                     
+1          PTS645SL50SMTRLFS      C             S12                                                                     
+1          PTS645SL50SMTRLFS      D             S13                                                                     
+1          PTS645SL50SMTRLFS      E             S14                                                                     
+1          PTS645SL50SMTRLFS      F             S15                                                                     
+1          PTS645SL50SMTRLFS      0             S16                                                                     
+1          PTS645SL50SMTRLFS      RESET         S17                                                                     
+1          MSK-12C01-07           ON/OFF        S18                                                                     
+1          STM32F103CBT6                        U1                                                                      
+1          TPS63001                             U2                                                                      
+1          TXC-7B                 8MHz (20pF)   Y1                                                                      
+58                                                                                                                      

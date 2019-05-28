@@ -1,0 +1,2665 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-exit.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (exit)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-impure.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-exit.o) (_global_impure_ptr)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-init.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (__libc_init_array)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memcpy.o)
+                              objects/chip8.o (memcpy)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memmove.o)
+                              objects/chip8.o (memmove)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memset.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o (memset)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-rand.o)
+                              objects/chip8.o (srand)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-strlen-stub.o)
+                              objects/menu.o (strlen)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-time.o)
+                              objects/chip8.o (time)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-exit.o) (__call_exitprocs)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-atexit.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o) (atexit)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-fini.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o) (__libc_fini_array)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-gettimeofdayr.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-time.o) (_gettimeofday_r)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o) (__retarget_lock_acquire_recursive)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-gettimeofdayr.o) (errno)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__atexit.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-atexit.o) (__register_exitproc)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o) (_free_r)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o) (__malloc_current_mallinfo)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mlock.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o) (__malloc_lock)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-sbrkr.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o) (_sbrk_r)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m\libgcc.a(_lshrdi3.o)
+                              objects/stm32f1xx_hal_flash.o (__aeabi_llsr)
+
+Allocating common symbols
+Common symbol       size              file
+
+__lock___atexit_recursive_mutex
+                    0x1               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+errno               0x4               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+uwTick              0x4               objects/stm32f1xx_hal.o
+pFlash              0x20              objects/stm32f1xx_hal_flash.o
+__lock___env_recursive_mutex
+                    0x1               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+__lock___malloc_recursive_mutex
+                    0x1               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+__lock___at_quick_exit_mutex
+                    0x1               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+__lock___dd_hash_mutex
+                    0x1               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+__lock___sfp_recursive_mutex
+                    0x1               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+ .text          0x00000000       0x74 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+ .text          0x00000000        0x0 objects/system_stm32f1xx.o
+ .data          0x00000000        0x0 objects/system_stm32f1xx.o
+ .bss           0x00000000        0x0 objects/system_stm32f1xx.o
+ .text.SystemCoreClockUpdate
+                0x00000000       0x5c objects/system_stm32f1xx.o
+ .rodata.APBPrescTable
+                0x00000000        0x8 objects/system_stm32f1xx.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_eth.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_eth.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_eth.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_eth.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_eth.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_i2c.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_i2c.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_i2c.o
+ .text.I2C_IsAcknowledgeFailed
+                0x00000000       0x2a objects/stm32f1xx_hal_i2c.o
+ .text.I2C_WaitOnMasterAddressFlagUntilTimeout
+                0x00000000       0x80 objects/stm32f1xx_hal_i2c.o
+ .text.I2C_WaitOnFlagUntilTimeout
+                0x00000000       0x5c objects/stm32f1xx_hal_i2c.o
+ .text.I2C_WaitOnTXEFlagUntilTimeout
+                0x00000000       0x4c objects/stm32f1xx_hal_i2c.o
+ .text.I2C_RequestMemoryWrite
+                0x00000000       0xa4 objects/stm32f1xx_hal_i2c.o
+ .text.I2C_RequestMemoryRead
+                0x00000000       0xf4 objects/stm32f1xx_hal_i2c.o
+ .text.I2C_WaitOnRXNEFlagUntilTimeout
+                0x00000000       0x5a objects/stm32f1xx_hal_i2c.o
+ .text.I2C_WaitOnBTFFlagUntilTimeout
+                0x00000000       0x4c objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Init
+                0x00000000       0xdc objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_DeInit
+                0x00000000       0x32 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Master_Transmit
+                0x00000000      0x1ac objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Master_Receive
+                0x00000000      0x304 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Slave_Transmit
+                0x00000000      0x15c objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Slave_Receive
+                0x00000000      0x178 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Master_Transmit_IT
+                0x00000000       0xa8 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Master_Receive_IT
+                0x00000000       0xb0 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Master_Sequential_Transmit_IT
+                0x00000000       0xc4 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Master_Sequential_Receive_IT
+                0x00000000       0xc4 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Slave_Transmit_IT
+                0x00000000       0xb4 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Slave_Receive_IT
+                0x00000000       0xb0 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Slave_Sequential_Transmit_IT
+                0x00000000       0x78 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Slave_Sequential_Receive_IT
+                0x00000000       0x78 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_EnableListen_IT
+                0x00000000       0x36 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_DisableListen_IT
+                0x00000000       0x3e objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Master_Transmit_DMA
+                0x00000000      0x100 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Master_Receive_DMA
+                0x00000000      0x100 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Slave_Transmit_DMA
+                0x00000000       0xe4 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Slave_Receive_DMA
+                0x00000000       0xe4 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Mem_Write
+                0x00000000      0x12c objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Mem_Read
+                0x00000000      0x240 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Mem_Write_IT
+                0x00000000       0xb4 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Mem_Read_IT
+                0x00000000       0xc0 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Mem_Write_DMA
+                0x00000000      0x118 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Mem_Read_DMA
+                0x00000000      0x178 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_IsDeviceReady
+                0x00000000      0x160 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_MasterTxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_MasterRxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_SlaveTxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_SlaveRxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_AddrCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_ListenCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_MemTxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_MemRxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_ErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.I2C_DMAError
+                0x00000000       0x2a objects/stm32f1xx_hal_i2c.o
+ .text.I2C_DMAXferCplt
+                0x00000000       0x80 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_AbortCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_i2c.o
+ .text.I2C_ITError
+                0x00000000      0x128 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_Master_Abort_IT
+                0x00000000       0x4c objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_EV_IRQHandler
+                0x00000000      0x6d4 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_ER_IRQHandler
+                0x00000000      0x13c objects/stm32f1xx_hal_i2c.o
+ .text.I2C_DMAAbort
+                0x00000000       0x4c objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_GetMode
+                0x00000000        0x6 objects/stm32f1xx_hal_i2c.o
+ .text.HAL_I2C_GetError
+                0x00000000        0x4 objects/stm32f1xx_hal_i2c.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_i2c.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_i2c.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_tim.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_tim.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_tim.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_tim.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_tim.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_pwr.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_pwr.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_pwr.o
+ .text.PWR_OverloadWfe
+                0x00000000        0x6 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_DeInit
+                0x00000000       0x18 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_EnableBkUpAccess
+                0x00000000        0xc objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_DisableBkUpAccess
+                0x00000000        0xc objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_ConfigPVD
+                0x00000000       0x6c objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_EnablePVD
+                0x00000000        0xc objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_DisablePVD
+                0x00000000        0xc objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_EnableWakeUpPin
+                0x00000000       0x18 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_DisableWakeUpPin
+                0x00000000       0x18 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_EnterSLEEPMode
+                0x00000000       0x20 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_EnterSTOPMode
+                0x00000000       0x48 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_EnterSTANDBYMode
+                0x00000000       0x20 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_EnableSleepOnExit
+                0x00000000       0x10 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_DisableSleepOnExit
+                0x00000000       0x10 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_EnableSEVOnPend
+                0x00000000       0x10 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_DisableSEVOnPend
+                0x00000000       0x10 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_PVDCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pwr.o
+ .text.HAL_PWR_PVD_IRQHandler
+                0x00000000       0x1c objects/stm32f1xx_hal_pwr.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_pwr.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_pwr.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_nand.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_nand.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_nand.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_nand.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_nand.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_can.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_can.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_ConfigFilter
+                0x00000000       0xc6 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_Init
+                0x00000000      0x118 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_DeInit
+                0x00000000       0x20 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_Transmit
+                0x00000000      0x1a0 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_Transmit_IT
+                0x00000000       0xf0 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_Receive
+                0x00000000      0x1b8 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_Receive_IT
+                0x00000000       0xb4 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_Sleep
+                0x00000000       0x76 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_WakeUp
+                0x00000000       0x68 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_TxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_RxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_can.o
+ .text.CAN_Receive_IT
+                0x00000000      0x100 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_ErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_IRQHandler
+                0x00000000      0x1d8 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_can.o
+ .text.HAL_CAN_GetError
+                0x00000000        0x4 objects/stm32f1xx_hal_can.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_can.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_can.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_dac.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_dac.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_dac.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_dac.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_dac.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_usart.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_usart.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_usart.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_usart.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_usart.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_crc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_crc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_crc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_crc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_crc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_spi_ex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_spi_ex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_spi_ex.o
+ .text.SPI_ISCRCErrorValid
+                0x00000000        0x4 objects/stm32f1xx_hal_spi_ex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_gpio_ex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_gpio_ex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_gpio_ex.o
+ .text.HAL_GPIOEx_ConfigEventout
+                0x00000000       0x14 objects/stm32f1xx_hal_gpio_ex.o
+ .text.HAL_GPIOEx_EnableEventout
+                0x00000000       0x10 objects/stm32f1xx_hal_gpio_ex.o
+ .text.HAL_GPIOEx_DisableEventout
+                0x00000000       0x10 objects/stm32f1xx_hal_gpio_ex.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_gpio_ex.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_gpio_ex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_iwdg.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_iwdg.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_iwdg.o
+ .text.HAL_IWDG_Init
+                0x00000000       0x42 objects/stm32f1xx_hal_iwdg.o
+ .text.HAL_IWDG_Refresh
+                0x00000000        0xc objects/stm32f1xx_hal_iwdg.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_iwdg.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_iwdg.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_dma.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_dma.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_Init
+                0x00000000       0x68 objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_DeInit
+                0x00000000       0x4c objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_Start
+                0x00000000       0x5c objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_Start_IT
+                0x00000000       0x7a objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_Abort
+                0x00000000       0x2c objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_Abort_IT
+                0x00000000       0x90 objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_PollForTransfer
+                0x00000000      0x238 objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_IRQHandler
+                0x00000000      0x128 objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_RegisterCallback
+                0x00000000       0x46 objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_UnRegisterCallback
+                0x00000000       0x4e objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_dma.o
+ .text.HAL_DMA_GetError
+                0x00000000        0x4 objects/stm32f1xx_hal_dma.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_dma.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_dma.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_smartcard.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_smartcard.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_DMATransmitCplt
+                0x00000000       0x1a objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_WaitOnFlagUntilTimeout.constprop.3
+                0x00000000       0x50 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_Init
+                0x00000000      0x1d0 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_DeInit
+                0x00000000       0x26 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_Transmit
+                0x00000000       0x9a objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_Receive
+                0x00000000       0x86 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_Transmit_IT
+                0x00000000       0x4e objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_Receive_IT
+                0x00000000       0x46 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_Transmit_DMA
+                0x00000000       0x6c objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_Receive_DMA
+                0x00000000       0x8c objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_Abort
+                0x00000000       0x60 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_AbortTransmit
+                0x00000000       0x34 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_AbortReceive
+                0x00000000       0x3c objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_TxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_RxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_DMAReceiveCplt
+                0x00000000       0x2e objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_Receive_IT
+                0x00000000       0x4c objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_ErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_DMAError
+                0x00000000       0x56 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_IRQHandler
+                0x00000000      0x140 objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_DMAAbortOnError
+                0x00000000       0x10 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_AbortCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_Abort_IT
+                0x00000000       0xa8 objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_DMARxAbortCallback
+                0x00000000       0x28 objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_DMATxAbortCallback
+                0x00000000       0x28 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_AbortTransmitCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_AbortTransmit_IT
+                0x00000000       0x50 objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_DMATxOnlyAbortCallback
+                0x00000000       0x14 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_AbortReceiveCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_AbortReceive_IT
+                0x00000000       0x58 objects/stm32f1xx_hal_smartcard.o
+ .text.SMARTCARD_DMARxOnlyAbortCallback
+                0x00000000       0x14 objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_GetState
+                0x00000000        0xc objects/stm32f1xx_hal_smartcard.o
+ .text.HAL_SMARTCARD_GetError
+                0x00000000        0x4 objects/stm32f1xx_hal_smartcard.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_smartcard.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_smartcard.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_dac.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_dac.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_dac.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_dac.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_dac.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_adc_ex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_adc_ex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_Calibration_Start
+                0x00000000       0xd0 objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_InjectedStart
+                0x00000000       0xac objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_InjectedStop
+                0x00000000       0x4e objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_InjectedPollForConversion
+                0x00000000      0x138 objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_InjectedStart_IT
+                0x00000000       0xb4 objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_InjectedStop_IT
+                0x00000000       0x58 objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_MultiModeStart_DMA
+                0x00000000       0xdc objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_MultiModeStop_DMA
+                0x00000000       0x78 objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_InjectedGetValue
+                0x00000000       0x1e objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_MultiModeGetValue
+                0x00000000       0x20 objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_InjectedConvCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_InjectedConfigChannel
+                0x00000000      0x1d8 objects/stm32f1xx_hal_adc_ex.o
+ .text.HAL_ADCEx_MultiModeConfigChannel
+                0x00000000       0x58 objects/stm32f1xx_hal_adc_ex.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_adc_ex.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_adc_ex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_tim_ex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_tim_ex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_tim_ex.o
+ .text.TIM_CCxNChannelCmd
+                0x00000000       0x18 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_Init
+                0x00000000       0xae objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_DeInit
+                0x00000000       0x3a objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_Start
+                0x00000000       0x1c objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_Stop
+                0x00000000       0x30 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_Start_IT
+                0x00000000       0x24 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_Stop_IT
+                0x00000000       0x38 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_Start_DMA
+                0x00000000       0x64 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_Stop_DMA
+                0x00000000       0x38 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_PWMN_Start
+                0x00000000       0x22 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OCN_Start
+                0x00000000        0x4 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_PWMN_Start_IT
+                0x00000000       0x60 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OCN_Start_IT
+                0x00000000        0x4 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_PWMN_Stop_IT
+                0x00000000       0x9a objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OCN_Stop_IT
+                0x00000000        0x4 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_PWMN_Start_DMA
+                0x00000000       0xd4 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OCN_Start_DMA
+                0x00000000        0x4 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_PWMN_Stop_DMA
+                0x00000000       0x8e objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OCN_Stop_DMA
+                0x00000000        0x4 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OnePulseN_Start
+                0x00000000       0x1a objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OnePulseN_Stop
+                0x00000000       0x4a objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_PWMN_Stop
+                0x00000000        0x4 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OCN_Stop
+                0x00000000        0x4 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OnePulseN_Start_IT
+                0x00000000       0x2a objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_OnePulseN_Stop_IT
+                0x00000000       0x5a objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_ConfigCommutationEvent
+                0x00000000       0x4a objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_ConfigCommutationEvent_IT
+                0x00000000       0x52 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_ConfigCommutationEvent_DMA
+                0x00000000       0x64 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_ConfigBreakDeadTime
+                0x00000000       0x4c objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_MasterConfigSynchronization
+                0x00000000       0x44 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_CommutationCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_tim_ex.o
+ .text.TIMEx_DMACommutationCplt
+                0x00000000       0x10 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_BreakCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_tim_ex.o
+ .text.HAL_TIMEx_HallSensor_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_tim_ex.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_tim_ex.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_tim_ex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_i2s.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_i2s.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_i2s.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_i2s.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_i2s.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_cortex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_cortex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_cortex.o
+ .text.HAL_NVIC_EnableIRQ
+                0x00000000       0x18 objects/stm32f1xx_hal_cortex.o
+ .text.HAL_NVIC_DisableIRQ
+                0x00000000       0x1c objects/stm32f1xx_hal_cortex.o
+ .text.HAL_NVIC_SystemReset
+                0x00000000       0x24 objects/stm32f1xx_hal_cortex.o
+ .text.HAL_NVIC_GetPriorityGrouping
+                0x00000000       0x10 objects/stm32f1xx_hal_cortex.o
+ .text.HAL_NVIC_GetPriority
+                0x00000000       0x5c objects/stm32f1xx_hal_cortex.o
+ .text.HAL_NVIC_SetPendingIRQ
+                0x00000000       0x1c objects/stm32f1xx_hal_cortex.o
+ .text.HAL_NVIC_GetPendingIRQ
+                0x00000000       0x1c objects/stm32f1xx_hal_cortex.o
+ .text.HAL_NVIC_ClearPendingIRQ
+                0x00000000       0x1c objects/stm32f1xx_hal_cortex.o
+ .text.HAL_NVIC_GetActive
+                0x00000000       0x1c objects/stm32f1xx_hal_cortex.o
+ .text.HAL_SYSTICK_CLKSourceConfig
+                0x00000000       0x18 objects/stm32f1xx_hal_cortex.o
+ .text.HAL_SYSTICK_Callback
+                0x00000000        0x2 objects/stm32f1xx_hal_cortex.o
+ .text.HAL_SYSTICK_IRQHandler
+                0x00000000        0x8 objects/stm32f1xx_hal_cortex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_rtc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_rtc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_rtc.o
+ .text.RTC_ReadTimeCounter
+                0x00000000       0x24 objects/stm32f1xx_hal_rtc.o
+ .text.RTC_ReadAlarmCounter
+                0x00000000        0xe objects/stm32f1xx_hal_rtc.o
+ .text.RTC_ByteToBcd2
+                0x00000000       0x16 objects/stm32f1xx_hal_rtc.o
+ .text.RTC_Bcd2ToByte
+                0x00000000       0x10 objects/stm32f1xx_hal_rtc.o
+ .text.RTC_WeekDayNum
+                0x00000000       0x6e objects/stm32f1xx_hal_rtc.o
+ .text.RTC_EnterInitMode
+                0x00000000       0x2e objects/stm32f1xx_hal_rtc.o
+ .text.RTC_ExitInitMode
+                0x00000000       0x30 objects/stm32f1xx_hal_rtc.o
+ .text.RTC_WriteTimeCounter
+                0x00000000       0x28 objects/stm32f1xx_hal_rtc.o
+ .text.RTC_WriteAlarmCounter
+                0x00000000       0x28 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_SetTime
+                0x00000000       0xa2 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_GetTime
+                0x00000000      0x16c objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_SetDate
+                0x00000000       0xb0 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_GetDate
+                0x00000000       0x58 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_SetAlarm
+                0x00000000       0xb8 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_SetAlarm_IT
+                0x00000000       0xe0 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_GetAlarm
+                0x00000000       0x5a objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_DeactivateAlarm
+                0x00000000       0x6e objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_AlarmAEventCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_AlarmIRQHandler
+                0x00000000       0x30 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_PollForAlarmAEvent
+                0x00000000       0x3e objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_GetState
+                0x00000000        0x4 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_WaitForSynchro
+                0x00000000       0x36 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_Init
+                0x00000000       0xa0 objects/stm32f1xx_hal_rtc.o
+ .text.HAL_RTC_DeInit
+                0x00000000       0x60 objects/stm32f1xx_hal_rtc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_rtc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_rtc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_pccard.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_pccard.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_pccard.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_pccard.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_pccard.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_i2c.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_i2c.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_i2c.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_i2c.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_i2c.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_utils.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_utils.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_utils.o
+ .text.UTILS_SetFlashLatency
+                0x00000000       0x3c objects/stm32f1xx_ll_utils.o
+ .text.UTILS_EnablePLLAndSwitchSystem
+                0x00000000       0xa8 objects/stm32f1xx_ll_utils.o
+ .text.LL_Init1msTick
+                0x00000000       0x1c objects/stm32f1xx_ll_utils.o
+ .text.LL_mDelay
+                0x00000000       0x28 objects/stm32f1xx_ll_utils.o
+ .text.LL_SetSystemCoreClock
+                0x00000000        0xc objects/stm32f1xx_ll_utils.o
+ .text.LL_PLL_ConfigSystemClock_HSI
+                0x00000000       0x48 objects/stm32f1xx_ll_utils.o
+ .text.LL_PLL_ConfigSystemClock_HSE
+                0x00000000       0x68 objects/stm32f1xx_ll_utils.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_utils.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_utils.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_usb.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_usb.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_usb.o
+ .text.USB_CoreInit
+                0x00000000        0xe objects/stm32f1xx_ll_usb.o
+ .text.USB_EnableGlobalInt
+                0x00000000       0x12 objects/stm32f1xx_ll_usb.o
+ .text.USB_DisableGlobalInt
+                0x00000000       0x14 objects/stm32f1xx_ll_usb.o
+ .text.USB_SetCurrentMode
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_DevInit
+                0x00000000       0x36 objects/stm32f1xx_ll_usb.o
+ .text.USB_FlushTxFifo
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_FlushRxFifo
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_ActivateEndpoint
+                0x00000000      0x2e4 objects/stm32f1xx_ll_usb.o
+ .text.USB_DeactivateEndpoint
+                0x00000000      0x19c objects/stm32f1xx_ll_usb.o
+ .text.USB_WritePacket
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_ReadPacket
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_EPSetStall
+                0x00000000       0x64 objects/stm32f1xx_ll_usb.o
+ .text.USB_EPClearStall
+                0x00000000       0x84 objects/stm32f1xx_ll_usb.o
+ .text.USB_StopDevice
+                0x00000000       0x16 objects/stm32f1xx_ll_usb.o
+ .text.USB_SetDevAddress
+                0x00000000        0xc objects/stm32f1xx_ll_usb.o
+ .text.USB_DevConnect
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_DevDisconnect
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_ReadInterrupts
+                0x00000000        0x8 objects/stm32f1xx_ll_usb.o
+ .text.USB_ReadDevAllOutEpInterrupt
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_ReadDevAllInEpInterrupt
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_ReadDevOutEPInterrupt
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_ReadDevInEPInterrupt
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_ClearInterrupts
+                0x00000000        0x2 objects/stm32f1xx_ll_usb.o
+ .text.USB_EP0_OutStart
+                0x00000000        0x4 objects/stm32f1xx_ll_usb.o
+ .text.USB_ActivateRemoteWakeup
+                0x00000000       0x12 objects/stm32f1xx_ll_usb.o
+ .text.USB_DeActivateRemoteWakeup
+                0x00000000       0x14 objects/stm32f1xx_ll_usb.o
+ .text.USB_WritePMA
+                0x00000000       0x22 objects/stm32f1xx_ll_usb.o
+ .text.USB_EPStartXfer
+                0x00000000      0x200 objects/stm32f1xx_ll_usb.o
+ .text.USB_ReadPMA
+                0x00000000       0x22 objects/stm32f1xx_ll_usb.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_usb.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_usb.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_gpio.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_gpio.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_gpio.o
+ .text.HAL_GPIO_DeInit
+                0x00000000       0xe0 objects/stm32f1xx_hal_gpio.o
+ .text.HAL_GPIO_TogglePin
+                0x00000000        0x8 objects/stm32f1xx_hal_gpio.o
+ .text.HAL_GPIO_LockPin
+                0x00000000       0x2a objects/stm32f1xx_hal_gpio.o
+ .text.HAL_GPIO_EXTI_Callback
+                0x00000000        0x2 objects/stm32f1xx_hal_gpio.o
+ .text.HAL_GPIO_EXTI_IRQHandler
+                0x00000000       0x18 objects/stm32f1xx_hal_gpio.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_mmc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_mmc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_mmc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_mmc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_mmc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_spi.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_spi.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_spi.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_spi.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_spi.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_spi.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_spi.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_spi.o
+ .text.SPI_AbortRx_ISR
+                0x00000000       0x50 objects/stm32f1xx_hal_spi.o
+ .text.SPI_AbortTx_ISR
+                0x00000000       0x14 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_Init
+                0x00000000       0x92 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_DeInit
+                0x00000000       0x2c objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_Transmit_IT
+                0x00000000       0xb0 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_TransmitReceive_IT
+                0x00000000       0xcc objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_Receive_IT
+                0x00000000       0xc8 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_Transmit_DMA
+                0x00000000       0xc8 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_TransmitReceive_DMA
+                0x00000000      0x110 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_Receive_DMA
+                0x00000000       0xe8 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_Abort
+                0x00000000       0xb8 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_DMAPause
+                0x00000000       0x20 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_DMAResume
+                0x00000000       0x20 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_DMAStop
+                0x00000000       0x28 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_TxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_RxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_TxRxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_TxHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMAHalfTransmitCplt
+                0x00000000        0xa objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_RxHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMAHalfReceiveCplt
+                0x00000000        0xa objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_TxRxHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMAHalfTransmitReceiveCplt
+                0x00000000        0xa objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_ErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_spi.o
+ .text.SPI_CloseTx_ISR
+                0x00000000       0x80 objects/stm32f1xx_hal_spi.o
+ .text.SPI_TxISR_8BIT
+                0x00000000       0x32 objects/stm32f1xx_hal_spi.o
+ .text.SPI_TxISR_16BIT
+                0x00000000       0x30 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMAError
+                0x00000000       0x22 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMATransmitCplt
+                0x00000000       0x62 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_IRQHandler
+                0x00000000       0xd0 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMAAbortOnError
+                0x00000000       0x10 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_AbortCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_Abort_IT
+                0x00000000       0xe8 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMARxAbortCallback
+                0x00000000       0x46 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMATxAbortCallback
+                0x00000000       0x64 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_GetError
+                0x00000000        0x4 objects/stm32f1xx_hal_spi.o
+ .text.SPI_ISCRCErrorValid
+                0x00000000        0x4 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_TransmitReceive
+                0x00000000      0x2d8 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_Receive
+                0x00000000      0x1fc objects/stm32f1xx_hal_spi.o
+ .text.SPI_CloseRx_ISR
+                0x00000000       0x8e objects/stm32f1xx_hal_spi.o
+ .text.SPI_RxISR_8BIT
+                0x00000000       0x4c objects/stm32f1xx_hal_spi.o
+ .text.SPI_RxISR_8BITCRC
+                0x00000000       0x20 objects/stm32f1xx_hal_spi.o
+ .text.SPI_RxISR_16BIT
+                0x00000000       0x4c objects/stm32f1xx_hal_spi.o
+ .text.SPI_RxISR_16BITCRC
+                0x00000000       0x28 objects/stm32f1xx_hal_spi.o
+ .text.SPI_CloseRxTx_ISR
+                0x00000000       0xd8 objects/stm32f1xx_hal_spi.o
+ .text.SPI_2linesTxISR_8BIT
+                0x00000000       0x50 objects/stm32f1xx_hal_spi.o
+ .text.SPI_2linesRxISR_8BIT
+                0x00000000       0x44 objects/stm32f1xx_hal_spi.o
+ .text.SPI_2linesRxISR_8BITCRC
+                0x00000000       0x2e objects/stm32f1xx_hal_spi.o
+ .text.SPI_2linesTxISR_16BIT
+                0x00000000       0x4e objects/stm32f1xx_hal_spi.o
+ .text.SPI_2linesRxISR_16BIT
+                0x00000000       0x48 objects/stm32f1xx_hal_spi.o
+ .text.SPI_2linesRxISR_16BITCRC
+                0x00000000       0x28 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMAReceiveCplt
+                0x00000000       0xc6 objects/stm32f1xx_hal_spi.o
+ .text.SPI_DMATransmitReceiveCplt
+                0x00000000       0xbe objects/stm32f1xx_hal_spi.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_rtc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_rtc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_rtc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_rtc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_rtc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_adc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_adc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_PollForConversion
+                0x00000000      0x13c objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_PollForEvent
+                0x00000000       0x4e objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_GetValue
+                0x00000000        0x6 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_ConvCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_adc.o
+ .text.ADC_DMAConvCplt
+                0x00000000       0x4e objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_ConvHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_adc.o
+ .text.ADC_DMAHalfConvCplt
+                0x00000000        0xa objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_LevelOutOfWindowCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_IRQHandler
+                0x00000000       0xec objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_ErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_adc.o
+ .text.ADC_DMAError
+                0x00000000       0x1a objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_ConfigChannel
+                0x00000000      0x108 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_AnalogWDGConfig
+                0x00000000       0x50 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_GetState
+                0x00000000        0x4 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_GetError
+                0x00000000        0x4 objects/stm32f1xx_hal_adc.o
+ .text.ADC_Enable
+                0x00000000       0x70 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_Start
+                0x00000000       0xc4 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_Start_IT
+                0x00000000       0xcc objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_Start_DMA
+                0x00000000      0x11c objects/stm32f1xx_hal_adc.o
+ .text.ADC_ConversionStop_Disable
+                0x00000000       0x44 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_Init
+                0x00000000      0x100 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_DeInit
+                0x00000000       0xc0 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_Stop
+                0x00000000       0x34 objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_Stop_IT
+                0x00000000       0x3e objects/stm32f1xx_hal_adc.o
+ .text.HAL_ADC_Stop_DMA
+                0x00000000       0x4c objects/stm32f1xx_hal_adc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_adc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_adc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_pcd_ex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_pcd_ex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_pcd_ex.o
+ .text.HAL_PCDEx_PMAConfig
+                0x00000000       0x30 objects/stm32f1xx_hal_pcd_ex.o
+ .text.HAL_PCDEx_SetConnectionState
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd_ex.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_pcd_ex.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_pcd_ex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_hcd.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_hcd.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_hcd.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_hcd.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_hcd.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_nor.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_nor.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_nor.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_nor.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_nor.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_uart.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_uart.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_uart.o
+ .text.UART_EndRxTransfer
+                0x00000000       0x1a objects/stm32f1xx_hal_uart.o
+ .text.UART_SetConfig
+                0x00000000      0x13c objects/stm32f1xx_hal_uart.o
+ .text.UART_WaitOnFlagUntilTimeout.constprop.3
+                0x00000000       0x50 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_Init
+                0x00000000       0x5c objects/stm32f1xx_hal_uart.o
+ .text.HAL_HalfDuplex_Init
+                0x00000000       0x64 objects/stm32f1xx_hal_uart.o
+ .text.HAL_LIN_Init
+                0x00000000       0x72 objects/stm32f1xx_hal_uart.o
+ .text.HAL_MultiProcessor_Init
+                0x00000000       0x76 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_DeInit
+                0x00000000       0x26 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_Transmit
+                0x00000000       0xb8 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_Receive
+                0x00000000       0xbe objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_Transmit_IT
+                0x00000000       0x3e objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_Receive_IT
+                0x00000000       0x4e objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_Transmit_DMA
+                0x00000000       0x74 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_Receive_DMA
+                0x00000000       0x90 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_DMAPause
+                0x00000000       0x5a objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_DMAResume
+                0x00000000       0x62 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_DMAStop
+                0x00000000       0x5e objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_Abort
+                0x00000000       0x60 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_AbortTransmit
+                0x00000000       0x34 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_AbortReceive
+                0x00000000       0x3c objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_TxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMATransmitCplt
+                0x00000000       0x2c objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_TxHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMATxHalfCplt
+                0x00000000        0xa objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_RxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMAReceiveCplt
+                0x00000000       0x38 objects/stm32f1xx_hal_uart.o
+ .text.UART_Receive_IT
+                0x00000000       0x7c objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_RxHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMARxHalfCplt
+                0x00000000        0xa objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_ErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMAError
+                0x00000000       0x4e objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_IRQHandler
+                0x00000000      0x140 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMAAbortOnError
+                0x00000000       0x10 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_AbortCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_Abort_IT
+                0x00000000       0xa8 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMARxAbortCallback
+                0x00000000       0x28 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMATxAbortCallback
+                0x00000000       0x28 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_AbortTransmitCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_AbortTransmit_IT
+                0x00000000       0x50 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMATxOnlyAbortCallback
+                0x00000000       0x14 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_AbortReceiveCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_AbortReceive_IT
+                0x00000000       0x58 objects/stm32f1xx_hal_uart.o
+ .text.UART_DMARxOnlyAbortCallback
+                0x00000000       0x14 objects/stm32f1xx_hal_uart.o
+ .text.HAL_LIN_SendBreak
+                0x00000000       0x2c objects/stm32f1xx_hal_uart.o
+ .text.HAL_MultiProcessor_EnterMuteMode
+                0x00000000       0x2c objects/stm32f1xx_hal_uart.o
+ .text.HAL_MultiProcessor_ExitMuteMode
+                0x00000000       0x2c objects/stm32f1xx_hal_uart.o
+ .text.HAL_HalfDuplex_EnableTransmitter
+                0x00000000       0x30 objects/stm32f1xx_hal_uart.o
+ .text.HAL_HalfDuplex_EnableReceiver
+                0x00000000       0x30 objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_GetState
+                0x00000000        0xc objects/stm32f1xx_hal_uart.o
+ .text.HAL_UART_GetError
+                0x00000000        0x4 objects/stm32f1xx_hal_uart.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_uart.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_uart.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_dma.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_dma.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_dma.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_dma.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_dma.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_flash.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_flash.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_flash.o
+ .text.FLASH_SetErrorCode
+                0x00000000       0x50 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_Program_IT
+                0x00000000       0x5c objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_EndOfOperationCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_OperationErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_IRQHandler
+                0x00000000      0x114 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_Unlock
+                0x00000000       0x24 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_Lock
+                0x00000000       0x14 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_OB_Unlock
+                0x00000000       0x24 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_OB_Lock
+                0x00000000       0x14 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_OB_Launch
+                0x00000000        0x4 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_GetError
+                0x00000000        0xc objects/stm32f1xx_hal_flash.o
+ .text.FLASH_WaitForLastOperation
+                0x00000000       0x54 objects/stm32f1xx_hal_flash.o
+ .text.HAL_FLASH_Program
+                0x00000000       0x8c objects/stm32f1xx_hal_flash.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_flash.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_flash.o
+ COMMON         0x00000000       0x20 objects/stm32f1xx_hal_flash.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal.o
+ .text.HAL_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal.o
+ .text.HAL_DeInit
+                0x00000000       0x20 objects/stm32f1xx_hal.o
+ .text.HAL_SuspendTick
+                0x00000000       0x10 objects/stm32f1xx_hal.o
+ .text.HAL_ResumeTick
+                0x00000000       0x10 objects/stm32f1xx_hal.o
+ .text.HAL_GetHalVersion
+                0x00000000        0x8 objects/stm32f1xx_hal.o
+ .text.HAL_GetREVID
+                0x00000000        0xc objects/stm32f1xx_hal.o
+ .text.HAL_GetDEVID
+                0x00000000       0x10 objects/stm32f1xx_hal.o
+ .text.HAL_DBGMCU_EnableDBGSleepMode
+                0x00000000       0x10 objects/stm32f1xx_hal.o
+ .text.HAL_DBGMCU_DisableDBGSleepMode
+                0x00000000       0x10 objects/stm32f1xx_hal.o
+ .text.HAL_DBGMCU_EnableDBGStopMode
+                0x00000000       0x10 objects/stm32f1xx_hal.o
+ .text.HAL_DBGMCU_DisableDBGStopMode
+                0x00000000       0x10 objects/stm32f1xx_hal.o
+ .text.HAL_DBGMCU_EnableDBGStandbyMode
+                0x00000000       0x10 objects/stm32f1xx_hal.o
+ .text.HAL_DBGMCU_DisableDBGStandbyMode
+                0x00000000       0x10 objects/stm32f1xx_hal.o
+ .text.HAL_GetUID
+                0x00000000       0x20 objects/stm32f1xx_hal.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_pwr.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_pwr.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_pwr.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_pwr.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_pwr.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_rcc_ex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_rcc_ex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_rcc_ex.o
+ .text.HAL_RCCEx_PeriphCLKConfig
+                0x00000000       0xf0 objects/stm32f1xx_hal_rcc_ex.o
+ .text.HAL_RCCEx_GetPeriphCLKConfig
+                0x00000000       0x24 objects/stm32f1xx_hal_rcc_ex.o
+ .text.HAL_RCCEx_GetPeriphCLKFreq
+                0x00000000       0xec objects/stm32f1xx_hal_rcc_ex.o
+ .rodata        0x00000000       0x10 objects/stm32f1xx_hal_rcc_ex.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_rcc_ex.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_rcc_ex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_fsmc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_fsmc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_fsmc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_fsmc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_fsmc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_wwdg.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_wwdg.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_wwdg.o
+ .text.HAL_WWDG_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_wwdg.o
+ .text.HAL_WWDG_Init
+                0x00000000       0x28 objects/stm32f1xx_hal_wwdg.o
+ .text.HAL_WWDG_Refresh
+                0x00000000        0xa objects/stm32f1xx_hal_wwdg.o
+ .text.HAL_WWDG_EarlyWakeupCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_wwdg.o
+ .text.HAL_WWDG_IRQHandler
+                0x00000000       0x1c objects/stm32f1xx_hal_wwdg.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_wwdg.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_wwdg.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_irda.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_irda.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_EndRxTransfer
+                0x00000000       0x1a objects/stm32f1xx_hal_irda.o
+ .text.IRDA_WaitOnFlagUntilTimeout.constprop.3
+                0x00000000       0x50 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_Init
+                0x00000000      0x1a0 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_DeInit
+                0x00000000       0x30 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_Transmit
+                0x00000000       0xb8 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_Receive
+                0x00000000       0xbe objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_Transmit_IT
+                0x00000000       0x3e objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_Receive_IT
+                0x00000000       0x4e objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_Transmit_DMA
+                0x00000000       0x74 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_Receive_DMA
+                0x00000000       0x90 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_DMAPause
+                0x00000000       0x5a objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_DMAResume
+                0x00000000       0x62 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_DMAStop
+                0x00000000       0x5e objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_Abort
+                0x00000000       0x60 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_AbortTransmit
+                0x00000000       0x34 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_AbortReceive
+                0x00000000       0x3c objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_TxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMATransmitCplt
+                0x00000000       0x2c objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_TxHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMATransmitHalfCplt
+                0x00000000        0xa objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_RxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMAReceiveCplt
+                0x00000000       0x38 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_Receive_IT
+                0x00000000       0x7a objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_RxHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMAReceiveHalfCplt
+                0x00000000        0xa objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_ErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMAError
+                0x00000000       0x4e objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_IRQHandler
+                0x00000000      0x140 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMAAbortOnError
+                0x00000000       0x10 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_AbortCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_Abort_IT
+                0x00000000       0xa8 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMARxAbortCallback
+                0x00000000       0x28 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMATxAbortCallback
+                0x00000000       0x28 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_AbortTransmitCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_AbortTransmit_IT
+                0x00000000       0x50 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMATxOnlyAbortCallback
+                0x00000000       0x14 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_AbortReceiveCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_AbortReceive_IT
+                0x00000000       0x58 objects/stm32f1xx_hal_irda.o
+ .text.IRDA_DMARxOnlyAbortCallback
+                0x00000000       0x14 objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_GetState
+                0x00000000        0xc objects/stm32f1xx_hal_irda.o
+ .text.HAL_IRDA_GetError
+                0x00000000        0x4 objects/stm32f1xx_hal_irda.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_irda.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_irda.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_sdmmc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_sdmmc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_sdmmc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_sdmmc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_sdmmc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_pcd.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_pcd.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_Init
+                0x00000000       0xd2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_Start
+                0x00000000       0x2e objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_Stop
+                0x00000000       0x30 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_DeInit
+                0x00000000       0x22 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_DataOutStageCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_DataInStageCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_SetupStageCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_SOFCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_ResetCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_SuspendCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_ResumeCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_ISOOUTIncompleteCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_ISOINIncompleteCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_ConnectCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_DisconnectCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_DevConnect
+                0x00000000       0x28 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_DevDisconnect
+                0x00000000       0x2a objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_SetAddress
+                0x00000000       0x28 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_EP_Open
+                0x00000000       0x46 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_EP_Close
+                0x00000000       0x42 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_EP_Receive
+                0x00000000       0x30 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_EP_GetRxCount
+                0x00000000        0xe objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_EP_Transmit
+                0x00000000       0x2c objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_IRQHandler
+                0x00000000      0x4f0 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_EP_SetStall
+                0x00000000       0x52 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_EP_ClrStall
+                0x00000000       0x46 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_EP_Flush
+                0x00000000       0x34 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_ActivateRemoteWakeup
+                0x00000000        0x6 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_DeActivateRemoteWakeup
+                0x00000000        0x6 objects/stm32f1xx_hal_pcd.o
+ .text.HAL_PCD_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_pcd.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_pcd.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_pcd.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_exti.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_exti.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_exti.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_exti.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_exti.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_usart.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_usart.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_usart.o
+ .text.USART_EndRxTransfer
+                0x00000000       0x1a objects/stm32f1xx_hal_usart.o
+ .text.USART_WaitOnFlagUntilTimeout.constprop.4
+                0x00000000       0x5c objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_Init
+                0x00000000      0x120 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_DeInit
+                0x00000000       0x22 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_Transmit
+                0x00000000       0xb2 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_Receive
+                0x00000000       0xea objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_TransmitReceive
+                0x00000000      0x110 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_Transmit_IT
+                0x00000000       0x3e objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_Receive_IT
+                0x00000000       0x54 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_TransmitReceive_IT
+                0x00000000       0x5e objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_Transmit_DMA
+                0x00000000       0x70 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_Receive_DMA
+                0x00000000       0xb4 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_TransmitReceive_DMA
+                0x00000000       0xd4 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_DMAPause
+                0x00000000       0x20 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_DMAResume
+                0x00000000       0x20 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_DMAStop
+                0x00000000       0x60 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_Abort
+                0x00000000       0x5c objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_TxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_usart.o
+ .text.USART_DMATransmitCplt
+                0x00000000       0x3c objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_TxHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_usart.o
+ .text.USART_DMATxHalfCplt
+                0x00000000        0xa objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_RxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_usart.o
+ .text.USART_Receive_IT
+                0x00000000       0x9c objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_RxHalfCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_usart.o
+ .text.USART_DMARxHalfCplt
+                0x00000000        0xa objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_TxRxCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_usart.o
+ .text.USART_DMAReceiveCplt
+                0x00000000       0x5a objects/stm32f1xx_hal_usart.o
+ .text.USART_TransmitReceive_IT
+                0x00000000       0xda objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_ErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_usart.o
+ .text.USART_DMAError
+                0x00000000       0x52 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_IRQHandler
+                0x00000000      0x170 objects/stm32f1xx_hal_usart.o
+ .text.USART_DMAAbortOnError
+                0x00000000       0x10 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_AbortCpltCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_Abort_IT
+                0x00000000       0xa4 objects/stm32f1xx_hal_usart.o
+ .text.USART_DMARxAbortCallback
+                0x00000000       0x24 objects/stm32f1xx_hal_usart.o
+ .text.USART_DMATxAbortCallback
+                0x00000000       0x24 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_usart.o
+ .text.HAL_USART_GetError
+                0x00000000        0x4 objects/stm32f1xx_hal_usart.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_usart.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_usart.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_tim.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_tim.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_tim.o
+ .text.TIM_SlaveTimer_SetConfig
+                0x00000000       0xaa objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_DeInit
+                0x00000000       0x3a objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_Start
+                0x00000000       0x1a objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_Stop
+                0x00000000       0x2e objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_Start_IT
+                0x00000000       0x16 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_Stop_IT
+                0x00000000       0x2a objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_Start_DMA
+                0x00000000       0x54 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_Stop_DMA
+                0x00000000       0x30 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_DeInit
+                0x00000000       0x3a objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PWM_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PWM_DeInit
+                0x00000000       0x3a objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_DeInit
+                0x00000000       0x3a objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_DeInit
+                0x00000000       0x3a objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_Start
+                0x00000000       0x38 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_Stop
+                0x00000000       0x60 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_Start_IT
+                0x00000000       0x48 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_Stop_IT
+                0x00000000       0x70 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_DeInit
+                0x00000000       0x3a objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_Start
+                0x00000000       0x44 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_Stop
+                0x00000000       0x48 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_Start_IT
+                0x00000000       0x6e objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_Stop_IT
+                0x00000000       0x74 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_Start_DMA
+                0x00000000      0x124 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_Stop_DMA
+                0x00000000       0x74 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_DMABurst_WriteStart
+                0x00000000       0xb4 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_DMABurst_ReadStart
+                0x00000000       0xb4 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_DMABurst_ReadStop
+                0x00000000       0x5e objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_DMABurst_WriteStop
+                0x00000000        0x4 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_GenerateEvent
+                0x00000000       0x24 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_ConfigOCrefClear
+                0x00000000       0xc0 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_ConfigClockSource
+                0x00000000      0x172 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_ConfigTI1Input
+                0x00000000       0x10 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_SlaveConfigSynchronization
+                0x00000000       0x40 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_SlaveConfigSynchronization_IT
+                0x00000000       0x40 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_ReadCapturedValue
+                0x00000000       0x46 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PeriodElapsedCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.TIM_DMAPeriodElapsedCplt
+                0x00000000       0x10 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_DelayElapsedCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_CaptureCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.TIM_DMACaptureCplt
+                0x00000000       0x3c objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PWM_PulseFinishedCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.TIM_DMADelayPulseCplt
+                0x00000000       0x3c objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_TriggerCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IRQHandler
+                0x00000000      0x144 objects/stm32f1xx_hal_tim.o
+ .text.TIM_DMATriggerCplt
+                0x00000000       0x10 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_ErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_tim.o
+ .text.TIM_DMAError
+                0x00000000       0x10 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PWM_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_GetState
+                0x00000000        0x6 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Base_Init
+                0x00000000       0x34 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_Init
+                0x00000000       0x34 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_Init
+                0x00000000       0x34 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_Init
+                0x00000000       0x46 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_Encoder_Init
+                0x00000000       0x92 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_ConfigChannel
+                0x00000000       0x5c objects/stm32f1xx_hal_tim.o
+ .text.TIM_TI1_SetConfig
+                0x00000000       0x54 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_ConfigChannel
+                0x00000000      0x110 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OnePulse_ConfigChannel
+                0x00000000       0xf4 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_Stop
+                0x00000000       0x54 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_Start
+                0x00000000        0x4 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PWM_Start_IT
+                0x00000000       0x6c objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_Start_IT
+                0x00000000        0x4 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PWM_Stop_IT
+                0x00000000       0x94 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_Stop_IT
+                0x00000000        0x4 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PWM_Start_DMA
+                0x00000000       0xe0 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_Start_DMA
+                0x00000000        0x4 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PWM_Stop_DMA
+                0x00000000       0x98 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_OC_Stop_DMA
+                0x00000000        0x4 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_Start
+                0x00000000       0x1a objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_Stop
+                0x00000000       0x2e objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_Start_IT
+                0x00000000       0x58 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_Stop_IT
+                0x00000000       0x6c objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_Start_DMA
+                0x00000000       0xcc objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_IC_Stop_DMA
+                0x00000000       0x72 objects/stm32f1xx_hal_tim.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_crc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_crc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_crc.o
+ .text.HAL_CRC_MspInit
+                0x00000000        0x2 objects/stm32f1xx_hal_crc.o
+ .text.HAL_CRC_Init
+                0x00000000       0x20 objects/stm32f1xx_hal_crc.o
+ .text.HAL_CRC_MspDeInit
+                0x00000000        0x2 objects/stm32f1xx_hal_crc.o
+ .text.HAL_CRC_DeInit
+                0x00000000       0x28 objects/stm32f1xx_hal_crc.o
+ .text.HAL_CRC_Accumulate
+                0x00000000       0x34 objects/stm32f1xx_hal_crc.o
+ .text.HAL_CRC_Calculate
+                0x00000000       0x3c objects/stm32f1xx_hal_crc.o
+ .text.HAL_CRC_GetState
+                0x00000000        0x4 objects/stm32f1xx_hal_crc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_crc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_crc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_rcc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_rcc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_rcc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_rcc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_rcc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_gpio.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_gpio.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_gpio.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_gpio.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_gpio.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_sram.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_sram.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_sram.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_sram.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_sram.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_rtc_ex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_rtc_ex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_SetTamper
+                0x00000000       0x48 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_SetTamper_IT
+                0x00000000       0x50 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_DeactivateTamper
+                0x00000000       0x44 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_Tamper1EventCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_TamperIRQHandler
+                0x00000000       0x28 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_PollForTamper1Event
+                0x00000000       0x48 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_SetSecond_IT
+                0x00000000       0x28 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_DeactivateSecond
+                0x00000000       0x28 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_RTCEventCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_RTCEventErrorCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_RTCIRQHandler
+                0x00000000       0x3a objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_BKUPWrite
+                0x00000000       0x10 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_BKUPRead
+                0x00000000       0x10 objects/stm32f1xx_hal_rtc_ex.o
+ .text.HAL_RTCEx_SetSmoothCalib
+                0x00000000       0x34 objects/stm32f1xx_hal_rtc_ex.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_rtc_ex.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_rtc_ex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_ll_adc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_ll_adc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_ll_adc.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_ll_adc.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_ll_adc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_dac_ex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_dac_ex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_dac_ex.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_dac_ex.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_dac_ex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_flash_ex.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_flash_ex.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_flash_ex.o
+ .text.FLASH_MassErase.isra.0
+                0x00000000       0x24 objects/stm32f1xx_hal_flash_ex.o
+ .text.FLASH_OB_RDP_LevelConfig
+                0x00000000       0x64 objects/stm32f1xx_hal_flash_ex.o
+ .text.HAL_FLASHEx_OBErase
+                0x00000000       0x54 objects/stm32f1xx_hal_flash_ex.o
+ .text.HAL_FLASHEx_OBProgram
+                0x00000000      0x1fc objects/stm32f1xx_hal_flash_ex.o
+ .text.HAL_FLASHEx_OBGetConfig
+                0x00000000       0x28 objects/stm32f1xx_hal_flash_ex.o
+ .text.HAL_FLASHEx_OBGetUserData
+                0x00000000       0x1c objects/stm32f1xx_hal_flash_ex.o
+ .text.FLASH_PageErase
+                0x00000000       0x24 objects/stm32f1xx_hal_flash_ex.o
+ .text.HAL_FLASHEx_Erase
+                0x00000000       0x9c objects/stm32f1xx_hal_flash_ex.o
+ .text.HAL_FLASHEx_Erase_IT
+                0x00000000       0x50 objects/stm32f1xx_hal_flash_ex.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_flash_ex.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_flash_ex.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_rcc.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_rcc.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_DeInit
+                0x00000000       0x44 objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_MCOConfig
+                0x00000000       0x50 objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_EnableCSS
+                0x00000000        0xc objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_DisableCSS
+                0x00000000        0xc objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_GetHCLKFreq
+                0x00000000        0xc objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_GetPCLK1Freq
+                0x00000000       0x20 objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_GetPCLK2Freq
+                0x00000000       0x20 objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_GetOscConfig
+                0x00000000       0x80 objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_GetClockConfig
+                0x00000000       0x3c objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_CSSCallback
+                0x00000000        0x2 objects/stm32f1xx_hal_rcc.o
+ .text.HAL_RCC_NMI_IRQHandler
+                0x00000000       0x20 objects/stm32f1xx_hal_rcc.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_sd.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_sd.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_sd.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_sd.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_sd.o
+ .text          0x00000000        0x0 objects/stm32f1xx_hal_cec.o
+ .data          0x00000000        0x0 objects/stm32f1xx_hal_cec.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_hal_cec.o
+ .comment       0x00000000       0x80 objects/stm32f1xx_hal_cec.o
+ .ARM.attributes
+                0x00000000       0x33 objects/stm32f1xx_hal_cec.o
+ .text          0x00000000        0x0 objects/input.o
+ .data          0x00000000        0x0 objects/input.o
+ .bss           0x00000000        0x0 objects/input.o
+ .text          0x00000000        0x0 objects/stm32f1xx_it.o
+ .data          0x00000000        0x0 objects/stm32f1xx_it.o
+ .bss           0x00000000        0x0 objects/stm32f1xx_it.o
+ .text          0x00000000        0x0 objects/main.o
+ .data          0x00000000        0x0 objects/main.o
+ .bss           0x00000000        0x0 objects/main.o
+ .text          0x00000000        0x0 objects/menu.o
+ .data          0x00000000        0x0 objects/menu.o
+ .bss           0x00000000        0x0 objects/menu.o
+ .text          0x00000000        0x0 objects/chip8.o
+ .data          0x00000000        0x0 objects/chip8.o
+ .bss           0x00000000        0x0 objects/chip8.o
+ .text.chip8CompatibilityMode
+                0x00000000        0xc objects/chip8.o
+ .text.chip8VerticalWrap
+                0x00000000        0xc objects/chip8.o
+ .text          0x00000000        0x0 objects/splash.o
+ .data          0x00000000        0x0 objects/splash.o
+ .bss           0x00000000        0x0 objects/splash.o
+ .text          0x00000000        0x0 objects/system.o
+ .data          0x00000000        0x0 objects/system.o
+ .bss           0x00000000        0x0 objects/system.o
+ .text          0x00000000        0x0 objects/display.o
+ .data          0x00000000        0x0 objects/display.o
+ .bss           0x00000000        0x0 objects/display.o
+ .text          0x00000000        0x0 objects/buzzer.o
+ .data          0x00000000        0x0 objects/buzzer.o
+ .bss           0x00000000        0x0 objects/buzzer.o
+ .text          0x00000000       0x14 objects/startup_stm32f103xb.o
+ .data          0x00000000        0x0 objects/startup_stm32f103xb.o
+ .bss           0x00000000        0x0 objects/startup_stm32f103xb.o
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-exit.o)
+ .debug_frame   0x00000000       0x28 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-init.o)
+ .debug_frame   0x00000000       0x2c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000000       0x1b c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memmove.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memmove.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memmove.o)
+ .debug_frame   0x00000000       0x30 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memmove.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-rand.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-rand.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-rand.o)
+ .debug_frame   0x00000000       0x3c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-rand.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-rand.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-strlen-stub.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-strlen-stub.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-strlen-stub.o)
+ .debug_frame   0x00000000       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-strlen-stub.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-strlen-stub.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-time.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-time.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-time.o)
+ .debug_frame   0x00000000       0x30 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-time.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-time.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x00000000       0xe8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00000000       0x5c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-atexit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-atexit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-atexit.o)
+ .debug_frame   0x00000000       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-atexit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-fini.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-fini.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-fini.o)
+ .debug_frame   0x00000000       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-fini.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-gettimeofdayr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-gettimeofdayr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-gettimeofdayr.o)
+ .debug_frame   0x00000000       0x2c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-gettimeofdayr.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-gettimeofdayr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .debug_frame   0x00000000       0xb0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x00000000       0x1c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x00000000       0x88 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+ .debug_frame   0x00000000       0x58 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__atexit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__atexit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__atexit.o)
+ .debug_frame   0x00000000       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__atexit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o)
+ .text._malloc_trim_r
+                0x00000000       0xa0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o)
+ .text._free_r  0x00000000      0x1cc c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o)
+ .debug_frame   0x00000000       0x74 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-freer.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .text._malloc_r
+                0x00000000      0x544 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .bss.__malloc_current_mallinfo
+                0x00000000       0x28 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .bss.__malloc_max_sbrked_mem
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .bss.__malloc_max_total_mem
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .bss.__malloc_top_pad
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .data.__malloc_av_
+                0x00000000      0x408 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .data.__malloc_sbrk_base
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .data.__malloc_trim_threshold
+                0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .debug_frame   0x00000000       0x54 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mallocr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mlock.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mlock.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mlock.o)
+ .text.__malloc_lock
+                0x00000000        0xc c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mlock.o)
+ .text.__malloc_unlock
+                0x00000000        0xc c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mlock.o)
+ .debug_frame   0x00000000       0x30 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-mlock.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-sbrkr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-sbrkr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-sbrkr.o)
+ .text._sbrk_r  0x00000000       0x24 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x00000000       0x2c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-sbrkr.o)
+ .text          0x00000000       0x18 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m\libgcc.a(_lshrdi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m\libgcc.a(_lshrdi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m\libgcc.a(_lshrdi3.o)
+ .ARM.attributes
+                0x00000000       0x1d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m\libgcc.a(_lshrdi3.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtend.o
+ .eh_frame      0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtend.o
+ .jcr           0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtend.o
+ .ARM.attributes
+                0x00000000       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00020000         xr
+RAM              0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/crt0.o
+LOAD objects/system_stm32f1xx.o
+LOAD objects/stm32f1xx_hal_eth.o
+LOAD objects/stm32f1xx_hal_i2c.o
+LOAD objects/stm32f1xx_ll_tim.o
+LOAD objects/stm32f1xx_hal_pwr.o
+LOAD objects/stm32f1xx_hal_nand.o
+LOAD objects/stm32f1xx_hal_can.o
+LOAD objects/stm32f1xx_hal_dac.o
+LOAD objects/stm32f1xx_ll_usart.o
+LOAD objects/stm32f1xx_ll_crc.o
+LOAD objects/stm32f1xx_hal_spi_ex.o
+LOAD objects/stm32f1xx_hal_gpio_ex.o
+LOAD objects/stm32f1xx_hal_iwdg.o
+LOAD objects/stm32f1xx_hal_dma.o
+LOAD objects/stm32f1xx_hal_smartcard.o
+LOAD objects/stm32f1xx_ll_dac.o
+LOAD objects/stm32f1xx_hal_adc_ex.o
+LOAD objects/stm32f1xx_hal_tim_ex.o
+LOAD objects/stm32f1xx_hal_i2s.o
+LOAD objects/stm32f1xx_hal_cortex.o
+LOAD objects/stm32f1xx_hal_rtc.o
+LOAD objects/stm32f1xx_hal_pccard.o
+LOAD objects/stm32f1xx_ll_i2c.o
+LOAD objects/stm32f1xx_ll_utils.o
+LOAD objects/stm32f1xx_ll_usb.o
+LOAD objects/stm32f1xx_hal_gpio.o
+LOAD objects/stm32f1xx_hal_mmc.o
+LOAD objects/stm32f1xx_ll_spi.o
+LOAD objects/stm32f1xx_hal_spi.o
+LOAD objects/stm32f1xx_ll_rtc.o
+LOAD objects/stm32f1xx_hal_adc.o
+LOAD objects/stm32f1xx_hal_pcd_ex.o
+LOAD objects/stm32f1xx_hal_hcd.o
+LOAD objects/stm32f1xx_hal_nor.o
+LOAD objects/stm32f1xx_hal_uart.o
+LOAD objects/stm32f1xx_ll_dma.o
+LOAD objects/stm32f1xx_hal_flash.o
+LOAD objects/stm32f1xx_hal.o
+LOAD objects/stm32f1xx_ll_pwr.o
+LOAD objects/stm32f1xx_hal_rcc_ex.o
+LOAD objects/stm32f1xx_ll_fsmc.o
+LOAD objects/stm32f1xx_hal_wwdg.o
+LOAD objects/stm32f1xx_hal_irda.o
+LOAD objects/stm32f1xx_ll_sdmmc.o
+LOAD objects/stm32f1xx_hal_pcd.o
+LOAD objects/stm32f1xx_ll_exti.o
+LOAD objects/stm32f1xx_hal_usart.o
+LOAD objects/stm32f1xx_hal_tim.o
+LOAD objects/stm32f1xx_hal_crc.o
+LOAD objects/stm32f1xx_ll_rcc.o
+LOAD objects/stm32f1xx_ll_gpio.o
+LOAD objects/stm32f1xx_hal_sram.o
+LOAD objects/stm32f1xx_hal_rtc_ex.o
+LOAD objects/stm32f1xx_ll_adc.o
+LOAD objects/stm32f1xx_hal_dac_ex.o
+LOAD objects/stm32f1xx_hal_flash_ex.o
+LOAD objects/stm32f1xx_hal_rcc.o
+LOAD objects/stm32f1xx_hal_sd.o
+LOAD objects/stm32f1xx_hal_cec.o
+LOAD objects/input.o
+LOAD objects/stm32f1xx_it.o
+LOAD objects/main.o
+LOAD objects/menu.o
+LOAD objects/chip8.o
+LOAD objects/splash.o
+LOAD objects/system.o
+LOAD objects/display.o
+LOAD objects/buzzer.o
+LOAD objects/startup_stm32f103xb.o
+                0x20004fff                _estack = 0x20004fff
+                0x00000200                _Min_Heap_Size = 0x200
+                0x00000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x08000000      0x10c
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x10c objects/startup_stm32f103xb.o
+                0x08000000                g_pfnVectors
+                0x0800010c                . = ALIGN (0x4)
+
+.text           0x0800010c     0x25cc
+                0x0800010c                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0800010c       0x6c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+ .text          0x08000178       0xec c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memcpy.o)
+                0x08000178                memcpy
+ *(.text*)
+ .text.SystemInit
+                0x08000264       0x4c objects/system_stm32f1xx.o
+                0x08000264                SystemInit
+ .text.HAL_SPI_Init
+                0x080002b0       0x7c objects/stm32f1xx_hal_spi_ex.o
+                0x080002b0                HAL_SPI_Init
+ .text.HAL_NVIC_SetPriorityGrouping
+                0x0800032c       0x24 objects/stm32f1xx_hal_cortex.o
+                0x0800032c                HAL_NVIC_SetPriorityGrouping
+ .text.HAL_NVIC_SetPriority
+                0x08000350       0x68 objects/stm32f1xx_hal_cortex.o
+                0x08000350                HAL_NVIC_SetPriority
+ .text.HAL_SYSTICK_Config
+                0x080003b8       0x2c objects/stm32f1xx_hal_cortex.o
+                0x080003b8                HAL_SYSTICK_Config
+ .text.HAL_GPIO_Init
+                0x080003e4      0x1c0 objects/stm32f1xx_hal_gpio.o
+                0x080003e4                HAL_GPIO_Init
+ .text.HAL_GPIO_ReadPin
+                0x080005a4        0xc objects/stm32f1xx_hal_gpio.o
+                0x080005a4                HAL_GPIO_ReadPin
+ .text.HAL_GPIO_WritePin
+                0x080005b0        0xa objects/stm32f1xx_hal_gpio.o
+                0x080005b0                HAL_GPIO_WritePin
+ .text.SPI_WaitFlagStateUntilTimeout
+                0x080005ba       0x8e objects/stm32f1xx_hal_spi.o
+ .text.SPI_CheckFlag_BSY
+                0x08000648       0x20 objects/stm32f1xx_hal_spi.o
+ .text.HAL_SPI_MspInit
+                0x08000668        0x2 objects/stm32f1xx_hal_spi.o
+                0x08000668                HAL_SPI_MspInit
+ .text.HAL_SPI_Transmit
+                0x0800066a      0x180 objects/stm32f1xx_hal_spi.o
+                0x0800066a                HAL_SPI_Transmit
+ .text.HAL_MspInit
+                0x080007ea        0x2 objects/stm32f1xx_hal.o
+                0x080007ea                HAL_MspInit
+ .text.HAL_InitTick
+                0x080007ec       0x28 objects/stm32f1xx_hal.o
+                0x080007ec                HAL_InitTick
+ .text.HAL_Init
+                0x08000814       0x24 objects/stm32f1xx_hal.o
+                0x08000814                HAL_Init
+ .text.HAL_IncTick
+                0x08000838       0x10 objects/stm32f1xx_hal.o
+                0x08000838                HAL_IncTick
+ .text.HAL_GetTick
+                0x08000848        0xc objects/stm32f1xx_hal.o
+                0x08000848                HAL_GetTick
+ .text.HAL_Delay
+                0x08000854       0x20 objects/stm32f1xx_hal.o
+                0x08000854                HAL_Delay
+ .text.TIM_OC1_SetConfig
+                0x08000874       0x50 objects/stm32f1xx_hal_tim.o
+ .text.TIM_OC3_SetConfig
+                0x080008c4       0x54 objects/stm32f1xx_hal_tim.o
+ .text.TIM_OC4_SetConfig
+                0x08000918       0x44 objects/stm32f1xx_hal_tim.o
+ .text.HAL_TIM_PWM_MspInit
+                0x0800095c        0x2 objects/stm32f1xx_hal_tim.o
+                0x0800095c                HAL_TIM_PWM_MspInit
+ *fill*         0x0800095e        0x2 
+ .text.TIM_Base_SetConfig
+                0x08000960       0x70 objects/stm32f1xx_hal_tim.o
+                0x08000960                TIM_Base_SetConfig
+ .text.HAL_TIM_PWM_Init
+                0x080009d0       0x34 objects/stm32f1xx_hal_tim.o
+                0x080009d0                HAL_TIM_PWM_Init
+ .text.TIM_OC2_SetConfig
+                0x08000a04       0x58 objects/stm32f1xx_hal_tim.o
+                0x08000a04                TIM_OC2_SetConfig
+ .text.HAL_TIM_PWM_ConfigChannel
+                0x08000a5c       0xc4 objects/stm32f1xx_hal_tim.o
+                0x08000a5c                HAL_TIM_PWM_ConfigChannel
+ .text.TIM_CCxChannelCmd
+                0x08000b20       0x18 objects/stm32f1xx_hal_tim.o
+                0x08000b20                TIM_CCxChannelCmd
+ .text.HAL_TIM_PWM_Start
+                0x08000b38       0x2c objects/stm32f1xx_hal_tim.o
+                0x08000b38                HAL_TIM_PWM_Start
+ .text.HAL_TIM_PWM_Stop
+                0x08000b64       0x5c objects/stm32f1xx_hal_tim.o
+                0x08000b64                HAL_TIM_PWM_Stop
+ .text.HAL_RCC_OscConfig
+                0x08000bc0      0x318 objects/stm32f1xx_hal_rcc.o
+                0x08000bc0                HAL_RCC_OscConfig
+ .text.HAL_RCC_GetSysClockFreq
+                0x08000ed8       0x7c objects/stm32f1xx_hal_rcc.o
+                0x08000ed8                HAL_RCC_GetSysClockFreq
+ .text.HAL_RCC_ClockConfig
+                0x08000f54      0x148 objects/stm32f1xx_hal_rcc.o
+                0x08000f54                HAL_RCC_ClockConfig
+ .text.inputRead
+                0x0800109c       0xc8 objects/input.o
+                0x0800109c                inputRead
+ .text.NMI_Handler
+                0x08001164        0x2 objects/stm32f1xx_it.o
+                0x08001164                NMI_Handler
+ .text.HardFault_Handler
+                0x08001166        0x2 objects/stm32f1xx_it.o
+                0x08001166                HardFault_Handler
+ .text.MemManage_Handler
+                0x08001168        0x2 objects/stm32f1xx_it.o
+                0x08001168                MemManage_Handler
+ .text.BusFault_Handler
+                0x0800116a        0x2 objects/stm32f1xx_it.o
+                0x0800116a                BusFault_Handler
+ .text.UsageFault_Handler
+                0x0800116c        0x2 objects/stm32f1xx_it.o
+                0x0800116c                UsageFault_Handler
+ .text.SVC_Handler
+                0x0800116e        0x2 objects/stm32f1xx_it.o
+                0x0800116e                SVC_Handler
+ .text.DebugMon_Handler
+                0x08001170        0x2 objects/stm32f1xx_it.o
+                0x08001170                DebugMon_Handler
+ .text.PendSV_Handler
+                0x08001172        0x2 objects/stm32f1xx_it.o
+                0x08001172                PendSV_Handler
+ .text.SysTick_Handler
+                0x08001174        0x4 objects/stm32f1xx_it.o
+                0x08001174                SysTick_Handler
+ .text._gettimeofday
+                0x08001178        0x4 objects/main.o
+                0x08001178                _gettimeofday
+ .text.startup.main
+                0x0800117c      0x150 objects/main.o
+                0x0800117c                main
+ .text.printChar
+                0x080012cc       0x74 objects/menu.o
+ .text.menuSelectGame
+                0x08001340      0x1bc objects/menu.o
+                0x08001340                menuSelectGame
+ .text.setPixel
+                0x080014fc       0x30 objects/chip8.o
+ .text.clearPixel
+                0x0800152c       0x30 objects/chip8.o
+ .text.chip8ResetMem
+                0x0800155c       0x5c objects/chip8.o
+                0x0800155c                chip8ResetMem
+ .text.chip8ResetCpu
+                0x080015b8       0x28 objects/chip8.o
+                0x080015b8                chip8ResetCpu
+ .text.chip8GetPixel
+                0x080015e0       0x2c objects/chip8.o
+                0x080015e0                chip8GetPixel
+ .text.chip8StepCpu
+                0x0800160c      0x780 objects/chip8.o
+                0x0800160c                chip8StepCpu
+ .text.chip8UpdateTimers
+                0x08001d8c       0x20 objects/chip8.o
+                0x08001d8c                chip8UpdateTimers
+ .text.chip8UpdateKey
+                0x08001dac       0x14 objects/chip8.o
+                0x08001dac                chip8UpdateKey
+ .text.chip8GetAudio
+                0x08001dc0       0x14 objects/chip8.o
+                0x08001dc0                chip8GetAudio
+ .text.chip8GetScreen
+                0x08001dd4        0x8 objects/chip8.o
+                0x08001dd4                chip8GetScreen
+ .text.splashScreenShow
+                0x08001ddc       0x18 objects/splash.o
+                0x08001ddc                splashScreenShow
+ .text.systemInit
+                0x08001df4       0x56 objects/system.o
+                0x08001df4                systemInit
+ .text.systemDelay
+                0x08001e4a        0x4 objects/system.o
+                0x08001e4a                systemDelay
+ .text.systemMillis
+                0x08001e4e        0x4 objects/system.o
+                0x08001e4e                systemMillis
+ *fill*         0x08001e52        0x2 
+ .text.sendCommand
+                0x08001e54       0x34 objects/display.o
+ .text.displayRefresh
+                0x08001e88      0x2e8 objects/display.o
+                0x08001e88                displayRefresh
+ .text.buzzerInit
+                0x08002170       0xb0 objects/buzzer.o
+ .text.buzzerBeep
+                0x08002220       0x40 objects/buzzer.o
+                0x08002220                buzzerBeep
+ .text.buzzerSilent
+                0x08002260       0x40 objects/buzzer.o
+                0x08002260                buzzerSilent
+ .text.Reset_Handler
+                0x080022a0       0x48 objects/startup_stm32f103xb.o
+                0x080022a0                Reset_Handler
+ .text.Default_Handler
+                0x080022e8        0x2 objects/startup_stm32f103xb.o
+                0x080022e8                RTC_Alarm_IRQHandler
+                0x080022e8                EXTI2_IRQHandler
+                0x080022e8                TIM1_CC_IRQHandler
+                0x080022e8                PVD_IRQHandler
+                0x080022e8                EXTI3_IRQHandler
+                0x080022e8                EXTI0_IRQHandler
+                0x080022e8                I2C2_EV_IRQHandler
+                0x080022e8                ADC1_2_IRQHandler
+                0x080022e8                SPI1_IRQHandler
+                0x080022e8                TAMPER_IRQHandler
+                0x080022e8                DMA1_Channel4_IRQHandler
+                0x080022e8                USART3_IRQHandler
+                0x080022e8                RTC_IRQHandler
+                0x080022e8                DMA1_Channel7_IRQHandler
+                0x080022e8                CAN1_RX1_IRQHandler
+                0x080022e8                TIM4_IRQHandler
+                0x080022e8                I2C1_EV_IRQHandler
+                0x080022e8                DMA1_Channel6_IRQHandler
+                0x080022e8                TIM3_IRQHandler
+                0x080022e8                RCC_IRQHandler
+                0x080022e8                TIM1_TRG_COM_IRQHandler
+                0x080022e8                DMA1_Channel1_IRQHandler
+                0x080022e8                Default_Handler
+                0x080022e8                EXTI15_10_IRQHandler
+                0x080022e8                EXTI9_5_IRQHandler
+                0x080022e8                SPI2_IRQHandler
+                0x080022e8                DMA1_Channel5_IRQHandler
+                0x080022e8                EXTI4_IRQHandler
+                0x080022e8                USB_LP_CAN1_RX0_IRQHandler
+                0x080022e8                USB_HP_CAN1_TX_IRQHandler
+                0x080022e8                DMA1_Channel3_IRQHandler
+                0x080022e8                TIM1_UP_IRQHandler
+                0x080022e8                WWDG_IRQHandler
+                0x080022e8                TIM2_IRQHandler
+                0x080022e8                TIM1_BRK_IRQHandler
+                0x080022e8                EXTI1_IRQHandler
+                0x080022e8                USART2_IRQHandler
+                0x080022e8                I2C2_ER_IRQHandler
+                0x080022e8                DMA1_Channel2_IRQHandler
+                0x080022e8                CAN1_SCE_IRQHandler
+                0x080022e8                FLASH_IRQHandler
+                0x080022e8                USART1_IRQHandler
+                0x080022e8                I2C1_ER_IRQHandler
+                0x080022e8                USBWakeUp_IRQHandler
+ *fill*         0x080022ea        0x2 
+ .text.__libc_init_array
+                0x080022ec       0x50 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-init.o)
+                0x080022ec                __libc_init_array
+ .text.memmove  0x0800233c       0xc8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memmove.o)
+                0x0800233c                memmove
+ .text.memset   0x08002404       0x9c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-memset.o)
+                0x08002404                memset
+ .text.srand    0x080024a0       0x14 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-rand.o)
+                0x080024a0                srand
+ .text.rand     0x080024b4       0x40 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-rand.o)
+                0x080024b4                rand
+ .text.strlen   0x080024f4       0x5c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-strlen-stub.o)
+                0x080024f4                strlen
+ .text.time     0x08002550       0x28 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-time.o)
+                0x08002550                time
+ .text.startup.register_fini
+                0x08002578       0x14 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0800258c        0xc c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-atexit.o)
+                0x0800258c                atexit
+ .text.__libc_fini_array
+                0x08002598       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-fini.o)
+                0x08002598                __libc_fini_array
+ .text._gettimeofday_r
+                0x080025cc       0x28 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-gettimeofdayr.o)
+                0x080025cc                _gettimeofday_r
+ .text.__retarget_lock_acquire_recursive
+                0x080025f4        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+                0x080025f4                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x080025f8        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+                0x080025f8                __retarget_lock_release_recursive
+ .text.__register_exitproc
+                0x080025fc       0xc4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__atexit.o)
+                0x080025fc                __register_exitproc
+ *(.glue_7)
+ .glue_7        0x080026c0        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x080026c0        0x0 linker stubs
+ *(.eh_frame)
+ .eh_frame      0x080026c0        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+ *(.init)
+ .init          0x080026c0        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
+                0x080026c0                _init
+ .init          0x080026c4        0x8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
+ *(.fini)
+ .fini          0x080026cc        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
+                0x080026cc                _fini
+ .fini          0x080026d0        0x8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
+                0x080026d8                . = ALIGN (0x4)
+                0x080026d8                _etext = .
+
+.vfp11_veneer   0x080026d8        0x0
+ .vfp11_veneer  0x080026d8        0x0 linker stubs
+
+.v4_bx          0x080026d8        0x0
+ .v4_bx         0x080026d8        0x0 linker stubs
+
+.iplt           0x080026d8        0x0
+ .iplt          0x080026d8        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+
+.rodata         0x080026d8     0x3658
+                0x080026d8                . = ALIGN (0x4)
+ *(.rodata)
+ .rodata        0x080026d8       0x10 objects/stm32f1xx_hal_rcc.o
+ .rodata        0x080026e8       0xb4 objects/chip8.o
+ *(.rodata*)
+ .rodata.AHBPrescTable
+                0x0800279c       0x10 objects/system_stm32f1xx.o
+                0x0800279c                AHBPrescTable
+ .rodata.ant    0x080027ac      0xc7c objects/main.o
+ .rodata.blinky
+                0x08003428      0x9e0 objects/main.o
+ .rodata.blitz  0x08003e08      0x187 objects/main.o
+ .rodata.brix   0x08003f8f      0x118 objects/main.o
+ .rodata.car    0x080040a7      0x140 objects/main.o
+ .rodata.cave   0x080041e7      0x372 objects/main.o
+ *fill*         0x08004559        0x3 
+ .rodata.game_data
+                0x0800455c       0x2c objects/main.o
+ .rodata.game_frequency
+                0x08004588       0x2c objects/main.o
+ .rodata.game_size
+                0x080045b4       0x2c objects/main.o
+ .rodata.invaders
+                0x080045e0      0x515 objects/main.o
+ .rodata.pong   0x08004af5       0xf6 objects/main.o
+ .rodata.super_astro_doge
+                0x08004beb      0x5e9 objects/main.o
+ .rodata.super_worm_v4
+                0x080051d4      0x2a2 objects/main.o
+ .rodata.tetris
+                0x08005476      0x1ee objects/main.o
+ .rodata.font   0x08005664      0x23e objects/menu.o
+ *fill*         0x080058a2        0x2 
+ .rodata.game_name
+                0x080058a4       0x2c objects/menu.o
+ .rodata.str1.1
+                0x080058d0       0x59 objects/menu.o
+ .rodata.splash
+                0x08005929      0x400 objects/splash.o
+ *fill*         0x08005d29        0x3 
+ .rodata._global_impure_ptr
+                0x08005d2c        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-impure.o)
+                0x08005d2c                _global_impure_ptr
+                0x08005d30                . = ALIGN (0x4)
+
+.rel.dyn        0x08005d30        0x0
+ .rel.iplt      0x08005d30        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x08005d30        0x0
+                0x08005d30                __exidx_start = .
+ *(.ARM.exidx*)
+                0x08005d30                __exidx_end = .
+
+.preinit_array  0x08005d30        0x0
+                0x08005d30                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x08005d30                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x08005d30        0x8
+                0x08005d30                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ .init_array.00000
+                0x08005d30        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+ *(.init_array*)
+ .init_array    0x08005d34        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+                0x08005d38                PROVIDE (__init_array_end, .)
+
+.fini_array     0x08005d38        0x4
+                0x08005d38                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+ .fini_array    0x08005d38        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+                0x08005d3c                PROVIDE (__fini_array_end, .)
+                0x08005d3c                _sidata = LOADADDR (.data)
+
+.data           0x20000000      0x43c load address 0x08005d3c
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data.SystemCoreClock
+                0x20000000        0x4 objects/system_stm32f1xx.o
+                0x20000000                SystemCoreClock
+ .data.button_down_state
+                0x20000004        0x1 objects/menu.o
+ .data.button_ok_state
+                0x20000005        0x1 objects/menu.o
+ .data.button_up_state
+                0x20000006        0x1 objects/menu.o
+ *fill*         0x20000007        0x1 
+ .data._impure_ptr
+                0x20000008        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-impure.o)
+                0x20000008                _impure_ptr
+ *fill*         0x2000000c        0x4 
+ .data.impure_data
+                0x20000010      0x428 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-impure.o)
+ .data.__atexit_recursive_mutex
+                0x20000438        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-__call_atexit.o)
+                0x20000438                __atexit_recursive_mutex
+                0x2000043c                . = ALIGN (0x4)
+                0x2000043c                _edata = .
+
+.jcr            0x2000043c        0x0 load address 0x08006178
+ .jcr           0x2000043c        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+
+.igot.plt       0x2000043c        0x0 load address 0x08006178
+ .igot.plt      0x2000043c        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+                0x2000043c                . = ALIGN (0x4)
+
+.bss            0x2000043c     0x1d74 load address 0x08006178
+                0x2000043c                _sbss = .
+                0x2000043c                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x2000043c       0x1c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+ *(.bss*)
+ .bss.uCRCErrorWorkaroundCheck
+                0x20000458        0x1 objects/stm32f1xx_hal_spi_ex.o
+                0x20000458                uCRCErrorWorkaroundCheck
+ .bss.input_ready
+                0x20000459        0x1 objects/input.o
+ .bss.buffer    0x2000045a      0x400 objects/menu.o
+ *fill*         0x2000085a        0x2 
+ .bss.general_index
+                0x2000085c        0x4 objects/menu.o
+ .bss.last_btn_down_press_millis
+                0x20000860        0x4 objects/menu.o
+ .bss.last_btn_ok_press_millis
+                0x20000864        0x4 objects/menu.o
+ .bss.last_btn_up_press_millis
+                0x20000868        0x4 objects/menu.o
+ .bss.ok        0x2000086c        0x4 objects/menu.o
+ .bss.screen_index
+                0x20000870        0x4 objects/menu.o
+ .bss.cpu       0x20000874      0x456 objects/chip8.o
+ .bss.memory    0x20000cca     0x1001 objects/chip8.o
+ .bss.buffer    0x20001ccb      0x400 objects/display.o
+ *fill*         0x200020cb        0x1 
+ .bss.config    0x200020cc       0x58 objects/display.o
+ .bss.display_ready
+                0x20002124        0x1 objects/display.o
+ .bss.buzzer_ready
+                0x20002125        0x1 objects/buzzer.o
+ *fill*         0x20002126        0x2 
+ .bss.config    0x20002128       0x40 objects/buzzer.o
+ .bss.config_oc
+                0x20002168       0x1c objects/buzzer.o
+ *(COMMON)
+ COMMON         0x20002184        0x4 objects/stm32f1xx_hal.o
+                0x20002184                uwTick
+ COMMON         0x20002188       0x21 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-lock.o)
+                0x20002188                __lock___atexit_recursive_mutex
+                0x2000218c                __lock___arc4random_mutex
+                0x20002190                __lock___env_recursive_mutex
+                0x20002194                __lock___sinit_recursive_mutex
+                0x20002198                __lock___malloc_recursive_mutex
+                0x2000219c                __lock___at_quick_exit_mutex
+                0x200021a0                __lock___dd_hash_mutex
+                0x200021a4                __lock___tz_mutex
+                0x200021a8                __lock___sfp_recursive_mutex
+ *fill*         0x200021a9        0x3 
+ COMMON         0x200021ac        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a(lib_a-reent.o)
+                0x200021ac                errno
+                0x200021b0                . = ALIGN (0x4)
+                0x200021b0                _ebss = .
+                0x200021b0                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x200021b0      0x600 load address 0x08006178
+                0x200021b0                . = ALIGN (0x4)
+                [!provide]                PROVIDE (end, .)
+                [!provide]                PROVIDE (_end, .)
+                0x200023b0                . = (. + _Min_Heap_Size)
+ *fill*         0x200021b0      0x200 
+                0x200027b0                . = (. + _Min_Stack_Size)
+ *fill*         0x200023b0      0x400 
+                0x200027b0                . = ALIGN (0x4)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x00000000       0x29
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x1d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
+ .ARM.attributes
+                0x0000001d       0x2d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x33 objects/system_stm32f1xx.o
+ .ARM.attributes
+                0x0000007d       0x33 objects/stm32f1xx_hal_spi_ex.o
+ .ARM.attributes
+                0x000000b0       0x33 objects/stm32f1xx_hal_cortex.o
+ .ARM.attributes
+                0x000000e3       0x33 objects/stm32f1xx_hal_gpio.o
+ .ARM.attributes
+                0x00000116       0x33 objects/stm32f1xx_hal_spi.o
+ .ARM.attributes
+                0x00000149       0x33 objects/stm32f1xx_hal.o
+ .ARM.attributes
+                0x0000017c       0x33 objects/stm32f1xx_hal_tim.o
+ .ARM.attributes
+                0x000001af       0x33 objects/stm32f1xx_hal_rcc.o
+ .ARM.attributes
+                0x000001e2       0x33 objects/input.o
+ .ARM.attributes
+                0x00000215       0x33 objects/stm32f1xx_it.o
+ .ARM.attributes
+                0x00000248       0x33 objects/main.o
+ .ARM.attributes
+                0x0000027b       0x33 objects/menu.o
+ .ARM.attributes
+                0x000002ae       0x33 objects/chip8.o
+ .ARM.attributes
+                0x000002e1       0x33 objects/splash.o
+ .ARM.attributes
+                0x00000314       0x33 objects/system.o
+ .ARM.attributes
+                0x00000347       0x33 objects/display.o
+ .ARM.attributes
+                0x0000037a       0x33 objects/buzzer.o
+ .ARM.attributes
+                0x000003ad       0x21 objects/startup_stm32f103xb.o
+ .ARM.attributes
+                0x000003ce       0x1d c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
+START GROUP
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m\libgcc.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc.a
+END GROUP
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtend.o
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
+OUTPUT(build/binary.elf elf32-littlearm)
+
+.comment        0x00000000       0xfe
+ .comment       0x00000000       0x7f objects/system_stm32f1xx.o
+                                 0x80 (size before relaxing)
+ .comment       0x0000007f       0x80 objects/stm32f1xx_hal_spi_ex.o
+ .comment       0x0000007f       0x80 objects/stm32f1xx_hal_cortex.o
+ .comment       0x0000007f       0x80 objects/stm32f1xx_hal_gpio.o
+ .comment       0x0000007f       0x80 objects/stm32f1xx_hal_spi.o
+ .comment       0x0000007f       0x80 objects/stm32f1xx_hal.o
+ .comment       0x0000007f       0x80 objects/stm32f1xx_hal_tim.o
+ .comment       0x0000007f       0x80 objects/stm32f1xx_hal_rcc.o
+ .comment       0x0000007f       0x7f objects/input.o
+                                 0x80 (size before relaxing)
+ .comment       0x000000fe       0x80 objects/stm32f1xx_it.o
+ .comment       0x000000fe       0x80 objects/main.o
+ .comment       0x000000fe       0x80 objects/menu.o
+ .comment       0x000000fe       0x80 objects/chip8.o
+ .comment       0x000000fe       0x80 objects/splash.o
+ .comment       0x000000fe       0x80 objects/system.o
+ .comment       0x000000fe       0x80 objects/display.o
+ .comment       0x000000fe       0x80 objects/buzzer.o
