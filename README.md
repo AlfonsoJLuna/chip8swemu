@@ -2,19 +2,17 @@
 
 *Multiplatform CHIP-8 and Super-CHIP emulator.*
 
-## chip8swemu/core
+## Features
 
-The emulator core is a CHIP-8 and Super-CHIP interpreter library written in standard C99 with no other dependencies. It can be easily included in any project adding the `chip8.h` and `chip8.c` files and can run in almost any machine.
+The emulator core is a CHIP-8 and Super-CHIP interpreter library written in standard C99 with no other dependencies. It can be easily included in any project adding the `chip8.h` and `chip8.c` files and can run on almost any machine.
 
-## chip8swemu/platform/desktop
+### Frontend for the desktop
 
 chip8swemu has a cross-platform frontend for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui).
 
-![frontend-1](/images/frontend-1.png) | ![frontend-2](/images/frontend-2.png) | ![frontend-3](/images/frontend-3.png)
-:-----------: | :-------------: | :-------------:
-| | | |
-
-### Features
+<p align="center">
+  <img src="/images/frontend-1.png" width="250"> <img src="/images/frontend-2.png" width="250"> <img src="/images/frontend-3.png" width="250">
+</p>
 
 * Compatible with Windows XP+ and Linux.
 * ROMs can be passed as an argument or dropped to the window.
@@ -23,15 +21,21 @@ chip8swemu has a cross-platform frontend for the desktop based on [SDL2](http://
 * Configurable color palette.
 * Configurable compatibility settings.
 
-## chip8swemu/platform/chip8stm32
+### Custom PCB
 
-chip8stm32 is a custom PCB and firmware for running chip8swemu on STM32F103 (ARM Cortex-M3) microcontrollers.
+It also has a custom PCB called chip8stm32 and firmware capable of running on STM32F103 (ARM Cortex-M3) microcontrollers.
 
-Video: https://www.youtube.com/watch?v=vA76s3j4H90
+https://www.youtube.com/watch?v=vA76s3j4H90
 
-![Core-STM32](/images/core-stm32.jpg) | ![chip8stm32](/images/chip8stm32.jpg)
-:-------------: | :-------------:
-Blue Pill (STM32F103 + SH1106 OLED Display) | Custom PCB (chip8stm32)
+<p align="center">
+  <img src="/images/chip8stm32.jpg" width="450">
+</p>
+
+The firmware can also be used with the Blue Pill board with a buzzer and a SH1106 display attached. You will also need to add the buttons required for each game.
+
+<p align="center">
+  <img src="/images/core-stm32.jpg" width="450">
+</p>
 
 ## Game gallery
 
@@ -45,7 +49,7 @@ Cave | Blitz | Brix
 ![Pong](/images/10.jpg) | ![Super Astro Dodge](/images/11.jpg) | ![Tetris](/images/12.jpg)
 Pong | Super Astro Dodge | Tetris
 
-## Compatibility settings
+## Compatibility
 
 Some games require special settings to run properly, you need to change the options before loading the game to take effect.
 
