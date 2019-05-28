@@ -1,0 +1,19 @@
+## Building
+
+Required dependencies are ImGui, SDL2, OpenGL.
+
+### How to build on Windows
+
+1. [Install](https://git-scm.com/downloads) git and clone this repository.
+2. [Install](http://tdm-gcc.tdragon.net/download) the TDM64-GCC (64-bit) or TDM-GCC (32-bit) compiler suite. Be sure you check `Add to PATH` during installation.
+3. [Download](https://www.libsdl.org/release/SDL2-devel-2.0.5-mingw.tar.gz) SDL 2.0.5 libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.5/...`
+4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
+5. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`.
+
+### How to build on Linux (Ubuntu)
+
+1. Install git: `sudo apt-get install git`
+2. Clone this repository: `git clone https://github.com/alfonsojluna/chip8swemu`
+3. Install SDL2 development libraries: `sudo apt-get install libsdl2-dev`
+4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
+5. Open a terminal in `chip8swemu/frontend/` and type: `make`.

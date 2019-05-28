@@ -47,42 +47,6 @@ Known games that require the `Vertical Wrap` *disabled*:
 
 There are some other weird quirks not considered because they also differ between original interpreters and no known game depends on them. These are well documented [here](https://github.com/Chromatophore/HP48-Superchip).
 
-## Desktop frontend building
-
-Required dependencies are ImGui, SDL2, OpenGL.
-
-### How to build on Windows
-
-1. [Install](https://git-scm.com/downloads) git and clone this repository.
-2. [Install](http://tdm-gcc.tdragon.net/download) the TDM64-GCC (64-bit) or TDM-GCC (32-bit) compiler suite. Be sure you check `Add to PATH` during installation.
-3. [Download](https://www.libsdl.org/release/SDL2-devel-2.0.5-mingw.tar.gz) SDL 2.0.5 libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.5/...`
-4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
-5. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`.
-
-### How to build on Linux (Ubuntu)
-
-1. Install git: `sudo apt-get install git`
-2. Clone this repository: `git clone https://github.com/alfonsojluna/chip8swemu`
-3. Install SDL2 development libraries: `sudo apt-get install libsdl2-dev`
-4. [Download](https://github.com/ocornut/imgui/releases) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
-5. Open a terminal in `chip8swemu/frontend/` and type: `make`.
-
-## Firmware building for chip8stm32
-
-1. Add your games to the `games.h` header file. You can convert your games from binary format to a C array using xxd: `xxd -i game.ch8`.
-
-**How to build:**
-
-2. [Install](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) the GNU ARM Embedded Toolchain compiler. Be sure you check `Add to PATH` during installation.
-3. You will need make. On Windows you can [install](http://tdm-gcc.tdragon.net/download) the TDM-GCC compiler suite which includes mingw32-make. Be sure you check `Add to PATH` during installation.
-4. [Install](http://www.st.com/en/embedded-software/stsw-link004.html) the STM32 ST-LINK Utility. You need to add its folder to PATH manually.
-5. Clone or download this repository.
-6. Open a command prompt in `chip8stm32/firmware/` and type `mingw32-make` for building.
-
-**How to flash:**
-
-7. Connect the board to the computer using a ST-LINK Programmer and type `mingw32-make flash` for flashing.
-
 ## References
 
 Useful resources and documentation for developing a CHIP-8 emulator:
