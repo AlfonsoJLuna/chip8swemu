@@ -1,5 +1,7 @@
-platform/desktop/build/
-platform/desktop/libraries/
-platform/desktop/objects/
-platform/desktop/releases/
-platform/chip8stm32/firmware/objects/
+frontend/build/*
+!frontend/build/.gitkeep
+frontend/libraries/*
+!frontend/libraries/.gitkeep
+frontend/objects/*
+!frontend/objects/.gitkeep
+releases/*

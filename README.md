@@ -2,52 +2,42 @@
 
 *Multiplatform CHIP-8 and Super-CHIP emulator.*
 
+Compiled releases are available here: https://github.com/AlfonsoJLuna/chip8swemu/releases
+
+![](images/frontend-1.png) | ![](images/frontend-2.png) | ![](images/frontend-3.png)
+:------------------------: | :------------------------: | :------------------------:
+
 ## Features
 
-The emulator core is a CHIP-8 and Super-CHIP interpreter library written in standard C99 with no other dependencies. It can be easily included in any project adding the `chip8.h` and `chip8.c` files and can run on almost any machine.
+The emulator core is a CHIP-8 and Super-CHIP interpreter library written in standard C99 with no other dependencies. It can be easily included in any project adding the `chip8.h` and `chip8.c` files and can run on most machines from microcontrollers to desktop computers.
 
-### Frontend for the desktop
+The frontend runs on both Windows and Linux. It is written in C and C++ and based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui). Its features include:
 
-chip8swemu has a cross-platform frontend for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui).
-
-<p align="center">
-  <img src="/images/frontend-1.png" width="250"> <img src="/images/frontend-2.png" width="250"> <img src="/images/frontend-3.png" width="250">
-</p>
-
-* Compatible with Windows XP+ and Linux.
-* ROMs can be passed as an argument or dropped to the window.
-* Native file selection dialog (only available on Windows).
 * Configurable CPU clock rate, 840Hz by default.
-* Configurable color palette.
-* Configurable compatibility settings.
+* Configurable color palette, black and white by default.
+* Compatibility modes for games that require special settings.
+* ROM files can be passed as an argument or dropped to the window.
+* Native file selection dialog (only available on Windows).
 
-### Custom PCB
+## Building
 
-It also has a custom PCB called chip8stm32 and firmware capable of running on STM32F103 (ARM Cortex-M3) microcontrollers.
+Required dependencies are ImGui, SDL2, OpenGL.
 
-https://www.youtube.com/watch?v=vA76s3j4H90
+### How to build on Windows
 
-<p align="center">
-  <img src="/images/chip8stm32.jpg" width="450">
-</p>
+1. [Install](https://git-scm.com/downloads) git and clone this repository.
+2. Download and install the mingw-w64 toolchain. Prebuilt binaries are available [here](https://gnutoolchains.com/mingw64/). Be sure you check `Add to PATH` during installation.
+3. [Download](https://www.libsdl.org/release/SDL2-devel-2.0.12-mingw.tar.gz) SDL 2.0.12 libraries for MinGW and extract them to `chip8swemu/frontend/libraries/SDL2-2.0.12/...`
+4. [Download](https://github.com/ocornut/imgui/archive/v1.52.zip) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
+5. Open a command prompt in `chip8swemu/frontend/` and type: `mingw32-make`.
 
-The firmware can also be used with the Blue Pill board with a buzzer and a SH1106 display attached. You will also need to add the buttons required for each game.
+### How to build on Linux (Ubuntu)
 
-<p align="center">
-  <img src="/images/core-stm32.jpg" width="450">
-</p>
-
-## Game gallery
-
-![Splash screen](/images/1.jpg) | ![Menu](/images/2.jpg) | ![SuperWorm V4](/images/3.jpg)
-:-----------: | :-------------: | :-------------:
-Splash screen | Menu | SuperWorm V4
-![Space Invaders](/images/4.jpg) | ![Car](/images/5.jpg) | ![Blinky](/images/6.jpg)
-Space Invaders | Car | Blinky
-![Cave](/images/7.jpg) | ![Blitz](/images/8.jpg) | ![Brix](/images/9.jpg)
-Cave | Blitz | Brix
-![Pong](/images/10.jpg) | ![Super Astro Dodge](/images/11.jpg) | ![Tetris](/images/12.jpg)
-Pong | Super Astro Dodge | Tetris
+1. Install git: `sudo apt-get install git`
+2. Clone this repository: `git clone https://github.com/AlfonsoJLuna/chip8swemu`
+3. Install SDL2 development libraries: `sudo apt-get install libsdl2-dev`
+4. [Download](https://github.com/ocornut/imgui/archive/v1.52.zip) ImGui 1.52 source code and extract it to `chip8swemu/frontend/libraries/imgui-1.52/...`
+5. Open a terminal in `chip8swemu/frontend/` and type: `make`.
 
 ## Compatibility
 
