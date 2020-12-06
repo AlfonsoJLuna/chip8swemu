@@ -52,6 +52,8 @@ Compiled releases are available here: https://github.com/AlfonsoJLuna/chip8swemu
 
 Port for the [Game & Watch: Super Mario Bros.](https://en.wikipedia.org/wiki/Game_%26_Watch:_Super_Mario_Bros.)
 
+Watch it in action: https://www.youtube.com/watch?v=n2IKZFr6tSo
+
 For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/master/Platform/GameAndWatch
 
 ## References

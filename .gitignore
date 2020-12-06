@@ -4,8 +4,6 @@ Platform/GameAndWatch/game-and-watch-base/Drivers/*
 
 Platform/GameAndWatch/game-and-watch-base/.mxproject
 
-Platform/GameAndWatch/Source/chip8-games.h
-
 Platform/SDL2/build/*
 !Platform/SDL2/build/.gitkeep
 

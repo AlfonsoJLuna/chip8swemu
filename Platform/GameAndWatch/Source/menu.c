@@ -1,6 +1,6 @@
-#include "chip8-menu.h"
-#include "chip8-games.h"
-#include "chip8-lcd.h"
+#include "menu.h"
+#include "games.h"
+#include "display.h"
 #include "buttons.h"
 #include "stm32h7xx_hal.h"
 
@@ -170,7 +170,7 @@ static void printChar(int tile_row, int tile_col, char character)
 
 static void printGameName(int tile_row, unsigned int game)
 {
-    int size = strlen(game_name[game]);
+    int size = strlen(GameList[game]->GameName);
 
     if (size > 21)
     {
@@ -179,7 +179,7 @@ static void printGameName(int tile_row, unsigned int game)
 
     for (int i = 0; i < size; i++)
     {
-        printChar(tile_row, i + 2, game_name[game][i]);
+        printChar(tile_row, i + 2, (GameList[game]->GameName)[i]);
     }
 }
 
@@ -190,9 +190,9 @@ static void sanitizeIndexes()
         general_index = 0;
     }
 
-    if (general_index > games - 1)
+    if (general_index > GameCount - 1)
     {
-        general_index = games - 1;
+        general_index = GameCount - 1;
     }
 
     if (screen_index < 0)
@@ -200,9 +200,9 @@ static void sanitizeIndexes()
         screen_index = 0;
     }
 
-    if (screen_index > games - 8)
+    if (screen_index > GameCount - 8)
     {
-        screen_index = games - 8;
+        screen_index = GameCount - 8;
     }
 }
 

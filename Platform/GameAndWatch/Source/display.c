@@ -1,5 +1,5 @@
 #include <stdbool.h>
-#include "chip8-lcd.h"
+#include "display.h"
 #include "lcd.h"
 
 static inline bool getPixel(uint8_t* chip8_buffer, int row, int col)
