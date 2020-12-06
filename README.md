@@ -2,6 +2,10 @@
 
 *Multiplatform CHIP-8 and Super-CHIP emulator.*
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/AlfonsoJLuna/chip8swemu/master/Assets/Images/Logo.png">
+</p>
+
 ## Core
 
 ### Features
@@ -29,7 +33,7 @@ chip8swemu has been ported to a wide variety of platforms.
 
 ### SDL2
 
-![](Assets/Images/SDL2-1.png) 
+![](Assets/Images/SDL2-2.png) 
 
 Port for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui). Features include:
 
@@ -40,7 +44,7 @@ Port for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://gith
 * ROM files can be passed as an argument or dropped to the window.
 * Native file selection dialog (only available on Windows).
 
-For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/Platform/SDL2/README.md
+For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/master/Platform/SDL2
 
 Compiled releases are available here: https://github.com/AlfonsoJLuna/chip8swemu/releases
 
@@ -50,7 +54,7 @@ Compiled releases are available here: https://github.com/AlfonsoJLuna/chip8swemu
 
 Port for the [Game & Watch: Super Mario Bros.](https://en.wikipedia.org/wiki/Game_%26_Watch:_Super_Mario_Bros.)
 
-For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/Platform/GameAndWatch/README.md
+For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/master/Platform/GameAndWatch
 
 ## References
 
