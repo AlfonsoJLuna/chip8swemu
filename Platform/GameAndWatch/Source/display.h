@@ -1,5 +1,5 @@
-#ifndef CHIP8_LCD_H
-#define CHIP8_LCD_H
+#ifndef DISPLAY_H
+#define DISPLAY_H
 
 
 #include <stdint.h>

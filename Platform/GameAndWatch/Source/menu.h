@@ -1,5 +1,5 @@
-#ifndef CHIP8_MENU_H
-#define CHIP8_MENU_H
+#ifndef MENU_H
+#define MENU_H
 
 
 unsigned int menuSelectGame();

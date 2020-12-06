@@ -37,9 +37,9 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 ../../../Core/chip8.c \
-../Source/chip8-splash.c \
-../Source/chip8-lcd.c \
-../Source/chip8-menu.c \
+../Source/chip8swemu.c \
+../Source/display.c \
+../Source/menu.c \
 Core/Src/flash.c \
 Core/Src/lcd.c \
 Core/Src/buttons.c \
@@ -129,6 +129,7 @@ AS_INCLUDES =
 # C includes
 C_INCLUDES =  \
 -I../../../Core \
+-I../../../Assets/ROMs \
 -I../Source \
 -ICore/Inc \
 -IDrivers/STM32H7xx_HAL_Driver/Inc \

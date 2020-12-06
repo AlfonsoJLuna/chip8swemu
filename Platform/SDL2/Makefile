@@ -1,6 +1,6 @@
 # Source files
 
-C_FILES += $(wildcard ../core/*.c) $(wildcard source/*.c)
+C_FILES += $(wildcard ../../Core/*.c) $(wildcard source/*.c)
 
 CPP_FILES += $(wildcard source/*.cpp) \
 	libraries/imgui-1.52/imgui.cpp \
@@ -12,7 +12,7 @@ CPP_OBJECTS += $(addprefix objects/,$(notdir $(CPP_FILES:.cpp=.o)))
 
 # Common flags
 
-HEADERS += -I../core -Isource -Ilibraries/imgui-1.52
+HEADERS += -I../../Core -I../../Assets/ROMs -Isource -Ilibraries/imgui-1.52
 
 CFLAGS += -Wall -Wextra -MMD -O2
 
@@ -94,7 +94,7 @@ endif
 build/chip8swemu: $(C_OBJECTS) $(CPP_OBJECTS)
 	g++ $^ $(LFLAGS) -o $@
 
-objects/%.o: ../core/%.c
+objects/%.o: ../../Core/%.c
 	gcc -std=c99 $(CFLAGS) -c $< -o $@
 
 objects/%.o: source/%.c

@@ -26,11 +26,8 @@
 #include "flash.h"
 #include "lcd.h"
 
-#include "chip8.h"
-#include "chip8-lcd.h"
-#include "chip8-splash.h"
-#include "chip8-games.h"
-#include "chip8-menu.h"
+#include "chip8swemu.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -143,115 +140,7 @@ int main(void)
   }
   //HAL_SAI_Transmit_DMA(&hsai_BlockA1, audiobuffer, sizeof(audiobuffer) / sizeof(audiobuffer[0]));
 
-
-
-
-
-
-    bool quit;
-    uint32_t buttons;
-    unsigned int game;
-
-
-    HAL_Delay(5000);
-
-    splashScreenShow();
-
-    while (1)
-    {
-        quit = 0;
-
-        game = menuSelectGame();
-        chip8ResetMem(game_data[game], game_size[game]);
-        chip8ResetCpu();
-        chip8CompatibilityMode(0);
-        chip8VerticalWrap(1);
-
-        while (!quit)
-        {
-            chip8UpdateKey(0x4, buttons_get() & B_Left);
-            chip8UpdateKey(0x5, buttons_get() & B_A);
-            chip8UpdateKey(0x6, buttons_get() & B_Right);
-            chip8UpdateTimers();
-            chip8StepCpu(2000 / 60);
-            displayRefresh(chip8GetScreen());
-            //HAL_Delay(17);
-
-            if (buttons_get() & B_GAME)
-            {
-                quit = 1;
-
-                while (buttons_get() & B_GAME);
-            }
-        }
-    }
-
-
-  //while (1)
-  //{
-
-
-    //HAL_Delay(17);
-
-
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-
-    
-    //if(buttons & B_Left) {
-    //  color = 0xf000;
-    //}
-    //if(buttons & B_Right) {
-    //  color = 0x0f00;
-    //}
-    //if(buttons & B_Up) {
-    //  color = 0x00f0;
-   // }
-    //if(buttons & B_Down) {
-      
-    //  color = *ptr&0xff;
-    //}
-    
-    //for(int x=0; x < 320; x++) {
-      //for(int y=0; y < 240; y++) {
-        // framebuffer[(y*320)+x] = i;
-        //if(((x + i)/10 % 2 == 0) && (((y + i)/10 % 2 == 0))){
-         // framebuffer[(y*320)+x] = color;
-        //} else {
-        //  framebuffer[(y*320)+x] = 0xffff;
-        //}
-        
-        // i++;
-      //}
-      // i++;
-    //}
-    
-    //HAL_Delay(20);
-    //i++;
-    // if(i % 30 == 0) {
-    //   if(color == 0xf800) {
-    //     color = 0x7e0;
-    //   } else {
-    //     color = 0xf800;
-    //   }
-      
-    // }
-// HAL_Delay(500);
-// for(int x=0; x < 320; x++) {
-// for(int y=0; y < 240; y++) {
-// framebuffer[(y*320)+x] = 0x7e0;
-// }
-// }
-// HAL_Delay(500);
-// for(int x=0; x < 320; x++) {
-// for(int y=0; y < 240; y++) {
-// framebuffer[(y*320)+x] = 0x1f;
-// }
-// }
-// HAL_Delay(500);
- // }
-  /* USER CODE END 3 */
+  chip8swemu_main_loop();
 }
 
 /**
