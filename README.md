@@ -2,9 +2,7 @@
 
 *Multiplatform CHIP-8 and Super-CHIP emulator.*
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/AlfonsoJLuna/chip8swemu/master/Assets/Images/Logo.png">
-</p>
+![](Assets/Images/Logo.png)
 
 ## Core
 
@@ -33,7 +31,7 @@ chip8swemu has been ported to a wide variety of platforms.
 
 ### SDL2
 
-![](Assets/Images/SDL2-2.png) 
+![](Assets/Images/SDL2-2.png)
 
 Port for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui). Features include:
 
