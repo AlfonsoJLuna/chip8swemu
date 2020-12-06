@@ -7,6 +7,7 @@ static inline bool getPixel(uint8_t* chip8_buffer, int row, int col)
     return (chip8_buffer[(128 * row + col) / 8] >> (7 - (col % 8))) & 1;
 }
 
+// So slow
 void displayRefresh(uint8_t* chip8_buffer)
 {
     for (int x = 0; x < 320; x++)
