@@ -6,13 +6,12 @@
 
 #include <stdbool.h>
 #include <stdint.h>
-#include <stm32h7xx_hal.h>
 #include <buttons.h>
 #include <chip8.h>
 #include <logo.h>
 
 
-void chip8swemu_main_loop()
+void chip8swemu_main_loop(SAI_HandleTypeDef* hsai_BlockA1)
 {
     bool QuitGame = 0;
     uint16_t GameNumber = 0;
@@ -56,6 +55,16 @@ void chip8swemu_main_loop()
 
                 chip8UpdateTimers();
                 chip8StepCpu((GameList[GameNumber]->GameFrequency) / 60);
+
+                if (chip8GetAudio())
+                {
+                    HAL_SAI_DMAResume(hsai_BlockA1);
+                }
+                else
+                {
+                    HAL_SAI_DMAPause(hsai_BlockA1);
+                }
+
                 displayRefresh(chip8GetScreen());
 
                 if (buttons_get() & B_GAME)
