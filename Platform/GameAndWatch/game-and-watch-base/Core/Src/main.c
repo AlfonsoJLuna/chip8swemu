@@ -22,6 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <string.h>
 #include "buttons.h"
 #include "flash.h"
 #include "lcd.h"
@@ -136,11 +137,13 @@ int main(void)
 
   // Create a continuous square wave and loop it using DMA in circular mode
   for (uint32_t i = 0; i < sizeof(audiobuffer) / sizeof(audiobuffer[0]); i++) {
-    audiobuffer[i] = (i % (48000 / 500)) > 48 ? 200 : -200;
+    audiobuffer[i] = (i % (48000 / 500)) > 48 ? 500 : -500;
   }
-  //HAL_SAI_Transmit_DMA(&hsai_BlockA1, audiobuffer, sizeof(audiobuffer) / sizeof(audiobuffer[0]));
+  
+  HAL_SAI_Transmit_DMA(&hsai_BlockA1, audiobuffer, sizeof(audiobuffer) / sizeof(audiobuffer[0]));
+  HAL_SAI_DMAPause(&hsai_BlockA1);
 
-  chip8swemu_main_loop();
+  chip8swemu_main_loop(&hsai_BlockA1);
 }
 
 /**
