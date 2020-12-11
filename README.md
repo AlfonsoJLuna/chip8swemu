@@ -17,9 +17,9 @@ The main goal of this emulator is to be as portable as possible, so it can easil
 
 ### Compatibility
 
-The core emulates the Super-CHIP 1.1 behavior by default, which is the most extended and supports most modern CHIP-8 and Super-CHIP games. For old games that depend on the different behavior of the original COSMAC VIP interpreter, a Compatibility Mode is provided.
+The core provides two configurable options: `Compatibility Mode` and `Vertical Wrap`, both disabled by default. When these options are disabled, the core emulates the Super-CHIP 1.1 behavior, which is the most extended and supports most modern CHIP-8 and Super-CHIP games.
 
-Known games that require the `Compatibility Mode` *enabled*:
+For old games that depend on the different behavior of the original COSMAC VIP interpreter, these options should be enabled. Known games that require the `Compatibility Mode` and `Vertical Wrap` *enabled*:
 * Animal Race [Brian Astle].ch8
 * Lunar Lander (Udo Pernisz, 1979).ch8
 
