@@ -612,9 +612,9 @@ static inline void execFX30()
 // FX33: Store BCD representation of VX in memory locations I, I+1, and I+2
 static inline void execFX33()
 {
-    memory.data[cpu.I] = cpu.V[OPCODE_X] / 100;
-    memory.data[cpu.I + 1] = (cpu.V[OPCODE_X] / 10) % 10;
-    memory.data[cpu.I + 2] = cpu.V[OPCODE_X] % 10;
+    memory.data[cpu.I & 0xFFF] = cpu.V[OPCODE_X] / 100;
+    memory.data[(cpu.I + 1) & 0xFFF] = (cpu.V[OPCODE_X] / 10) % 10;
+    memory.data[(cpu.I + 2) & 0xFFF] = cpu.V[OPCODE_X] % 10;
     cpu.PC += 2;
 }
 
@@ -623,7 +623,8 @@ static inline void execFX33()
 // Note: The original implementation also increments I by the number of registers written.
 static inline void execFX55()
 {
-    memcpy(&memory.data[cpu.I], cpu.V, OPCODE_X + 1);
+    for (int i = 0; i <= OPCODE_X; i++)
+        memory.data[(cpu.I + i) & 0xFFF] = cpu.V[i];
 
     if (cpu.compatibility_mode)
         cpu.I += (OPCODE_X + 1);
@@ -636,7 +637,8 @@ static inline void execFX55()
 // Note: The original implementation also increments I by the number of registers read.
 static inline void execFX65()
 {
-    memcpy(cpu.V, &memory.data[cpu.I], OPCODE_X + 1);
+    for (int i = 0; i <= OPCODE_X; i++)
+        cpu.V[i] = memory.data[(cpu.I + i) & 0xFFF];
 
     if (cpu.compatibility_mode)
         cpu.I += (OPCODE_X + 1);
