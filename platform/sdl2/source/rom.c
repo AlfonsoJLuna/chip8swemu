@@ -2,6 +2,7 @@
 
 #include "chip8.h"
 #include "logo.h"
+
 #include <stdint.h>
 #include <stdio.h>
 
@@ -13,7 +14,7 @@
 #endif
 
 
-static int loadRom(uint8_t* rom, size_t rom_size)
+static int ROM_Load(uint8_t* rom, size_t rom_size)
 {
 	chip8ResetCpu();
 	
@@ -21,18 +22,19 @@ static int loadRom(uint8_t* rom, size_t rom_size)
 }
 
 
-int romLoadDefault()
+int ROM_LoadDefault()
 {
-	return loadRom(logo, sizeof(logo));
+	return ROM_Load(logo, sizeof(logo));
 }
 
 
-int romLoadFromPath(char* rom_path)
+int ROM_LoadFromPath(char* rom_path)
 {
 	FILE* rom = fopen(rom_path, "rb");
 
 	if (rom == NULL)
 	{
+		printf("Error: Cannot open ROM file.\n");
 		return 1;
 	}
 
@@ -45,6 +47,7 @@ int romLoadFromPath(char* rom_path)
 	if (rom_size > 3584)
 	{
 		fclose(rom);
+		printf("Error: ROM file is too large.\n");
 		return 1;
 	}
 
@@ -59,11 +62,11 @@ int romLoadFromPath(char* rom_path)
 		return 1;
 	}
 
-	return loadRom(buffer, rom_size);
+	return ROM_Load(buffer, rom_size);
 }
 
 
-int romLoadFromDialog()
+int ROM_LoadFromDialog()
 {
 	#ifdef _WIN32
 
@@ -88,7 +91,7 @@ int romLoadFromDialog()
 
 	if (GetOpenFileName(&ofn))
 	{
-		return romLoadFromPath(rom_path);
+		return ROM_LoadFromPath(rom_path);
 	}
 
 	#endif

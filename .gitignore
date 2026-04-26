@@ -1,16 +1,26 @@
+platform/sdl2/build/*
+!platform/sdl2/build/.gitkeep
+!platform/sdl2/build/fonts/
+
+platform/sdl2/libraries/SDL*
+!platform/sdl2/libraries/.gitkeep
+
+platform/sdl2/objects/*
+!platform/sdl2/objects/.gitkeep
+
+platform/sdl2/releases/*
+
+
+
+
+
+
+
+
+
+
 Platform/GameAndWatch/game-and-watch-base/build/*
 
 Platform/GameAndWatch/game-and-watch-base/Drivers/*
 
 Platform/GameAndWatch/game-and-watch-base/.mxproject
-
-Platform/SDL2/build/*
-!Platform/SDL2/build/.gitkeep
-
-Platform/SDL2/libraries/*
-!Platform/SDL2/libraries/.gitkeep
-
-Platform/SDL2/objects/*
-!Platform/SDL2/objects/.gitkeep
-
-Releases/*

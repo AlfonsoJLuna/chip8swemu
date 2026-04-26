@@ -2,7 +2,7 @@
 
 *Multiplatform CHIP-8 and Super-CHIP emulator.*
 
-![](Assets/Images/Logo.png)
+![](core/assets/logo.png)
 
 ## Core
 
@@ -31,9 +31,11 @@ chip8swemu has been ported to a wide variety of platforms.
 
 ### SDL2
 
-![](Assets/Images/SDL2-2.png)
+![](platform/sdl2/assets/sdl2-1.png) | ![](platform/sdl2/assets/sdl2-2.png)
+:--------------------: | :--------------------:
+![](platform/sdl2/assets/sdl2-3.png) | ![](platform/sdl2/assets/sdl2-4.png)
 
-Port for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://github.com/ocornut/imgui). Features include:
+Port for the desktop based on [SDL2](http://libsdl.org) and [Dear ImGui](https://github.com/ocornut/imgui). Features include:
 
 * Compatible with Windows and Linux.
 * Configurable CPU clock rate, 840Hz by default.
@@ -42,9 +44,11 @@ Port for the desktop based on [SDL2](http://libsdl.org) and [ImGui](https://gith
 * ROM files can be passed as an argument or dropped to the window.
 * Native file selection dialog (only available on Windows).
 
-For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/master/Platform/SDL2
+For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/master/platform/sdl2
 
-Compiled releases are available here: https://github.com/AlfonsoJLuna/chip8swemu/releases
+Compiled releases are available here:
+* Windows: [chip8swemu-v1.2.0-win64.zip](https://github.com/AlfonsoJLuna/chip8swemu/releases/download/v1.2.0/chip8swemu-v1.2.0-win64.zip)
+* Linux: [chip8swemu-v1.2.0-linux64.tar.gz](https://github.com/AlfonsoJLuna/chip8swemu/releases/download/v1.2.0/chip8swemu-v1.2.0-linux64.tar.gz)
 
 ### Game & Watch
 
