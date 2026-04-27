@@ -15,9 +15,9 @@ void displayRefresh(uint8_t* chip8_buffer)
         for (int y = 0; y < 160; y++)
         {
             if (getPixel(chip8_buffer, y * 64 / 160, x * 128 / 320))
-                framebuffer[((y+40)*320)+x] = 0xFFFF;
+                framebuffer[((y+40)*320)+x] = 0x18E3;
             else
-                framebuffer[((y+40)*320)+x] = 0x0000;
+                framebuffer[((y+40)*320)+x] = 0xB775;
       }
     }
 }

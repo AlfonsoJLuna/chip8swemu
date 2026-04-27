@@ -52,13 +52,13 @@ Compiled releases are available here:
 
 ### Game & Watch
 
-![](platform/gameandwatch/Images/GameAndWatch-1.jpg)
+![](platform/gameandwatch/assets/gaw-1.jpg)
 
 Port for the [Game & Watch: Super Mario Bros.](https://en.wikipedia.org/wiki/Game_%26_Watch:_Super_Mario_Bros.)
 
 See it in action: https://www.youtube.com/watch?v=n2IKZFr6tSo
 
-For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/main/Platform/GameAndWatch
+For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/main/platform/gameandwatch
 
 ## References
 

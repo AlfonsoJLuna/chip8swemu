@@ -10,17 +10,8 @@ platform/sdl2/objects/*
 
 platform/sdl2/releases/*
 
+platform/gameandwatch/build/*
+!platform/gameandwatch/build/.gitkeep
 
-
-
-
-
-
-
-
-
-Platform/GameAndWatch/game-and-watch-base/build/*
-
-Platform/GameAndWatch/game-and-watch-base/Drivers/*
-
-Platform/GameAndWatch/game-and-watch-base/.mxproject
+platform/gameandwatch/objects/*
+!platform/gameandwatch/objects/.gitkeep

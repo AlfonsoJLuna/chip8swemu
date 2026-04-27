@@ -140,7 +140,7 @@ int main(void)
     audiobuffer[i] = (i % (48000 / 500)) > 48 ? 500 : -500;
   }
   
-  HAL_SAI_Transmit_DMA(&hsai_BlockA1, audiobuffer, sizeof(audiobuffer) / sizeof(audiobuffer[0]));
+  HAL_SAI_Transmit_DMA(&hsai_BlockA1, (uint8_t *)audiobuffer, sizeof(audiobuffer) / sizeof(audiobuffer[0]));
   HAL_SAI_DMAPause(&hsai_BlockA1);
 
   chip8swemu_main_loop(&hsai_BlockA1);
@@ -356,7 +356,7 @@ static void MX_OCTOSPI1_Init(void)
   hospi1.Init.SampleShifting = HAL_OSPI_SAMPLE_SHIFTING_NONE;
   hospi1.Init.DelayHoldQuarterCycle = HAL_OSPI_DHQC_DISABLE;
   hospi1.Init.ChipSelectBoundary = 0;
-  hospi1.Init.ClkChipSelectHighTime = 0;
+  hospi1.Init.ChipSelectHighTime = 0;
   hospi1.Init.DelayBlockBypass = HAL_OSPI_DELAY_BLOCK_BYPASSED;
   hospi1.Init.MaxTran = 0;
   hospi1.Init.Refresh = 0;
