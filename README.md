@@ -44,7 +44,7 @@ Port for the desktop based on [SDL2](http://libsdl.org) and [Dear ImGui](https:/
 * ROM files can be passed as an argument or dropped to the window.
 * Native file selection dialog (only available on Windows).
 
-For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/master/platform/sdl2
+For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/main/platform/sdl2
 
 Compiled releases are available here:
 * Windows: [chip8swemu-v1.2.0-win64.zip](https://github.com/AlfonsoJLuna/chip8swemu/releases/download/v1.2.0/chip8swemu-v1.2.0-win64.zip)
@@ -52,13 +52,13 @@ Compiled releases are available here:
 
 ### Game & Watch
 
-![](Assets/Images/GameAndWatch-1.jpg)
+![](platform/gameandwatch/Images/GameAndWatch-1.jpg)
 
 Port for the [Game & Watch: Super Mario Bros.](https://en.wikipedia.org/wiki/Game_%26_Watch:_Super_Mario_Bros.)
 
-Watch it in action: https://www.youtube.com/watch?v=n2IKZFr6tSo
+See it in action: https://www.youtube.com/watch?v=n2IKZFr6tSo
 
-For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/master/Platform/GameAndWatch
+For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/main/Platform/GameAndWatch
 
 ## References
 
@@ -78,4 +78,4 @@ Useful resources and documentation for developing a CHIP-8 emulator:
 
 chip8swemu is licensed under the MIT license. See `LICENSE.md` for more information.
 
-This repository may contain libraries or other files provided by third parties. The above license do not apply to these files.
+This repository may contain libraries or other files provided by third parties. The above license does not apply to these files.
