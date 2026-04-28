@@ -27,7 +27,7 @@ There are some other quirks not implemented because they also differ between ori
 
 ## Platforms
 
-chip8swemu has been ported to a wide variety of platforms.
+chip8swemu has been ported to a wide variety of platforms:
 
 ### SDL2
 
@@ -52,13 +52,23 @@ Compiled releases are available here:
 
 ### Game & Watch
 
-![](platform/gameandwatch/assets/gaw-1.jpg)
+<img src="platform/gameandwatch/assets/gaw-1.jpg" width="400">
 
-Port for the [Game & Watch: Super Mario Bros.](https://en.wikipedia.org/wiki/Game_%26_Watch:_Super_Mario_Bros.)
+Port for the [Game & Watch: Super Mario Bros.](https://en.wikipedia.org/wiki/Game_%26_Watch:_Super_Mario_Bros.) console.
 
 See it in action: https://www.youtube.com/watch?v=n2IKZFr6tSo
 
 For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/main/platform/gameandwatch
+
+### chip8stm32
+
+<img src="platform/chip8stm32/assets/chip8stm32.jpg" width="400">
+
+Port for the [chip8stm32](github.com/AlfonsoJLuna/chip8stm32) board.
+
+See it in action: https://www.youtube.com/watch?v=vA76s3j4H90
+
+For more information and building instructions please see: https://github.com/AlfonsoJLuna/chip8swemu/tree/main/platform/chip8stm32
 
 ## References
 

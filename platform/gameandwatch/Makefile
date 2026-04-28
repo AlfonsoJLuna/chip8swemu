@@ -10,33 +10,33 @@ MCU_LDSCRIPT := STM32H7B0VBTx
 LDSCRIPT := libraries/game-and-watch-base/$(MCU_LDSCRIPT)_FLASH.ld
 
 # Library sources
-S_FILES += libraries/cmsis_device_h7/Source/Templates/gcc/startup_$(MCU_STARTUP).s
-C_FILES += libraries/cmsis_device_h7/Source/Templates/system_stm32h7xx.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_cortex.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_ltdc.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_ltdc_ex.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_rcc.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_rcc_ex.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_flash.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_flash_ex.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_gpio.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_hsem.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_dma.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_dma_ex.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_mdma.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_pwr.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_pwr_ex.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_i2c.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_i2c_ex.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_exti.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_tim.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_tim_ex.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_spi.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_spi_ex.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_ospi.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_sai.c
-C_FILES += libraries/stm32h7xx_hal_driver/Src/stm32h7xx_hal_sai_ex.c
+S_FILES += libraries/cmsis-device-h7/Source/Templates/gcc/startup_$(MCU_STARTUP).s
+C_FILES += libraries/cmsis-device-h7/Source/Templates/system_stm32h7xx.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_cortex.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_ltdc.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_ltdc_ex.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_rcc.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_rcc_ex.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_flash.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_flash_ex.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_gpio.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_hsem.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_dma.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_dma_ex.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_mdma.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_pwr.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_pwr_ex.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_i2c.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_i2c_ex.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_exti.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_tim.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_tim_ex.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_spi.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_spi_ex.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_ospi.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_sai.c
+C_FILES += libraries/stm32h7xx-hal-driver/Src/stm32h7xx_hal_sai_ex.c
 C_FILES += libraries/game-and-watch-base/Core/Src/buttons.c
 C_FILES += libraries/game-and-watch-base/Core/Src/flash.c
 C_FILES += libraries/game-and-watch-base/Core/Src/lcd.c
@@ -52,9 +52,9 @@ OBJECTS += $(addprefix objects/,$(notdir $(C_FILES:.c=.o)))
 OBJECTS += $(addprefix objects/,$(notdir $(S_FILES:.s=.o)))
 
 # Include search paths
-INCS += -Ilibraries/cmsis_core/Include
-INCS += -Ilibraries/cmsis_device_h7/Include
-INCS += -Ilibraries/stm32h7xx_hal_driver/Inc
+INCS += -Ilibraries/cmsis-core/Include
+INCS += -Ilibraries/cmsis-device-h7/Include
+INCS += -Ilibraries/stm32h7xx-hal-driver/Inc
 INCS += -Ilibraries/game-and-watch-base/Core/Inc
 INCS += -I../../core/source
 INCS += -I../../core/assets/logo_rom
@@ -83,13 +83,13 @@ build/binary.bin: build/binary.elf
 build/binary.elf: $(OBJECTS)
 	arm-none-eabi-gcc $^ $(CFLAGS) $(LFLAGS) -o $@
 
-objects/%.o: libraries/cmsis_device_h7/Source/Templates/gcc/%.s
+objects/%.o: libraries/cmsis-device-h7/Source/Templates/gcc/%.s
 	arm-none-eabi-gcc $(CFLAGS) -MMD -c $(DEFINE) $(INCS) $< -o $@
 
-objects/%.o: libraries/cmsis_device_h7/Source/Templates/%.c
+objects/%.o: libraries/cmsis-device-h7/Source/Templates/%.c
 	arm-none-eabi-gcc $(CFLAGS) -MMD -c $(DEFINE) $(INCS) $< -o $@
 
-objects/%.o: libraries/stm32h7xx_hal_driver/Src/%.c
+objects/%.o: libraries/stm32h7xx-hal-driver/Src/%.c
 	arm-none-eabi-gcc $(CFLAGS) -MMD -c $(DEFINE) $(INCS) $< -o $@
 
 objects/%.o: ../../core/source/%.c

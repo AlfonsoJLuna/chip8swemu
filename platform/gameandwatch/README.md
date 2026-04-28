@@ -10,8 +10,9 @@ See it in action: https://www.youtube.com/watch?v=n2IKZFr6tSo
 
 ### Prerequisites
 
-1. Follow [this guide](https://github.com/ghidraninja/game-and-watch-backup) to install the required packages and prepare your device.
-2. Clone this repository, including the submodules: `git clone --recurse-submodules https://github.com/AlfonsoJLuna/chip8swemu`.
+1. Ensure you have the following packages installed on your system and available on the PATH: `git`, `make`, `arm-none-eabi-gcc`, `openocd`.
+2. Follow [this guide](https://github.com/ghidraninja/game-and-watch-backup) to backup and prepare your device.
+3. Clone this repository, including the submodules: `git clone --recurse-submodules https://github.com/AlfonsoJLuna/chip8swemu`.
 
 ### Adding games
 
@@ -25,4 +26,8 @@ Currently, the process of adding new games is done manually. You can convert you
 
 1. Open a terminal in `chip8swemu/platform/gameandwatch/`.
 2. Type `make` for building.
-3. Type `make flash` for flashing the binary into your device.
+
+### Flashing
+
+1. Connect your device to the computer using a ST-Link compatible debugger.
+2. Type `make flash` for flashing the binary into your device.

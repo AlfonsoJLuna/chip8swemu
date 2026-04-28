@@ -15,3 +15,9 @@ platform/gameandwatch/build/*
 
 platform/gameandwatch/objects/*
 !platform/gameandwatch/objects/.gitkeep
+
+platform/chip8stm32/build/*
+!platform/chip8stm32/build/.gitkeep
+
+platform/chip8stm32/objects/*
+!platform/chip8stm32/objects/.gitkeep
