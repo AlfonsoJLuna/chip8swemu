@@ -2,7 +2,7 @@
 
 <img src="assets/chip8stm32.jpg" width="400">
 
-This is a port of chip8swemu for the [chip8stm32](github.com/AlfonsoJLuna/chip8stm32) board.
+This is a port of chip8swemu for the [chip8stm32](https://github.com/AlfonsoJLuna/chip8stm32) board.
 
 See it in action: https://www.youtube.com/watch?v=vA76s3j4H90
 
