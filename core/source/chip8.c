@@ -85,6 +85,7 @@ typedef struct
     uint8_t  screen[1024];  // Screen buffer needs 128x64 pixels = 8192 bits = 1024 bytes
     bool     extended;      // Extended screen (128x64 mode)
     bool     keyboard[16];
+    uint8_t  pending_key;   // Key seen going down during FX0A, plus one; 0 while none
 
     uint16_t opcode;
 
@@ -307,6 +308,9 @@ static inline void exec8XY0()
 static inline void exec8XY1()
 {
     cpu.V[OPCODE_X] |= cpu.V[OPCODE_Y];
+    // The original CHIP-8 interpreter leaves VF as 0 after the logic ops
+    if (cpu.compatibility_mode)
+        cpu.V[0xF] = 0;
     cpu.PC += 2;
 }
 
@@ -315,6 +319,9 @@ static inline void exec8XY1()
 static inline void exec8XY2()
 {
     cpu.V[OPCODE_X] &= cpu.V[OPCODE_Y];
+    // The original CHIP-8 interpreter leaves VF as 0 after the logic ops
+    if (cpu.compatibility_mode)
+        cpu.V[0xF] = 0;
     cpu.PC += 2;
 }
 
@@ -323,6 +330,9 @@ static inline void exec8XY2()
 static inline void exec8XY3()
 {
     cpu.V[OPCODE_X] ^= cpu.V[OPCODE_Y];
+    // The original CHIP-8 interpreter leaves VF as 0 after the logic ops
+    if (cpu.compatibility_mode)
+        cpu.V[0xF] = 0;
     cpu.PC += 2;
 }
 
@@ -330,8 +340,10 @@ static inline void exec8XY3()
 // 8XY4: Set VX = VX + VY, set VF = carry
 static inline void exec8XY4()
 {
-    cpu.V[0xF] = (cpu.V[OPCODE_X] + cpu.V[OPCODE_Y]) > 0xFF;
+    // VF is written last so the flag survives when VX is VF itself
+    bool carry = (cpu.V[OPCODE_X] + cpu.V[OPCODE_Y]) > 0xFF;
     cpu.V[OPCODE_X] += cpu.V[OPCODE_Y];
+    cpu.V[0xF] = carry;
     cpu.PC += 2;
 }
 
@@ -340,9 +352,10 @@ static inline void exec8XY4()
 static inline void exec8XY5()
 {
     // Borrow occurred if VY > VX, so NOT borrow occured if VX >= VY
-    cpu.V[0xF] = cpu.V[OPCODE_X] >= cpu.V[OPCODE_Y];
+    bool not_borrow = cpu.V[OPCODE_X] >= cpu.V[OPCODE_Y];
     // VX = VX - VY
     cpu.V[OPCODE_X] -= cpu.V[OPCODE_Y];
+    cpu.V[0xF] = not_borrow;
     cpu.PC += 2;
 }
 
@@ -351,16 +364,9 @@ static inline void exec8XY5()
 // Note: The original implementation stores the value of register VY shifted right one bit in register VX.
 static inline void exec8XY6()
 {
-    if (cpu.compatibility_mode)
-    {
-        cpu.V[0xF] = cpu.V[OPCODE_Y] & 0x01;
-        cpu.V[OPCODE_X] = cpu.V[OPCODE_Y] >> 1;
-    }
-    else
-    {
-        cpu.V[0xF] = cpu.V[OPCODE_X] & 0x01;
-        cpu.V[OPCODE_X] >>= 1;
-    }
+    uint8_t source = cpu.compatibility_mode ? cpu.V[OPCODE_Y] : cpu.V[OPCODE_X];
+    cpu.V[OPCODE_X] = source >> 1;
+    cpu.V[0xF] = source & 0x01;
 
     cpu.PC += 2;
 }
@@ -370,9 +376,10 @@ static inline void exec8XY6()
 static inline void exec8XY7()
 {
     // Borrow occurred if VX > VY, so NOT borrow occured if VY >= VX
-    cpu.V[0xF] = cpu.V[OPCODE_Y] >= cpu.V[OPCODE_X];
+    bool not_borrow = cpu.V[OPCODE_Y] >= cpu.V[OPCODE_X];
     // VX = VY - VX
     cpu.V[OPCODE_X] = cpu.V[OPCODE_Y] - cpu.V[OPCODE_X];
+    cpu.V[0xF] = not_borrow;
     cpu.PC += 2;
 }
 
@@ -381,16 +388,9 @@ static inline void exec8XY7()
 // Note: The original implementation stores the value of register VY shifted left one bit in register VX.
 static inline void exec8XYE()
 {
-    if (cpu.compatibility_mode)
-    {
-        cpu.V[0xF] = cpu.V[OPCODE_Y] >> 7;
-        cpu.V[OPCODE_X] = cpu.V[OPCODE_Y] << 1;
-    }
-    else
-    {
-        cpu.V[0xF] = cpu.V[OPCODE_X] >> 7;
-        cpu.V[OPCODE_X] <<= 1;
-    }
+    uint8_t source = cpu.compatibility_mode ? cpu.V[OPCODE_Y] : cpu.V[OPCODE_X];
+    cpu.V[OPCODE_X] = source << 1;
+    cpu.V[0xF] = source >> 7;
 
     cpu.PC += 2;
 }
@@ -434,6 +434,10 @@ static inline void execDXY0()
 {
     cpu.V[0xF] = 0;
 
+    // The start position always wraps; only the overhang is subject to the wrap setting
+    int start_x = cpu.V[OPCODE_X] % 128;
+    int start_y = cpu.V[OPCODE_Y] % 64;
+
     for (int row = 0; row < 16; row++)
     {
         for (int col = 0; col < 16; col++)
@@ -442,16 +446,12 @@ static inline void execDXY0()
 
             int pixel = (sprite_row >> (15 - col)) & 1;
 
-            int screen_x = (cpu.V[OPCODE_X] + col) % 128;
-
-            int screen_y;
+            int screen_x = start_x + col;
+            int screen_y = start_y + row;
             if (cpu.vertical_wrap)
             {
-                screen_y = (cpu.V[OPCODE_Y] + row) % 64;
-            }
-            else
-            {
-                screen_y = (cpu.V[OPCODE_Y] + row);
+                screen_x %= 128;
+                screen_y %= 64;
             }
 
             cpu.V[0xF] |= chip8GetPixel(screen_y, screen_x) & pixel;
@@ -471,22 +471,23 @@ static inline void execDXYN()
 {
     cpu.V[0xF] = 0;
 
+    int width  = cpu.extended ? 128 : 64;
+    int height = cpu.extended ? 64  : 32;
+    int start_x = cpu.V[OPCODE_X] % width;
+    int start_y = cpu.V[OPCODE_Y] % height;
+
     for (int row = 0; row < OPCODE_N; row++)
     {
         for (int col = 0; col < 8; col++)
         {
             int pixel = (memory.data[cpu.I + row] >> (7 - col)) & 1;
 
-            int screen_x = (cpu.V[OPCODE_X] + col) % (cpu.extended ? 128 : 64);
-
-            int screen_y;
+            int screen_x = start_x + col;
+            int screen_y = start_y + row;
             if (cpu.vertical_wrap)
             {
-                screen_y = (cpu.V[OPCODE_Y] + row) % (cpu.extended ? 64  : 32);
-            }
-            else
-            {
-                screen_y = (cpu.V[OPCODE_Y] + row);
+                screen_x %= width;
+                screen_y %= height;
             }
 
             if (cpu.extended)
@@ -555,16 +556,27 @@ static inline void execFX07()
 // FX0A: Wait for a key press, store the value of the key in VX
 static inline void execFX0A()
 {
-    // If no key was pressed, repeat the instruction until a key is pressed
-    for (int key = 0; key < 16; key++)
+    // Repeat the instruction until a key goes down and comes back up,
+    // as the original interpreter did. Key state is left alone for EX9E/EXA1.
+    if (cpu.pending_key == 0)
     {
-        if (cpu.keyboard[key])
+        for (int key = 0; key < 16; key++)
         {
-            cpu.V[OPCODE_X] = key;
-            cpu.PC += 2;
+            if (cpu.keyboard[key])
+            {
+                cpu.pending_key = key + 1;
+                break;
+            }
         }
-        cpu.keyboard[key] = false;
+        return;
     }
+
+    if (cpu.keyboard[cpu.pending_key - 1])
+        return;
+
+    cpu.V[OPCODE_X] = cpu.pending_key - 1;
+    cpu.pending_key = 0;
+    cpu.PC += 2;
 }
 
 
