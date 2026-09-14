@@ -85,7 +85,7 @@ uint8_t* chip8GetScreen();
 
 
 /**
- * Change 8XY6, 8XYE, FX55, FX65 behavior between
+ * Change 8XY1, 8XY2, 8XY3, 8XY6, 8XYE, FX55, FX65 behavior between
  * CHIP-8 (compatibility mode enabled) or Super-CHIP (disabled).
  *
  * @param Enable or disable the compatibility mode.
@@ -94,9 +94,11 @@ void chip8CompatibilityMode(bool enabled);
 
 
 /**
- * Configure Vertical Wrap
+ * Configure whether the part of a sprite drawn past an edge of the screen
+ * wraps around to the other side (enabled) or is clipped (disabled).
+ * The start position of a sprite always wraps. Applies to both directions.
  *
- * @param Enable or disable the vertical wrap.
+ * @param Enable or disable the wrap.
  */
 void chip8VerticalWrap(bool enabled);
 
